@@ -32,25 +32,25 @@ Route::get('DB_DATABASE', function () {
 */
 
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::get('/', function () {
+    return view('index');
+});
 
-// Route::get('/coupon', function () {
-//     return view('coupon');
-// });
+Route::get('/coupon', function () {
+    return view('coupon');
+});
 
-// Route::get('/details', function () {
-//     return view('details');
-// });
+Route::get('/details', function () {
+    return view('details');
+});
 
-// Route::get('/cart', function () {
-//     return view('cart');
-// });
+Route::get('/cart', function () {
+    return view('cart');
+});
 
-// Route::get('/mitra/dashboard', function () {
-// 	return view('mitra.index');
-// });
+Route::get('/dashboard', function () {
+	return view('mitra.index');
+});
 
 
 
@@ -75,10 +75,6 @@ Route::get('DB_DATABASE', function () {
 
 
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

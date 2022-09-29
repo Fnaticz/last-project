@@ -2648,12 +2648,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #222;
 }
 
-.footer-area {
-  background: url(../img/footer.png) center;
-  background-size: cover;
-  padding-top: 1px;
-}
-
 .footer-area .footer-nav li {
   margin-top: 8px;
 }

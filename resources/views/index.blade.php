@@ -1,4 +1,4 @@
-@extends('navbar.layout')
+@extends('navbar.main')
 
 @section('content')
 <head>
@@ -12,7 +12,7 @@
         }
     </style>
 </head>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <body>
     
 	
