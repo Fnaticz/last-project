@@ -48,8 +48,15 @@
 				<div class="float-right">
 					<ul class="right_side">
 						@auth
-							<li><a href="{{ route('logout') }}">Logout</a></li>
-							<li><a href="{{ route('login') }}">My Account</a></li>
+							<li class="nav-item submenu dropdown">
+						        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
+						        <ul class="dropdown-menu">
+						            <form action="/logout" method="post">
+				                      @csrf
+				                      <button type="submit" class="dropdown-item text-center">ログアウト</button>
+				                    </form>
+						        </ul>
+						    </li>
 						@else
 							<li><a href="{{ route('login') }}">Login</a></li>
 							<li><a href="{{ route('login') }}">My Account</a></li>
