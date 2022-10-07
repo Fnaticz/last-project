@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
-    <link rel="stylesheet" href="{{ URL::asset('css/main.css')}}             ">
+    <link rel="stylesheet" href="{{ URL::asset('css/main.css')}}">
 
 	<style>
 		.menu-sidebar-area {

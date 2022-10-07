@@ -39,7 +39,7 @@
                     <div class="hot_deal_box">
                         <img class="img-fluid" src="{{ asset('img/product/hot_deals/deal1.jpg') }}" alt="">
                         <div class="content">
-                            <h2>Lapangan Basket Terpopuler</h2>
+                            <h2 style="">Lapangan Basket Terpopuler</h1>
                         </div>
                         <a class="hot_deal_link" href="#"></a>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product">
                         <div class="thumb">
-                            <img src="img/lapangan.jpg" width="175px" height="120px" alt="">
+                            <img src="img/lapangan.jpg" width="180px" height="120px" alt="">
                         </div>
                         <h4>Scudetto</h4>
                         <p>
