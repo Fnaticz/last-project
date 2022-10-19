@@ -52,7 +52,9 @@ Route::get('/dashboard', function () {
 	return view('mitra.index');
 });
 
-
+// Route::get('/dashtrial', function () {
+// 	return view('mitra.dash');
+// });
 
 
 
