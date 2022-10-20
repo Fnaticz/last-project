@@ -48,9 +48,9 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('/dashboard', function () {
-	return view('mitra.index');
-});
+// Route::get('/dashboard', function () {
+// 	return view('mitra.index');
+// });
 
 // Route::get('/dashtrial', function () {
 // 	return view('mitra.dash');
@@ -79,7 +79,7 @@ Route::get('/dashboard', function () {
 
 
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/users/create', [UserController::class, 'create'])->name('users.create');

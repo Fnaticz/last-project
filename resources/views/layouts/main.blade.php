@@ -22,11 +22,11 @@
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf
   </form>
-  @include('layouts.page_templates.auth')
+  @include('layouts.style.auth')
   @endauth
 
   @guest()
-    @include('layouts.page_templates.guest')
+    @include('layouts.style.guest')
   @endguest
   <!--   Core JS Files   -->
   <script src="{{ asset('js/core/jquery.min.js') }}"></script>

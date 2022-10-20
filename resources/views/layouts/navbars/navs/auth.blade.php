@@ -25,7 +25,7 @@
           <a class="nav-link" href="{{ route('home') }}">
             <i class="material-icons">dashboard</i>
             <p class="d-lg-none d-md-block">
-              {{ __('Stats') }}
+              {{ __('Dashboard') }}
             </p>
           </a>
         </li>
@@ -34,15 +34,15 @@
             <i class="material-icons">notifications</i>
             <span class="notification">5</span>
             <p class="d-lg-none d-md-block">
-              {{ __('Some Actions') }}
+              {{ __('Notif') }}
             </p>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">{{ __('Mike John responded to your email') }}</a>
-            <a class="dropdown-item" href="#">{{ __('You have 5 new tasks') }}</a>
-            <a class="dropdown-item" href="#">{{ __('You\'re now friend with Andrew') }}</a>
-            <a class="dropdown-item" href="#">{{ __('Another Notification') }}</a>
-            <a class="dropdown-item" href="#">{{ __('Another One') }}</a>
+            <a class="dropdown-item" href="#">{{ __('Notif1') }}</a>
+            <a class="dropdown-item" href="#">{{ __('Notif2') }}</a>
+            <a class="dropdown-item" href="#">{{ __('Notif3') }}</a>
+            <a class="dropdown-item" href="#">{{ __('Notif4') }}</a>
+            <a class="dropdown-item" href="#">{{ __('Notif5') }}</a>
           </div>
         </li>
         <li class="nav-item dropdown">

@@ -4,7 +4,10 @@
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <!--Enter code here -->
+
+        	<!-- Content isi disini -->
+
+
         </div>
     </div>
 </div>
