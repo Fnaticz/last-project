@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet">
       <!-- stylsheet  -->
-    <link rel="stylesheet" href="../../../public/css/dash.css">
+    <link href="{{ asset('css/dash.css') }}" rel="stylesheet" />
 
 </head>
 <body>
@@ -17,7 +17,7 @@
       <aside>
         <div class="top">
           <div class="logo">
-            <img src="../../../public/img/ball.png">
+            <img src="img/ball.png">
             <h2>COR<span class="primary">NER</span></h2>
           </div>
           <div class="close" id="close-btn">
@@ -214,7 +214,7 @@
                 <small class="text-muted">Admin</small>
                 </div>
                 <div class="profile-photo">
-                  <img src="../../../public/img/profile1.jpg" alt="">
+                  <img src="img/profile1.jpg" alt="">
                 </div>
               </div>
           </div>
@@ -304,6 +304,6 @@
         </div>
     </div>
 
-    <script src="../../../public/js/dash.js"></script>
+    <script src="{{ asset('js/dash.js') }}"></script>
 </body>
 </html>

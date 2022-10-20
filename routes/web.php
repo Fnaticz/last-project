@@ -48,9 +48,9 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-// Route::get('/dashboard', function () {
-// 	return view('mitra.index');
-// });
+Route::get('/dash', function () {
+	return view('mitra.dash');
+});
 
 // Route::get('/dashtrial', function () {
 // 	return view('mitra.dash');
