@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <form method="POST" action="{{ route('posts.update', $post->id) }}" class="form-horizontal">
+        <form method="POST" action="{{ route('product.update', $product->id) }}" class="form-horizontal">
           @csrf
           @method('PUT')
           <div class="card">
@@ -17,17 +17,48 @@
             <!--Body-->
             <div class="card-body">
               <div class="row">
-                <label for="title" class="col-sm-2 col-form-label">Title</label>
+                <label for="title" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-7">
-                  <input type="text" class="form-control" name="title" placeholder="Ingrese el title"
-                    value="{{ old('title', $post->title) }}" autocomplete="off" autofocus>
+                  <input type="text" class="form-control" name="nama" placeholder="Nama lapangan"
+                    value="{{ old('nama', $product->nama) }}" autocomplete="off" autofocus>
                 </div>
               </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Harga</label>
+                <div class="col-sm-7">
+                  <input type="number" class="form-control" name="harga" placeholder="Harga" value="{{ old('nama', $product->harga) }}" autocomplete="off">
+                </div>
+              </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Category</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" name="category" placeholder="Category" value="{{ old('nama', $product->category) }}" autocomplete="off">
+                </div>
+              </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Subjek</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" name="subjek" placeholder="Subjek" value="{{ old('subjek', $product->subjek) }}" autocomplete="off">
+                </div>
+              </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Alas</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" name="alas" placeholder="Tipe Alas" value="{{ old('alas', $product->alas) }}" autocomplete="off">
+                </div>
+              </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Image</label>
+                <div class="col-sm-7">
+                   <input type="file" name="image" class="form-control" placeholder="image" value="{{ old('image', $product->image) }}" autocomplete="off">
+                </div>
+              </div>
+            </div>
             </div>
             <!--End body-->
             <!--Footer-->
             <div class="card-footer ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary">Guardar</button>
+              <button type="submit" class="btn btn-primary">Update</button>
             </div>
           </div>
           <!--End footer-->

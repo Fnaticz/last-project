@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Detalles del post'])
+@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Detail Lapangan'])
 @section('content')
 <div class="content">
   <div class="container-fluid">
@@ -7,8 +7,8 @@
         <div class="card">
           <!--Header-->
           <div class="card-header card-header-primary">
-            <h4 class="card-title">Posts</h4>
-            <p class="card-category">Vista detallada de {{ $product->nama }}</p>
+            <h4 class="card-title">Post</h4>
+            <p class="card-category">Detail lapangan {{ $product->nama }}</p>
           </div>
           <!--End header-->
           <!--Body-->
@@ -25,23 +25,23 @@
                         <div class="block block-three"></div>
                         <div class="block block-four"></div>
                         <a href="#">
-                          <img class="avatar" src="{{ asset('/img/default-avatar.png') }}" alt="">
+                          <img class="avatar" src="{{ $product->image }}" alt="">
                           <h5 class="title mt-3">{{ $product->nama }}</h5>
                         </a>
                         <p class="description">
-                          {{ _('Ceo/Co-Founder') }} <br>
                           {{ $product->nama }} <br>
+                          {{ $product->harga }} <br>
                           {{ $product->created_at }}
                         </p>
                       </div>
                     </p>
                     <div class="card-description">
-                      {{ _('Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...') }}
+                      {{ $product->subjek }}
                     </div>
                   </div>
                   <div class="card-footer">
                     <div class="button-container">
-                      <button type="submit" class="btn btn-sm btn-primary">Editar</button>
+                      <button type="submit" class="btn btn-sm btn-primary">Edit</button>
                     </div>
                   </div>
                 </div>

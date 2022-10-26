@@ -47,7 +47,7 @@
                   </tr>
                   @empty
                   <tr>
-                    <td colspan="2">Sin registros.</td>
+                    <td colspan="2">Tidak ada data</td>
                   </tr>
                   @endforelse
                 </tbody>

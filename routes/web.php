@@ -68,10 +68,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/post/create', [ProductController::class, 'create'])->name('product.create');
     Route::post('/post', [ProductController::class, 'store'])->name('product.store');
     Route::get('/post', [ProductController::class, 'index'])->name('product.index');
-    Route::get('/post/{user}', [ProductController::class, 'show'])->name('product.show');
-    Route::get('/post/{user}/edit', [ProductController::class, 'edit'])->name('product.edit');
-    Route::put('/post/{user}', [ProductController::class, 'update'])->name('product.update');
-    Route::delete('/post/{user}', [ProductController::class, 'destroy'])->name('product.destroy');
+    Route::get('/post/{product}', [ProductController::class, 'show'])->name('product.show');
+    Route::get('/post/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
+    Route::put('/post/{product}', [ProductController::class, 'update'])->name('product.update');
+    Route::delete('/post/{product}', [ProductController::class, 'destroy'])->name('product.destroy');
 });
 
 // Route::get('/mitlog', [MitlogController::class, 'index'])->name('mitlog')->middleware('guest');
