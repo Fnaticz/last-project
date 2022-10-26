@@ -14,7 +14,7 @@ class ProductController extends Controller
     {
         $products = Product::paginate(5);
 
-        return view('posts.blbl', compact('products'))
+        return view('posts.index', compact('products'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }

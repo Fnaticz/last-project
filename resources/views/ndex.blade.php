@@ -26,19 +26,13 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product">
                         <div class="thumb">
-                            <img src="img/lapangan.jpg" width="175px" height="120px" alt="">
+                            <img src="{{ $product->image }}" width="175px" height="120px" alt="">
                         </div>
-                        <h4>Scudetto</h4>
+                        <h4>{{ $product->nama }}</h4>
                         <p>
-                            Harga: Rp. 50.000/Jam
+                            Harga: Rp. {{ $product->harga }} /Jam
                         </p>
-                        <p>
-                            Sepatu: 
-                        </p>
-                        <p>
-                            Bola:
-                        </p>
-                        <a href="/details" class="primary-btn text-uppercase">View Details</a>
+                        <a href="{{  }}" class="primary-btn text-uppercase">View Details</a>
                     </div>
                 </div>
             </div>

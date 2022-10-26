@@ -16,6 +16,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +35,12 @@ Route::get('DB_DATABASE', function () {
 */
 
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::resource('/', PageController::class);
+Route::get('/', [PageController::class, 'index']);
 
 Route::get('/coupon', function () {
     return view('coupon');
