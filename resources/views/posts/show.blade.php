@@ -8,7 +8,7 @@
           <!--Header-->
           <div class="card-header card-header-primary">
             <h4 class="card-title">Posts</h4>
-            <p class="card-category">Vista detallada de {{ $post->title }}</p>
+            <p class="card-category">Vista detallada de {{ $product->nama }}</p>
           </div>
           <!--End header-->
           <!--Body-->
@@ -26,12 +26,12 @@
                         <div class="block block-four"></div>
                         <a href="#">
                           <img class="avatar" src="{{ asset('/img/default-avatar.png') }}" alt="">
-                          <h5 class="title mt-3">{{ $post->title }}</h5>
+                          <h5 class="title mt-3">{{ $product->nama }}</h5>
                         </a>
                         <p class="description">
                           {{ _('Ceo/Co-Founder') }} <br>
-                          {{ $post->title }} <br>
-                          {{ $post->created_at }}
+                          {{ $product->nama }} <br>
+                          {{ $product->created_at }}
                         </p>
                       </div>
                     </p>

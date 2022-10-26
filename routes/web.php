@@ -9,11 +9,13 @@ use App\Http\Controllers\LoginController;
 // use Illuminate\Support\Facades\Route;
 
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,9 +58,21 @@ Route::get('/dash', function () {
 // 	return view('mitra.dash');
 // });
 
+// Route::resource('post', ProductController::class)->middleware('auth');
+// Route::get('post', [ProductController::class, 'index'])->name('product.index')->middleware('auth');
+// Route::post('post', [ProductController::class, 'store'])->name('product.store')->middleware('auth');
 
 
 
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/post/create', [ProductController::class, 'create'])->name('product.create');
+    Route::post('/post', [ProductController::class, 'store'])->name('product.store');
+    Route::get('/post', [ProductController::class, 'index'])->name('product.index');
+    Route::get('/post/{user}', [ProductController::class, 'show'])->name('product.show');
+    Route::get('/post/{user}/edit', [ProductController::class, 'edit'])->name('product.edit');
+    Route::put('/post/{user}', [ProductController::class, 'update'])->name('product.update');
+    Route::delete('/post/{user}', [ProductController::class, 'destroy'])->name('product.destroy');
+});
 
 // Route::get('/mitlog', [MitlogController::class, 'index'])->name('mitlog')->middleware('guest');
 // Route::post('mitlog', [MitlogController::class, 'authenticate']);
@@ -78,6 +92,7 @@ Route::get('/dash', function () {
 
 
 
+    // Route::resource('posts', PostController::class);
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 
@@ -90,7 +105,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.delete');
 
-    Route::resource('posts', PostController::class);
 
     Route::resource('permissions', PermissionController::class);
     Route::resource('roles', RoleController::class);

@@ -1,37 +1,63 @@
-@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Nuevo Post'])
+@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Tambah Lapangan'])
 
 @section('content')
 <div class="content">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <form method="POST" action="{{ route('posts.store') }}" class="form-horizontal">
+        <form method="POST" action="{{ route('product.store') }}" class="form-horizontal">
           @csrf
-          <div class="card ">
+          <div class="card">
             <!--Header-->
             <div class="card-header card-header-primary">
-              <h4 class="card-title">Post</h4>
-              <p class="card-category">Ingresar datos del nuevo post</p>
+              <h4 class="card-title">Tambah</h4>
+              <p class="card-category">Tamabahkan lapangan lebih banyak untuk mitra anda</p>
             </div>
             <!--End header-->
             <!--Body-->
             <div class="card-body">
               <div class="row">
-                <label for="title" class="col-sm-2 col-form-label">Post title</label>
+                <label for="title" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-7">
-                  <input type="text" class="form-control" name="title" placeholder="Ingrese el post title"
-                    autocomplete="off" autofocus>
+                  <input type="text" class="form-control" name="nama" placeholder="Nama Lapangan" autofocus>
+                </div>
+              </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Harga</label>
+                <div class="col-sm-7">
+                  <input type="number" class="form-control" name="harga" placeholder="Harga">
+                </div>
+              </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Category</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" name="category" placeholder="Category">
+                </div>
+              </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Subjek</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" name="subjek" placeholder="Subjek">
+                </div>
+              </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Alas</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" name="alas" placeholder="Tipe Alas">
+                </div>
+              </div>
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Image</label>
+                <div class="col-sm-7">
+                   <input type="file" name="image" class="form-control" placeholder="image">
                 </div>
               </div>
             </div>
-
             <!--End body-->
-
             <!--Footer-->
             <div class="card-footer ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary">Guardar</button>
+              <button type="submit" class="btn btn-primary">Post</button>
             </div>
-            <!--End footer-->
           </div>
         </form>
       </div>

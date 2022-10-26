@@ -21,9 +21,27 @@
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="#">
-                <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('User profile') }} </span>
+              <a class="nav-link" href="{{ url('post') }}">
+                <span class="sidebar-mini"> LP </span>
+                <span class="sidebar-normal">{{ __('Lapangan') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ url('post/create') }}">
+                <span class="sidebar-mini"> TL </span>
+                <span class="sidebar-normal">{{ __('Tambah Lapangan') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ url('post-create') }}">
+                <span class="sidebar-mini"> UL </span>
+                <span class="sidebar-normal">{{ __('Update Lapangan') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ url('post-create') }}">
+                <span class="sidebar-mini"> HL </span>
+                <span class="sidebar-normal">{{ __('Hapus Lapangan') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
