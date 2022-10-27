@@ -29,7 +29,7 @@
                           <h5 class="title mt-3">{{ $product->nama }}</h5>
                         </a>
                         <p class="description">
-                          {{ $product->nama }} <br>
+                          {{ $product->alas }} <br>
                           {{ $product->harga }} <br>
                           {{ $product->created_at }}
                         </p>
@@ -41,7 +41,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="button-container">
-                      <button type="submit" class="btn btn-sm btn-primary">Edit</button>
+                      <a href="{{ route('product.edit', $product->id) }}"><button type="submit" class="btn btn-sm btn-primary">Edit</button></a>
                     </div>
                   </div>
                 </div>

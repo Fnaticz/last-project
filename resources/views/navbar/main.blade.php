@@ -94,7 +94,7 @@
 									</li>
 									<hr>
 									<li class="nav-item">
-										<a href="#" class="icons">
+										<a href="/dashboard" class="icons">
 											<i class="fa fa-user" aria-hidden="true"></i>
 										</a>
 									</li>

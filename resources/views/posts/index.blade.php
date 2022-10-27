@@ -8,21 +8,21 @@
         <div class="card">
           <div class="card-header card-header-primary">
             <h4 class="card-title">Lapangan</h4>
-            <p class="card-category">Lapangan yang ada post</p>
+            <p class="card-category">Lapangan yang anda post</p>
           </div>
           <div class="card-body">
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-12 text-right">
                 <a href="{{ url('post/create') }}" class="btn btn-sm btn-facebook">Add</a>
               </div>
-            </div>
+            </div> -->
             <div class="table-responsive">
               <table class="table ">
                 <thead class="text-primary">
                   <th> ID </th>
                   <th> Nama </th>
-                  <th> Category </th>
-                  <th class="text-right"> Penyewa </th>
+                  <th> Date </th>
+                  <th class="text-right"> Actions </th>
                 </thead>
                 <tbody>
                   @forelse ($products as $product)
