@@ -8,13 +8,10 @@
           @csrf
           @method('PUT')
           <div class="card">
-            <!--Header-->
             <div class="card-header card-header-primary">
               <h4 class="card-title">Editar post</h4>
               <p class="card-category">Editar datos del post</p>
             </div>
-            <!--End header-->
-            <!--Body-->
             <div class="card-body">
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Nama</label>
@@ -55,13 +52,10 @@
               </div>
             </div>
             </div>
-            <!--End body-->
-            <!--Footer-->
             <div class="card-footer ml-auto mr-auto">
               <button type="submit" class="btn btn-primary">Update</button>
             </div>
           </div>
-          <!--End footer-->
         </form>
       </div>
     </div>

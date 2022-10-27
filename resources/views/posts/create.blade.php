@@ -8,13 +8,10 @@
         <form method="POST" action="{{ route('product.store') }}" class="form-horizontal">
           @csrf
           <div class="card">
-            <!--Header-->
             <div class="card-header card-header-primary">
               <h4 class="card-title">Tambah</h4>
               <p class="card-category">Tamabahkan lapangan lebih banyak untuk mitra anda</p>
             </div>
-            <!--End header-->
-            <!--Body-->
             <div class="card-body">
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Nama</label>
@@ -53,8 +50,6 @@
                 </div>
               </div>
             </div>
-            <!--End body-->
-            <!--Footer-->
             <div class="card-footer ml-auto mr-auto">
               <button type="submit" class="btn btn-primary">Post</button>
             </div>

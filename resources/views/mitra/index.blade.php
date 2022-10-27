@@ -3,7 +3,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="{{ URL::asset('js/mitstyl.js') }}"></script>
 <link rel="stylesheet" href="{{ URL::asset('css/mitstyl.css')}}">
-<!------ Include the above in your HEAD tag ---------->
 
 <html lang="en">
 
@@ -35,12 +34,10 @@
             </div>
         </div>
 
-        <!-- Brand/logo -->
         <a class="navbar-brand" href="#">
     <img src="images/logo.png" alt="logo" style="width:140px;">
   </a>
 
-        <!-- Links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#"><img src="images/notification.png" alt=""></a>
@@ -121,7 +118,6 @@
 
     <div id="page-wrapper">
         <div class="container-fluid">
-            <!-- Page Heading -->
             <div class="row" id="main" >
                 <div style="margin-left: 60px; margin-top: 40px;" id="content">
                     <h1>Welcome Admin!</h1>

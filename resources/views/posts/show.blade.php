@@ -5,16 +5,12 @@
     <div class="row">
       <div class="col-md-12">
         <div class="card">
-          <!--Header-->
           <div class="card-header card-header-primary">
             <h4 class="card-title">Post</h4>
             <p class="card-category">Detail lapangan {{ $product->nama }}</p>
           </div>
-          <!--End header-->
-          <!--Body-->
           <div class="card-body">
             <div class="row">
-              <!-- first -->
               <div class="col-md-4">
                 <div class="card card-user">
                   <div class="card-body">
@@ -46,13 +42,9 @@
                   </div>
                 </div>
               </div>
-              <!--end first-->
             </div>
-            <!--end row-->
           </div>
-          <!--End card body-->
         </div>
-        <!--End card-->
       </div>
     </div>
   </div>

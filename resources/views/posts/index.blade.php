@@ -19,7 +19,7 @@
             <div class="table-responsive">
               <table class="table ">
                 <thead class="text-primary">
-                  <th> ID </th>
+                  <th> NO </th>
                   <th> Nama </th>
                   <th> Date </th>
                   <th class="text-right"> Actions </th>
@@ -27,7 +27,7 @@
                 <tbody>
                   @forelse ($products as $product)
                   <tr>
-                    <td>{{ $product->id }}</td>
+                    <td>{{ ++$i }}</td>
                     <td>{{ $product->nama }}</td>
                     <td class="text-primary">{{ $product->created_at->toFormattedDateString() }}</td>
                     <td class="td-actions text-right">
@@ -54,11 +54,9 @@
               </table>
             </div>
           </div>
-          <!--Footer-->
           <div class="card-footer mr-auto">
-            {{-- {{ $product->links() }} --}}
+              {{ $products->links() }}
           </div>
-          <!--End footer-->
         </div>
       </div>
     </div>
