@@ -12,11 +12,11 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::paginate(5);
+        $products = Product::paginate(10);
 
         return view('posts.index', compact('products'))
 
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -32,40 +32,40 @@ class ProductController extends Controller
     public function store(Request $request, Product $product)
     {
 
-        Product::create($request->all());
+        // Product::create($request->all());
 
-        // $request->validate([
+        $request->validate([
 
-        //     'id',
+            'id',
 
-        //     'nama' => 'required',
+            'nama' => 'required',
 
-        //     'harga' => 'required',
+            'harga' => 'required',
 
-        //     'category' => 'required',
+            'category' => 'required',
 
-        //     'subjek' => 'required',
+            'subjek' => 'required',
 
-        //     'alas' => 'required',
+            'alas' => 'required',
 
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
-        // ]);
+        ]);
 
-        // // $input = $request->all();
+        $input = $request->all();
 
-        // if ($image = $request->file('image')) {
+        if ($image = $request->file('image')) {
 
-        //     $destinationPath = 'image/';
+            $destinationPath = 'image/';
 
-        //     $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
 
-        //     $image->move($destinationPath, $profileImage);
+            $image->move($destinationPath, $profileImage);
 
-        //     $input['image'] = "$profileImage";
-        // }
+            $input['image'] = "$profileImage";
+        }
 
-        // // Product::create($input);
+        Product::create($input);
         // Product::create($request->all());
         // dd($request);
         return redirect('/post/create');
@@ -94,6 +94,6 @@ class ProductController extends Controller
 
 
 
-        return redirect();
+        return redirect('/post');
     }
 }

@@ -1,5 +1,19 @@
 @extends('navbar.main')
 
+<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+    
+    $('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+
+</script> -->
+
 @section('title')
     <title>Corner - Pusat Sewa Lapangan</title>
 @endsection
@@ -56,15 +70,16 @@
                 <p>Lapangan yang kami rekomendasikan untuk anda</p>
               </div>
             </div>
+            @foreach ($products as $product)
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product">
                         <div class="thumb">
-                            <img src="img/lapangan.jpg" width="180px" height="120px" alt="">
+                            <img src="{{ $product->image }}" width="180px" height="120px" alt="">
                         </div>
-                        <h4>Scudetto</h4>
+                        <h4>{{ $product->nama }}</h4>
                         <p>
-                            Harga: Rp. 50.000/Jam
+                            Harga: Rp. {{ $product->harga }}/Jam
                         </p>
                         <p>
                             Sepatu: 
@@ -76,7 +91,14 @@
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
     </section>
+
+<!--     <div class="autoplay">
+      <div>your content</div>
+      <div>your content</div>
+      <div>your content</div>
+    </div> -->
 
 @endsection
