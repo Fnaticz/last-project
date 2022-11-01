@@ -75,17 +75,17 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product">
                         <div class="thumb">
-                            <img src="{{ $product->image }}" width="180px" height="120px" alt="">
+                            <img src="/image/{{ $product->image }}" width="180px" height="120px" alt="">
                         </div>
                         <h4>{{ $product->nama }}</h4>
                         <p>
                             Harga: Rp. {{ $product->harga }}/Jam
                         </p>
                         <p>
-                            Sepatu: 
+                            Alas: {{ $product->alas }}
                         </p>
                         <p>
-                            Bola:
+                            {{ $product->category }}
                         </p>
                         <a href="/details" class="primary-btn text-uppercase">View Details</a>
                     </div>

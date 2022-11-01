@@ -21,7 +21,7 @@
                         <div class="block block-three"></div>
                         <div class="block block-four"></div>
                         <a href="#">
-                          <img class="avatar" src="image/{{ $product->image }}" alt="">
+                          <img src="/image/{{ $product->image }}" width="250px">
                           <h5 class="title mt-3">{{ $product->nama }}</h5>
                         </a>
                         <p class="description">
