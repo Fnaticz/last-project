@@ -5,7 +5,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <form method="POST" action="{{ route('product.store') }}" class="form-horizontal">
+        <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data" class="form-horizontal">
           @csrf
           <div class="card">
             <div class="card-header card-header-primary">
