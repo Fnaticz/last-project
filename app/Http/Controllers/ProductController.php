@@ -86,6 +86,52 @@ class ProductController extends Controller
         return view('posts.edit', compact('product'));
     }
 
+    public function update(Request $request, Product $product)
+
+    {
+        
+        $request->validate([
+
+            'id',
+
+            'nama' => 'required',
+
+            'harga' => 'required',
+
+            'category' => 'required',
+
+            'subjek' => 'required',
+
+            'alas' => 'required',
+
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
+
+        ]);
+
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+
+            $destinationPath = 'image/';
+
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+
+            $image->move($destinationPath, $profileImage);
+
+            $input['image'] = "$profileImage";
+        } else {
+
+            unset($input['image']);
+            
+            }
+
+        $product->update($input);
+            // dd($input);
+
+        return redirect('/post');
+
+    }
+
     public function destroy(Product $product)
 
     {

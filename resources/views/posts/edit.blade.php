@@ -1,16 +1,16 @@
-@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Editar Post'])
+@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Edit lapangan'])
 @section('content')
 <div class="content">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <form method="POST" action="{{ route('product.update', $product->id) }}" class="form-horizontal">
+        <form method="POST" action="{{ route('product.update', $product->id) }}" enctype="multipart/form-data" class="form-horizontal">
           @csrf
           @method('PUT')
           <div class="card">
             <div class="card-header card-header-primary">
-              <h4 class="card-title">Editar post</h4>
-              <p class="card-category">Editar datos del post</p>
+              <h4 class="card-title">Edit</h4>
+              <p class="card-category">Edit lapangan</p>
             </div>
             <div class="card-body">
               <div class="row">
