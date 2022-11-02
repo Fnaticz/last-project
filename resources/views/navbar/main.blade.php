@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="{{ asset('vendors/nice-select/css/nice-select.css') }}">
 	<link rel="stylesheet" href="{{ asset('vendors/animate-css/animate.css') }}">
 	<link rel="stylesheet" href="{{ asset('vendors/jquery-ui/jquery-ui.css') }}">
+	{{-- <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"> --}}
 	
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
@@ -70,7 +71,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container-fluid">
                     <div id="logo">
-              		<a href="/" style="color:black; font-size:24px;"><img src="img/ball.png" width="50px" height="50px" alt="" title="Corner">Corner</a>
+              		<a href="/" style="color:black; font-size:20px;"><img src="img/ball.png" width="50px" height="50px" alt="" title="Corner">Corner</a>
             		</div>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 					 aria-expanded="false" aria-label="Toggle navigation">
@@ -149,7 +150,7 @@
 	<script src="{{ asset('vendors/counter-up/jquery.counterup.js') }}"></script>
 	<script src="{{ asset('js/mail-script.js') }}"></script>
 	<script src="{{ asset('js/theme.js') }}"></script>
-
+	<script src="js/custom.js" type="text/javascript"></script>
 	@yield('js')
 </body>
 </html>

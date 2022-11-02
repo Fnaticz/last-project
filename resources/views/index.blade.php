@@ -25,10 +25,9 @@
             <div class="container">
                 <div class="banner_content row">
                     <div class="offset-lg-2 col-lg-8">
-                        <h3>SEWA LAPANGAN
-                            <br />ONLINE</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                        <strong><h3>COR<span>NER </span></strong>
+                         <br> Sewa Lapangan Online</h3>
+                        <p> Selamat datang di Website Booking Lapangan Online, Booking lapangan lebih mudah dari rumah saja</p>
                         <a class="white_bg_btn" href="#">View Collection</a>
                     </div>
                 </div>
@@ -41,9 +40,9 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="hot_deal_box">
-                        <img class="img-fluid" src="{{ asset('img/product/hot_deals/deal1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('img/football.png') }}" alt="">
                         <div class="content">
-                            <h2>Lapangan Futsal Terpopuler</h2>
+                            <h2 style="color:#fff;">Lapangan Futsal Terpopuler</h2>
                         </div>
                         <a class="hot_deal_link" href="#"></a>
                     </div>
@@ -51,9 +50,9 @@
 
                 <div class="col-lg-6">
                     <div class="hot_deal_box">
-                        <img class="img-fluid" src="{{ asset('img/product/hot_deals/deal1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('img/basket.png') }}" alt="">
                         <div class="content">
-                            <h2 style="">Lapangan Basket Terpopuler</h1>
+                            <h2 style="color:#fff;">Lapangan Basket Terpopuler</h1>
                         </div>
                         <a class="hot_deal_link" href="#"></a>
                     </div>
@@ -92,6 +91,70 @@
                 </div>
             </div>
             @endforeach
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+                <div class="main_title">
+                  <h2>Latest <span style="font-color:f1610e "> Match</span></h2>
+                  <p>Skor Tournament Futsal Hari ini</p>
+                </div>
+            <div class="match">
+                <div class="match-header">
+                    <div class="match-status">Live</div>
+                    <div class="match-tournament"><img src="img/futsal/logo3.png" />School Premier League</div>
+                    <div class="match-actions">
+                        <button class="btn-icon"><i class="fa fa-star-o"></i></button>
+                        <button class="btn-icon"><i class="fa fa-bell-o"></i></button>
+                    </div>
+                </div>
+                <div class="match-content">
+                    <div class="column">
+                        <div class="team team--home">
+                            <div class="team-logo">
+                                
+                                <img src="img/futsal/logo1.png" />
+                            </div>
+                            <h2 class="team-name">Esemkasa</h2>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="match-details">
+                            <div class="match-date">
+                                3 May at <strong>17:30</strong>
+                            </div>
+                            <div class="match-score">
+                                <span class="match-score-number match-score-number--leading">3</span>
+                                <span class="match-score-divider">:</span>
+                                <span class="match-score-number">1</span>
+                            </div>
+                            <div class="match-time-lapsed">
+                                72'
+                            </div>
+                            <div class="match-referee">
+                                Tournament: <strong>Futsal</strong>
+                            </div>
+                            <div class="match-bet-options">
+                                <button class="match-bet-option">1.48</button>
+                                <button class="match-bet-option">7.84</button>
+                                <button class="match-bet-option">3.24</button>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="team team--away">
+                            <div class="team-logo">
+                        
+                                <img src="img/futsal/logo2.png" />
+                            </div>
+                            <h2 class="team-name"> Sadama</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
