@@ -4,6 +4,22 @@
 
 <?php 
 function build_calendar($month, $year){
+
+  // $mysqli = new mysqli('localhost', 'root', 'last_project');
+  // $stmt = $mysqli->prepare('select *from bookings WHERE MONTH(date) = ? AND YEAR(date) = ?');
+  // $bookings = array();
+  // if ($stmt->execute()) {
+  //   $result =$stmt->get_result();
+  //   if ($result->num_rows > 0) {
+  //     while($row = $result->fetch_assoc){
+  //       $bookings = $row['date'];
+  //     }
+  //      $stmt->close(); 
+
+  //   } 
+  // }
+
+
   $daysOfWeek= array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
   $firstDayOfMonth =  mktime(0,0,0,$month, 1 , $year);
   $numberDays = date('t', $firstDayOfMonth);
@@ -17,9 +33,9 @@ function build_calendar($month, $year){
   $next_month = date('m', mktime(0,0,0, $month+1, 1 , $year));
   $next_year = date('Y', mktime(0,0,0,$month+1,1, $year));
   $calendar = "<center><h2>$monthName $year</h2>";
-  $calendar.= "<a class='btn btn-primary btn-sm'href='?month=".$prev_month."&year=".$prev_year."'>Prev Month</a>";
-  $calendar.= "<a class='btn btn-primary btn-sm'href='?month=".date('m')."&year=".date('Y')."'>Current Month</a>";
-  $calendar.= "<a class='btn btn-primary btn-sm'href='?month=".$next_month."&year=$next_year'>Next Month</a></center>";
+  $calendar.= "<a class='btn btn-primary btn-pr'href='?month=".$prev_month."&year=".$prev_year."'>Prev Month</a>";
+  $calendar.= "<a class='btn btn-primary btn-pr'href='?month=".date('m')."&year=".date('Y')."'>Current Month</a>";
+  $calendar.= "<a class='btn btn-primary btn-pr'href='?month=".$next_month."&year=$next_year'>Next Month</a></center>";
   $calendar.= "<br><table class='table table-bordered'>";
   $calendar.= "<tr>";
     foreach ($daysOfWeek as $day) {
@@ -45,7 +61,7 @@ function build_calendar($month, $year){
       $date = "$year-$month-$currentDayRel";
       $dayName = strtolower(date('I',strtotime($date)));
       $today = $date==date('Y-m-d') ? 'today' : '' ;
-      $calendar.="<td class='$today'><h4>$currentDayRel</h4></td>";
+      $calendar.="<td class='$today'><h4>$currentDay</h4><a class='btn btn-success btn-sml'>Avaible</a></td>";
       $currentDay++;
       $dayOfWeek++;
     }
@@ -83,8 +99,21 @@ function build_calendar($month, $year){
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
 <style type="text/css">
-    	
+    
+    .btn-pr{
+      padding: 8px 8px;
+      font-size: 10px;
+      border-radius: 7px;
+      /* gap: 2px; */
+      
+    }
 
+    .btn-sml {
+    padding: 3px 3px;
+    font-size: 5px;
+    border-radius: 4px;
+    /* color: white; */
+}
 /*****************globals*************/
 body {
   font-family: 'open sans';
@@ -346,7 +375,7 @@ img {
     }
 
     .today {
-      background-color: red;
+      background-color: yellow;
     }
 /*# sourceMappingURL=style.css.map */
 
