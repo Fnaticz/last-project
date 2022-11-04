@@ -69,8 +69,8 @@
                 <p>Lapangan yang kami rekomendasikan untuk anda</p>
               </div>
             </div>
-            @foreach ($products as $product)
             <div class="row">
+            @foreach ($products as $product)
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product">
                         <div class="thumb">
@@ -89,8 +89,8 @@
                         <a href="/details" class="primary-btn text-uppercase">View Details</a>
                     </div>
                 </div>
-            </div>
             @endforeach
+            </div>
         </div>
     </section>
 
