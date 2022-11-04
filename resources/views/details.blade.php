@@ -1,7 +1,72 @@
 @extends('navbar.main')
 
-@section('content')
 
+
+<?php 
+function build_calendar($month, $year){
+  $daysOfWeek= array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+  $firstDayOfMonth =  mktime(0,0,0,$month, 1 , $year);
+  $numberDays = date('t', $firstDayOfMonth);
+  $dateComponents =  getDate($firstDayOfMonth);
+  $monthName = $dateComponents['month'];
+  $dayOfWeek = $dateComponents['wday'];
+  $dateToday = date('Y-m-d');
+  
+  $prev_month = date('m', mktime(0,0,0,$month-1, 1 ,$year));
+  $prev_year = date('Y', mktime(0,0,0,$month-1, 1, $year));
+  $next_month = date('m', mktime(0,0,0, $month+1, 1 , $year));
+  $next_year = date('Y', mktime(0,0,0,$month+1,1, $year));
+  $calendar = "<center><h2>$monthName $year</h2>";
+  $calendar.= "<a class='btn btn-primary btn-sm'href='?month=".$prev_month."&year=".$prev_year."'>Prev Month</a>";
+  $calendar.= "<a class='btn btn-primary btn-sm'href='?month=".date('m')."&year=".date('Y')."'>Current Month</a>";
+  $calendar.= "<a class='btn btn-primary btn-sm'href='?month=".$next_month."&year=$next_year'>Next Month</a></center>";
+  $calendar.= "<br><table class='table table-bordered'>";
+  $calendar.= "<tr>";
+    foreach ($daysOfWeek as $day) {
+     $calendar.="<th class='header'>$day</th>";
+    }
+
+    $calendar.="</tr><tr>";
+    $currentDay = 1;
+    if ($dayOfWeek>0) {
+      for ($k=0; $k <$dayOfWeek ; $k++) { 
+        $calendar.="<td class='empty'></td>";
+      }
+    }
+
+    $month = str_pad($month,2,"0",STR_PAD_LEFT);
+    while ($currentDay <= $numberDays) {
+      if($dayOfWeek ==7){
+        $dayOfWeek = 0;
+        $calendar.="</tr><tr>";
+      }
+
+      $currentDayRel = str_pad($currentDay,2,"0", STR_PAD_LEFT);
+      $date = "$year-$month-$currentDayRel";
+      $dayName = strtolower(date('I',strtotime($date)));
+      $today = $date==date('Y-m-d') ? 'today' : '' ;
+      $calendar.="<td class='$today'><h4>$currentDayRel</h4></td>";
+      $currentDay++;
+      $dayOfWeek++;
+    }
+
+    if ($dayOfWeek<7) {
+      $remainingDays= 7 - $dayOfWeek;
+      for ($i=0; $i <$remainingDays ; $i++) { 
+        $calendar.="<td class='empty'></td>";
+      }
+    }
+
+    $calendar.="</tr></table>";
+
+
+  return $calendar;
+
+}
+
+?>
+
+@section('content')
 <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -17,7 +82,7 @@
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
-    <style type="text/css">
+<style type="text/css">
     	
 
 /*****************globals*************/
@@ -184,6 +249,105 @@ img {
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
+
+    @media only screen and (max-width:760px),
+    (min-device-width:802px) and (max-device-width:1020px){
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr{
+      display: block;
+
+    }
+
+    .empty{
+      display: none;
+    }
+
+    th{
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr{
+      border: 1px solid #ccc;
+    }
+
+    .u{
+      border: 3px;
+    }
+
+    td{
+      border:none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    td:nth-last-of-type(1):before{
+      content: "Sunday";
+    }
+
+    td:nth-last-of-type(2):before{
+      content: "Monday";
+    }
+
+    td:nth-last-of-type(3):before{
+      content: "Tuesday";
+    }
+
+    td:nth-last-of-type(4):before{
+      content: "Wednesday";
+    }
+
+    td:nth-last-of-type(5):before{
+      content: "Thursday";
+    }
+
+    td:nth-last-of-type(6):before{
+      content: "Friday";
+    }
+
+    td:nth-last-of-type(7):before{
+      content: "Saturday";
+    }
+
+    
+  }
+
+  @media only screen and (min-device-width:320px) and (max-device-width:480px){
+    body{
+      padding: 0;
+      margin: 0;
+
+    }
+  }
+
+  @media only screen and (min-device-width:802px) and (max-device-width:1020px){
+    body{
+      width: 495px;
+    }
+  }
+
+  @media (min-width:641px){
+    table{
+      table-layout: fixed;
+    }
+
+    td{
+      width: 33%;
+    }
+  }
+  .row{
+      margin-top: 20px;
+    }
+
+    .today {
+      background-color: red;
+    }
 /*# sourceMappingURL=style.css.map */
 
     </style>
@@ -244,8 +408,23 @@ img {
 						</div>
 					</div>
 				</div>
+        <br><br>
+        <?php
+        $dateComponents = getDate();
+        if (isset($_GET['month']) && isset($_GET['year'])) {
+          $month = $_GET['month'];
+          $year = $_GET['year'];
+        }else{
+          $month = $dateComponents['mon'];
+          $year = $dateComponents['year'];
+        }
+    
+        echo build_calendar($month, $year);
+        ?>
 			</div>
 		</div>
+    
+
 	</div>
   </body>
 </html>
