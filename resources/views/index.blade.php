@@ -25,8 +25,8 @@
             <div class="container">
                 <div class="banner_content row">
                     <div class="offset-lg-2 col-lg-8">
-                        <strong><h3>COR<span>NER </span></strong>
-                         <br> Sewa Lapangan Online</h3>
+                        <h3>Sewa lapangan
+                         <br>  Online</h3>
                         <p> Selamat datang di Website Booking Lapangan Online, Booking lapangan lebih mudah dari rumah saja</p>
                         <a class="white_bg_btn" href="#">View Collection</a>
                     </div>
