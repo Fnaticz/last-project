@@ -2261,15 +2261,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .p1-gradient-bg, .primary-btn, .single-product:hover .details .primary-btn, .about-video-right .overlay-bg, .blog-area .detais .tags li, .footer-social a:hover {
-  background-image: -moz-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-  background-image: -ms-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+  background-image: -moz-linear-gradient(0deg, #fb984d  20%, #fb984d     100%);
+  background-image: -webkit-linear-gradient(0deg, #fb984d 20%, #fb984d    100%);
+  background-image: -ms-linear-gradient(0deg, #fb984d 20%, #fb984d    100%);
 }
 
 .p1-gradient-color {
-  background: -moz-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-  background: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-  background: -ms-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+  background: -moz-linear-gradient(0deg, #fb984d 20%, #fb984d    100%);
+  background: -webkit-linear-gradient(0deg, #fb984d 20%, #fb984d    100%);
+  background: -ms-linear-gradient(0deg, #fb984d 20%, #fb984d    100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2310,8 +2310,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .primary-btn:hover {
   background: transparent;
-  color: #8a90ff;
-  border-color: #8a90ff;
+  color: #f1610e;
+  border-color: #f1610e;
 }
 
 .primary-btn.white {
@@ -2413,6 +2413,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 10px;
   background-color: white;
   box-shadow: 0px 10px 30px 0px rgba(212, 150, 255, 0.2);
+  padding-bottom: 25px;
+  margin-bottom: 80px;
 }
 
 .single-product .thumb {

@@ -58,6 +58,10 @@ Route::get('/dash', function () {
 	return view('mitra.dash');
 });
 
+// Route::get('/timebook', function () {
+// 	return view('book');
+// });
+
 // Route::get('/dashtrial', function () {
 // 	return view('mitra.dash');
 // });

@@ -61,7 +61,20 @@ function build_calendar($month, $year){
       $date = "$year-$month-$currentDayRel";
       $dayName = strtolower(date('I',strtotime($date)));
       $today = $date==date('Y-m-d') ? 'today' : '' ;
+
+
+        // ini biar merah status di tanggal nyya (kek udah di booking)
+        
+      // if(in_array($date, $bookings)){
+      // $calendar.="<td class='$today'><h4>$currentDay</h4><a class='btn btn-danger btn-sml'>Booked</a></td>";
+
+      // }else{
+        
+        // $calendar.="<td class='$today'><h4>$currentDay</h4><a class='btn btn-success btn-sml'>Avaible</a></td>";
+      // }
+
       $calendar.="<td class='$today'><h4>$currentDay</h4><a class='btn btn-success btn-sml'>Avaible</a></td>";
+      
       $currentDay++;
       $dayOfWeek++;
     }
@@ -79,6 +92,9 @@ function build_calendar($month, $year){
   return $calendar;
 
 }
+
+
+
 
 ?>
 
@@ -375,7 +391,7 @@ img {
     }
 
     .today {
-      background-color: yellow;
+      background-color: rgb(237, 226, 226);
     }
 /*# sourceMappingURL=style.css.map */
 

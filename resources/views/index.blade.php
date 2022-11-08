@@ -25,8 +25,8 @@
             <div class="container">
                 <div class="banner_content row">
                     <div class="offset-lg-2 col-lg-8">
-                        <h3>Sewa lapangan
-                         <br>  Online</h3>
+                        <strong><h3>COR<span>NER </span></strong>
+                         <br>Sewa Lpanagan Online</h3>
                         <p> Selamat datang di Website Booking Lapangan Online, Booking lapangan lebih mudah dari rumah saja</p>
                         <a class="white_bg_btn" href="#">View Collection</a>
                     </div>
@@ -65,7 +65,7 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
               <div class="main_title">
-                <h2>Lapangan Terbaru</h2>
+                <h2><span style="font-color:f1610e ">Lapangan</span> Terbaru</h2>
                 <p>Lapangan yang kami rekomendasikan untuk anda</p>
               </div>
             </div>
@@ -99,7 +99,7 @@
         <div class="container">
                 <div class="main_title">
                   <h2>Latest <span style="font-color:f1610e "> Match</span></h2>
-                  <p>Skor Tournament Futsal Hari ini (ini di beranda nya GBK ada latst match nya jadi tertarik bikin)</p>
+                  <p>Skor Tournament Futsal Hari ini</p>
                 </div>
             <div class="match">
                 <div class="match-header">
