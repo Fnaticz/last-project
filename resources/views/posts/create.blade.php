@@ -30,24 +30,32 @@
                   <input type="text" class="form-control" name="nama" placeholder="Nama Lapangan" autofocus>
                 </div>
               </div>
+
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Harga</label>
                 <div class="col-sm-7">
                   <input type="number" class="form-control" name="harga" placeholder="Harga">
                 </div>
               </div>
+
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Category</label>
                 <div class="col-sm-7">
-                  <input type="text" class="form-control" name="category" placeholder="Category">
+                  <select type="select" class="form-control" name="category" placeholder="Category">
+                    <option selected disabled >Open this select menu</option>
+                    <option value="Futsal">Futsal</option>
+                    <option value="Basket">Basket</option>
+                  </select>
                 </div>
               </div>
+
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Subjek</label>
                 <div class="col-sm-7">
                   <input type="text" class="form-control" name="subjek" placeholder="Subjek">
                 </div>
               </div>
+
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Alas</label>
                 <div class="col-sm-7">
@@ -60,6 +68,7 @@
                    <input type="file" name="image" class="form-control" placeholder="image">
                 </div>
               </div>
+              
             </div>
             <div class="card-footer ml-auto mr-auto">
               <button type="submit" class="btn btn-primary">Post</button>
