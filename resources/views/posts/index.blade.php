@@ -26,6 +26,16 @@
               </div>
 
               @endif
+
+              @if(session()->has('message1',))
+
+              <div class="alert alert-danger" id="alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+
+              {{ session()->get('message1') }}
+              </div>
+
+              @endif
             </div>
 
             <br>

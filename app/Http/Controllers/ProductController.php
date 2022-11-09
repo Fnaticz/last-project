@@ -140,6 +140,6 @@ class ProductController extends Controller
 
 
 
-        return redirect('/post')->with('message','Data Deleted Successfully');
+        return redirect('/post')->with('message1','Data Deleted Successfully');
     }
 }
