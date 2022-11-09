@@ -13,6 +13,17 @@
               <p class="card-category">Tamabahkan lapangan lebih banyak untuk mitra anda</p>
             </div>
             <div class="card-body">
+              <div>
+                @if(session()->has('message',))
+  
+                <div class="alert alert-success" id="alert">
+                  <button type="button" class="close" data-dismiss="alert">x</button>
+  
+                {{ session()->get('message') }}
+                </div>
+  
+                @endif
+              </div>
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-7">
@@ -59,4 +70,7 @@
     </div>
   </div>
 </div>
+{{-- @include('sweetalert::alert') --}}
+
+
 @endsection

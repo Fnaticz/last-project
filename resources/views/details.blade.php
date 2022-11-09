@@ -2,96 +2,147 @@
 
 
 
-<?php 
-function build_calendar($month, $year){
+<?php
+function build_calendar($month, $year) {
+    $mysqli = new mysqli('localhost', 'root', '', 'last_project');
+    $stmt = $mysqli->prepare("select * from bookings where MONTH(date) = ? AND YEAR(date) = ?");
+    $stmt->bind_param('ss', $month, $year);
+    $bookings = array();
+    if($stmt->execute()){
+        $result = $stmt->get_result();
+        if($result->num_rows>0){
+            while($row = $result->fetch_assoc()){
+                $bookings[] = $row['date'];
+            }
+            
+            $stmt->close();
+        }
+    }
+    
+    
+    
+     $daysOfWeek = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
 
-  // $mysqli = new mysqli('localhost', 'root', 'last_project');
-  // $stmt = $mysqli->prepare('select *from bookings WHERE MONTH(date) = ? AND YEAR(date) = ?');
-  // $bookings = array();
-  // if ($stmt->execute()) {
-  //   $result =$stmt->get_result();
-  //   if ($result->num_rows > 0) {
-  //     while($row = $result->fetch_assoc){
-  //       $bookings = $row['date'];
-  //     }
-  //      $stmt->close(); 
+     
+     $firstDayOfMonth = mktime(0,0,0,$month,1,$year);
 
-  //   } 
-  // }
+     
+     $numberDays = date('t',$firstDayOfMonth);
 
+   
+     $dateComponents = getdate($firstDayOfMonth);
 
-  $daysOfWeek= array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
-  $firstDayOfMonth =  mktime(0,0,0,$month, 1 , $year);
-  $numberDays = date('t', $firstDayOfMonth);
-  $dateComponents =  getDate($firstDayOfMonth);
-  $monthName = $dateComponents['month'];
-  $dayOfWeek = $dateComponents['wday'];
-  $dateToday = date('Y-m-d');
+    
+     $monthName = $dateComponents['month'];
+
+    
+     $dayOfWeek = $dateComponents['wday'];
+
+     
+    $datetoday = date('Y-m-d');
+    
+    
+    
+    $calendar = "<table class='table table-bordered'>";
+    $calendar .= "<center><h2>$monthName $year</h2>";
+    $calendar.= "<a class='btn btn-sm btn-primary' href='?month=".date('m', mktime(0, 0, 0, $month-1, 1, $year))."&year=".date('Y', mktime(0, 0, 0, $month-1, 1, $year))."'>Previous Month</a> ";
+    
+    $calendar.= " <a class='btn btn-sm btn-primary' href='?month=".date('m')."&year=".date('Y')."'>Current Month</a> ";
+    
+    $calendar.= "<a class='btn btn-sm btn-primary' href='?month=".date('m', mktime(0, 0, 0, $month+1, 1, $year))."&year=".date('Y', mktime(0, 0, 0, $month+1, 1, $year))."'>Next Month</a></center><br>";
+    
+    
+        
+      $calendar .= "<tr>";
+
+     // Create the calendar headers
+
+     foreach($daysOfWeek as $day) {
+          $calendar .= "<th  class='header'>$day</th>";
+     } 
+
+     // Create the rest of the calendar
+
+     // Initiate the day counter, starting with the 1st.
+
+     $currentDay = 1;
+
+     $calendar .= "</tr><tr>";
+
+     // The variable $dayOfWeek is used to
+     // ensure that the calendar
+     // display consists of exactly 7 columns.
+
+     if ($dayOfWeek > 0) { 
+         for($k=0;$k<$dayOfWeek;$k++){
+                $calendar .= "<td  class='empty'></td>"; 
+
+         }
+     }
+    
+     
+     $month = str_pad($month, 2, "0", STR_PAD_LEFT);
   
-  $prev_month = date('m', mktime(0,0,0,$month-1, 1 ,$year));
-  $prev_year = date('Y', mktime(0,0,0,$month-1, 1, $year));
-  $next_month = date('m', mktime(0,0,0, $month+1, 1 , $year));
-  $next_year = date('Y', mktime(0,0,0,$month+1,1, $year));
-  $calendar = "<center><h2>$monthName $year</h2>";
-  $calendar.= "<a class='btn btn-primary btn-pr'href='?month=".$prev_month."&year=".$prev_year."'>Prev Month</a>";
-  $calendar.= "<a class='btn btn-primary btn-pr'href='?month=".date('m')."&year=".date('Y')."'>Current Month</a>";
-  $calendar.= "<a class='btn btn-primary btn-pr'href='?month=".$next_month."&year=$next_year'>Next Month</a></center>";
-  $calendar.= "<br><table class='table table-bordered'>";
-  $calendar.= "<tr>";
-    foreach ($daysOfWeek as $day) {
-     $calendar.="<th class='header'>$day</th>";
-    }
+     while ($currentDay <= $numberDays) {
 
-    $calendar.="</tr><tr>";
-    $currentDay = 1;
-    if ($dayOfWeek>0) {
-      for ($k=0; $k <$dayOfWeek ; $k++) { 
-        $calendar.="<td class='empty'></td>";
-      }
-    }
+          // Seventh column (Saturday) reached. Start a new row.
 
-    $month = str_pad($month,2,"0",STR_PAD_LEFT);
-    while ($currentDay <= $numberDays) {
-      if($dayOfWeek ==7){
-        $dayOfWeek = 0;
-        $calendar.="</tr><tr>";
-      }
+          if ($dayOfWeek == 7) {
 
-      $currentDayRel = str_pad($currentDay,2,"0", STR_PAD_LEFT);
-      $date = "$year-$month-$currentDayRel";
-      $dayName = strtolower(date('I',strtotime($date)));
-      $today = $date==date('Y-m-d') ? 'today' : '' ;
+               $dayOfWeek = 0;
+               $calendar .= "</tr><tr>";
 
+          }
+          
+          $currentDayRel = str_pad($currentDay, 2, "0", STR_PAD_LEFT);
+          $date = "$year-$month-$currentDayRel";
+          
+            $dayname = strtolower(date('l', strtotime($date)));
+            $eventNum = 0;
+            $today = $date==date('Y-m-d')? "today" : "";
+         if($date<date('Y-m-d')){
+             $calendar.="<td><h4>$currentDay</h4> <button class='btn btn-danger btn-sml'>N/A</button>";
+         }elseif(in_array($date, $bookings)){
+             $calendar.="<td class='$today'><h4>$currentDay</h4> <button class='btn btn-danger btn-sml'>Already Booked</button>";
+         }else{
+             $calendar.="<td class='$today'><h4>$currentDay</h4> <a href='' class='btn btn-success btn-sml'>Book</a>";
+         }
+         
+        //  {{url('book' $date->id )}}
+            
+        //  book.blade.php?date=".$date."
+            
+          $calendar .="</td>";
+          // Increment counters
+ 
+          $currentDay++;
+          $dayOfWeek++;
 
-        // ini biar merah status di tanggal nyya (kek udah di booking)
-        
-      // if(in_array($date, $bookings)){
-      // $calendar.="<td class='$today'><h4>$currentDay</h4><a class='btn btn-danger btn-sml'>Booked</a></td>";
+     }
+     
+     
 
-      // }else{
-        
-        // $calendar.="<td class='$today'><h4>$currentDay</h4><a class='btn btn-success btn-sml'>Avaible</a></td>";
-      // }
+     // Complete the row of the last week in month, if necessary
 
-      $calendar.="<td class='$today'><h4>$currentDay</h4><a class='btn btn-success btn-sml'>Avaible</a></td>";
-      
-      $currentDay++;
-      $dayOfWeek++;
-    }
+     if ($dayOfWeek != 7) { 
+     
+          $remainingDays = 7 - $dayOfWeek;
+            for($l=0;$l<$remainingDays;$l++){
+                $calendar .= "<td class='empty'></td>"; 
 
-    if ($dayOfWeek<7) {
-      $remainingDays= 7 - $dayOfWeek;
-      for ($i=0; $i <$remainingDays ; $i++) { 
-        $calendar.="<td class='empty'></td>";
-      }
-    }
+         }
 
-    $calendar.="</tr></table>";
+     }
+     
+     $calendar .= "</tr>";
 
+     $calendar .= "</table>";
 
-  return $calendar;
+     echo $calendar;
 
 }
+    
+?>
 
 
 
@@ -125,11 +176,21 @@ function build_calendar($month, $year){
     }
 
     .btn-sml {
-    padding: 3px 3px;
-    font-size: 5px;
+    padding: 5px 5px;
+    font-size: 9px;
     border-radius: 4px;
     /* color: white; */
-}
+    margin-top: 5px;
+  
+  }
+
+  .table-bordered td, .table-bordered th{
+    border: 1px solid#b9b9b9;
+  }
+  /* .table-bordered{
+    border: #0076ad;
+  } */
+
 /*****************globals*************/
 body {
   font-family: 'open sans';
@@ -391,7 +452,7 @@ img {
     }
 
     .today {
-      background-color: rgb(237, 226, 226);
+      background-color: rgb(242, 217, 182);
     }
 /*# sourceMappingURL=style.css.map */
 

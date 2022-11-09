@@ -84,8 +84,7 @@
 							<div class="col-lg-7 pr-0">
 								@include('navbar.menu')
 							</div>
-
-							<div class="col-lg-5">
+													<div class="col-lg-5">
 								<ul class="nav navbar-nav navbar-right right_nav pull-right">
 									<hr>
 									<li class="nav-item">

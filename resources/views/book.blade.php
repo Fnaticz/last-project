@@ -1,36 +1,26 @@
 @extends('navbar.main')
 
-@section('content')
 
-<?php 
 
-$duration = 10;
-$cleanup = 0;
-$start ="09:00";
-$end = "15:00";
-
-function timeslots($duration, $cleanup, $start, $end){
-  $start = new DateTime($start);
-  $end = new DateTime($end);
-  $interval = new DateInterval("PT".$duration."M");
-  $cleanupinterval = new DateInterval("PT".$cleanup."M");
-  $slots =  array();
-
-  for ($intStart= $start; $intStart <$end ; $intStart->add($interval)->add($cleanupinterval)) {
-    $endPeriod = clone $intStart;
-    $endPeriod->add($interval);
-    if ($endPeriod>$end){
-      break;
-    }
-
-    $slots = $intStart->format("H:iA")."-".$endPeriod->format("H:iA");
-
-  }
-
-  return $slots;
-
+<?php
+if(isset($_GET['date'])){
+    $date = $_GET['date'];
 }
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $mysqli = new mysqli('localhost', 'root', '', 'bookingcalendar');
+    $stmt = $mysqli->prepare("INSERT INTO bookings (name, email, date) VALUES (?,?,?)");
+    $stmt->bind_param('sss', $name, $email, $date);
+    $stmt->execute();
+    $msg = "<div class='alert alert-success'>Booking Successfull</div>";
+    $stmt->close();
+    $mysqli->close();
+}
+
 ?>
+@section('content')
 <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -47,16 +37,39 @@ function timeslots($duration, $cleanup, $start, $end){
 </head>
 
 <body>
-<div class="container">
-    <h1 class="text-center">Book For Date :<?php echo date('m/d/Y', strtotime($date)); ?></h1><hr>
-    <div class="row">
-        <?php $timeslots = timeslots($duration, $cleanup, $start, $end);  
-        foreach($timeslots as $ts){
-            ?>
-            <div class="col-md-2">
-                <button class="btn btn-success"><?php echo $ts; ?></button>
+    <div class="container">
+        <h1 class="text-center">Book for Date:
+            
+        <?php
+       
+         echo date('m/d/Y', strtotime($date)); 
+         
+         ?>
+         
+        
+        </h1><hr>
+
+
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+               <?php echo isset($msg)?$msg:''; ?>
+                <form action="" method="post" autocomplete="off">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" name="email">
+                    </div>
+                    <button class="btn btn-primary" type="submit" name="submit">Submit</button>
+                </form>
             </div>
-        <?php }?>
+        </div>
     </div>
-</div>
+
+    
+  </body>
+  </html>
 @endsection

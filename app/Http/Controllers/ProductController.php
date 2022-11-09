@@ -68,7 +68,7 @@ class ProductController extends Controller
         Product::create($input);
         // Product::create($request->all());
         // dd($request);
-        return redirect('/post/create');
+        return redirect('/post/create')->with('message','Data Uploaded Successfully');
     }
 
     public function show(Product $product)
@@ -128,7 +128,7 @@ class ProductController extends Controller
         $product->update($input);
             // dd($input);
 
-        return redirect('/post');
+        return redirect('/post')->with('message','Data Updated Successfully');
 
     }
 
@@ -140,6 +140,6 @@ class ProductController extends Controller
 
 
 
-        return redirect('/post');
+        return redirect('/post')->with('message','Data Deleted Successfully');
     }
 }

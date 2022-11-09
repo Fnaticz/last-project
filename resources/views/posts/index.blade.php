@@ -16,6 +16,19 @@
                 <a href="{{ url('post/create') }}" class="btn btn-sm btn-facebook">Add</a>
               </div>
             </div> -->
+            <div>
+              @if(session()->has('message',))
+
+              <div class="alert alert-success" id="alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+
+              {{ session()->get('message') }}
+              </div>
+
+              @endif
+            </div>
+
+            <br>
             <div class="table-responsive">
               <table class="table ">
                 <thead class="text-primary">
@@ -62,4 +75,17 @@
     </div>
   </div>
 </div>
+{{-- <script type="text/javascript">
+  $("document").ready(function()
+  {
+
+    setTimeout(function()
+    {
+      $("div.alert")->remove();
+    
+    },3000);
+  
+  
+  });
+</script> --}}
 @endsection
