@@ -99,7 +99,7 @@
         <div class="container">
                 <div class="main_title">
                   <h2>Latest <span style="font-color:f1610e "> Match</span></h2>
-                  <p>Skor Tournament Futsal Hari ini</p>
+                  <p>Skor Tournament Futsal Terbaru Hari ini</p>
                 </div>
             <div class="match">
                 <div class="match-header">

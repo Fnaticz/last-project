@@ -77,7 +77,7 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          </div> 
           <div class="card-footer mr-auto">
               {{ $products->links() }}
           </div>
