@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://img2.pngdownload.id/20180806/jr/kisspng-football-portable-network-graphics-clip-art-sports-soccer-ball-png-clip-art-image-gallery-yopricevill-5b68bec6727887.8253895615335912384689.jpg width="400" alt="Laravel Logo"></a></p><strong align="center"><h3>COR<span>NER </span></strong>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://img2.pngdownload.id/20180806/jr/kisspng-football-portable-network-graphics-clip-art-sports-soccer-ball-png-clip-art-image-gallery-yopricevill-5b68bec6727887.8253895615335912384689.jpg" width="400" alt="corner logo"></a></p><strong align="center"><h3>COR<span>NER </span></strong>
                          <br>Sewa Lapangan Online</h3>
 
 <p align="center">
