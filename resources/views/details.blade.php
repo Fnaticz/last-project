@@ -5,14 +5,14 @@
 <?php
 function build_calendar($month, $year) {
     $mysqli = new mysqli('localhost', 'root', '', 'last_project');
-    $stmt = $mysqli->prepare("select * from bookings where MONTH(date) = ? AND YEAR(date) = ?");
+    $stmt = $mysqli->prepare("select * from bookings where MONTH(tglmain) = ? AND YEAR(tglmain) = ?");
     $stmt->bind_param('ss', $month, $year);
     $bookings = array();
     if($stmt->execute()){
         $result = $stmt->get_result();
         if($result->num_rows>0){
             while($row = $result->fetch_assoc()){
-                $bookings[] = $row['date'];
+                $bookings[] = $row['tglmain'];
             }
             
             $stmt->close();
@@ -487,7 +487,7 @@ img {
 						
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">Scudetto</h3>
+						<h3 class="product-title">Lapangan HAHAHA</h3>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -508,7 +508,7 @@ img {
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 							</form> -->
 							<a href="/cart">	
-							<button class="add-to-cart btn btn-default" href="/cart" type="button">add to cart</button>
+							<button class="add-to-cart btn btn-default" href="/" type="button">Pesan Sekarang</button>
 							</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>

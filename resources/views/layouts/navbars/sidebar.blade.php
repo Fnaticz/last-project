@@ -33,14 +33,14 @@
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ url('post-create') }}">
-                <span class="sidebar-mini"> UL </span>
-                <span class="sidebar-normal">{{ __('Update Lapangan') }} </span>
+              <a class="nav-link" href="{{ url('booking') }}">
+                <span class="sidebar-mini"> BK </span>
+                <span class="sidebar-normal">{{ __('Bookings') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="{{ url('post-create') }}">
-                <span class="sidebar-mini"> HL </span>
+                <span class="sidebar-mini"> HLs</span>
                 <span class="sidebar-normal">{{ __('Hapus Lapangan') }} </span>
               </a>
             </li>

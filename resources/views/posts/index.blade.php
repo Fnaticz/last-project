@@ -60,7 +60,7 @@
                       <a href="{{ route('product.edit', $product->id) }}" class="btn btn-success"> <i
                           class="material-icons">edit</i> </a>
                       <form action="{{ route('product.destroy', $product->id) }}" method="post"
-                        onsubmit="return confirm('areYouSure')" style="display: inline-block;">
+                        onsubmit="return confirm('apakah anda yakin menghapus?')" style="display: inline-block;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" rel="tooltip" class="btn btn-danger">

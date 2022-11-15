@@ -17,6 +17,7 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -118,4 +119,5 @@ Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 //     Route::resource('roles', RoleController::class);
 // });
 
+Route::resource("/booking", BookingController::class); 
 
