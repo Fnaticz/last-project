@@ -17,7 +17,10 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\PageController;
+
 use App\Http\Controllers\BookingController;
+
+use App\Http\Controllers\DashController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +45,8 @@ Route::get('DB_DATABASE', function () {
 
 Route::resource('/', PageController::class);
 Route::get('/', [PageController::class, 'index']);
+
+
 
 Route::get('/coupon', function () {
     return view('coupon');
@@ -71,13 +76,15 @@ Route::get('/create', function () {
 // 	return view('mitra.dash');
 // });
 
-// Route::resource('post', ProductController::class)->middleware('auth');
 // Route::get('post', [ProductController::class, 'index'])->name('product.index')->middleware('auth');
 // Route::post('post', [ProductController::class, 'store'])->name('product.store')->middleware('auth');
 
 
 
 Route::group(['middleware' => 'auth'], function() {
+    // Route::resources([
+    // 'post' => ProductController::class,
+    // ]);
     Route::get('/post/create', [ProductController::class, 'create'])->name('product.create');
     Route::post('/post', [ProductController::class, 'store'])->name('product.store');
     Route::get('/post', [ProductController::class, 'index'])->name('product.index');
@@ -85,6 +92,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/post/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
     Route::put('/post/{product}', [ProductController::class, 'update'])->name('product.update');
     Route::delete('/post/{product}', [ProductController::class, 'destroy'])->name('product.destroy');
+    // Route::resource('post', DashController::class)->middleware('auth');
+
 });
 
 // Route::get('/mitlog', [MitlogController::class, 'index'])->name('mitlog')->middleware('guest');

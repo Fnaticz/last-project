@@ -3,24 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use App\Models\User;
-use App\Models\Category;
 use App\Rules\Uppercase;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 
-class ProductController extends Controller
+class DashController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
 
-        // return Product::where('user_id', auth()->user()->id)->get();
-        $products = Product::where('user_id', auth()->user()->id)->get();
+        $products = Product::paginate(10);
 
-        return view('posts.index', compact('products'))
+        return view('posts.index', [
+            'products' => Product::where('id', auth()->user()->id)->get()
+        ])
 
             ->with('i', (request()->input('page', 1) - 1) * 10);
+
+        // return Product::where('id', auth()->user()->id)->get();
     }
 
     /**
@@ -30,28 +36,28 @@ class ProductController extends Controller
      */
     public function create()
     {
-        // $categories = Category::all();
-
-        return view('posts.create', [
-            'categories' => Category::all()
-        ]);
+        return view('posts.create');
     }
 
-    public function store(Request $request, Product $product)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
-
         // Product::create($request->all());
 
         $request->validate([
 
             'id',
 
-
             'nama' => 'required',
 
             'harga' => 'required',
 
-            'category_id' => 'required',
+            'category' => 'required',
 
             'subjek' => 'required',
 
@@ -59,13 +65,9 @@ class ProductController extends Controller
 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
-            // 'user_id' => auth()->user()->id,
         ]);
 
-        $request['user_id'] = auth()->user()->id;
-
         $input = $request->all();
-        
 
         if ($image = $request->file('image')) {
 
@@ -81,28 +83,42 @@ class ProductController extends Controller
         Product::create($input);
         // Product::create($request->all());
         // dd($request);
-        return redirect('/post/create')->with('message','Data Uploaded Successfully');
+        return redirect('/post/create');
     }
 
-    public function show(Product $product)
-
-    {   
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
         // dd($product);
 
         return view('posts.show', compact('product'));
     }
 
-    public function edit(Product $product)
-
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
-
         return view('posts.edit', compact('product'));
     }
 
-    public function update(Request $request, Product $product)
-
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
     {
-        
         $request->validate([
 
             'id',
@@ -141,18 +157,21 @@ class ProductController extends Controller
         $product->update($input);
             // dd($input);
 
-        return redirect('/post')->with('message','Data Updated Successfully');
-
+        return redirect('/post');
     }
 
-    public function destroy(Product $product)
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
     {
-
         $product->delete();
 
 
 
-        return redirect('/post')->with('message1','Data Deleted Successfully');
+        return redirect('/post');
     }
 }

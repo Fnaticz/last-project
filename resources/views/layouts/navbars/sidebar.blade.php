@@ -21,7 +21,7 @@
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ url('post') }}">
+              <a class="nav-link" href="{{ url('/post') }}">
                 <span class="sidebar-mini"> LP </span>
                 <span class="sidebar-normal">{{ __('Lapangan') }} </span>
               </a>
