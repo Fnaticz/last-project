@@ -17,7 +17,7 @@ class Product extends Model
 
     ];
 
-    // protected $guarded = ['id'];
+    protected $guarded = ['id'];
 
     public function category()
     {

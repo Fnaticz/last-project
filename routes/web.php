@@ -17,11 +17,10 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\PageController;
-<<<<<<< HEAD
+
 use App\Http\Controllers\BookingController;
-=======
+
 use App\Http\Controllers\DashController;
->>>>>>> dbbd756 (category id)
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +45,8 @@ Route::get('DB_DATABASE', function () {
 
 Route::resource('/', PageController::class);
 Route::get('/', [PageController::class, 'index']);
+
+
 
 Route::get('/coupon', function () {
     return view('coupon');
