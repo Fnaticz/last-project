@@ -460,7 +460,7 @@ img {
 
   </head>
 
-  <br><br>
+  <br><br><br><br><br><br>
 
   <body>
 	
@@ -507,8 +507,8 @@ img {
 							<button class="add-to-cart btn btn-default" href="" type="button">add to cart</button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 							</form> -->
-							<a href="/cart">	
-							<button class="add-to-cart btn btn-default" href="/" type="button">Pesan Sekarang</button>
+							<a href="/create">	
+							<button class="add-to-cart btn btn-default" href="/create" type="button">Pesan Sekarang</button>
 							</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>

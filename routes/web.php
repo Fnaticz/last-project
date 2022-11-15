@@ -63,6 +63,10 @@ Route::get('/timebook', function () {
 	return view('book');
 });
 
+Route::get('/create', function () {
+	return view('bookings.create');
+});
+
 // Route::get('/dashtrial', function () {
 // 	return view('mitra.dash');
 // });

@@ -39,7 +39,7 @@ class BookingController extends Controller
     {
         $input = $request->all();
         Booking::create($input);
-        return redirect('booking/create')->with('flash_message','Booking Lapangan !');
+        return redirect('booking/create')->with('messagebok','Booking Terikirim !');
     }
 
     /**

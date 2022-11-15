@@ -12,6 +12,18 @@
     <div class="card-body">
         <form action="{{ route('booking.store') }}" method="post">
         @csrf
+
+        <div>
+            @if(session()->has('messagebok',))
+
+            <div class="alert alert-success" id="alert">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+
+            {{ session()->get('messagebok') }}
+            </div>
+
+            @endif
+          </div>
         
         <label for="">Nama Tim</label><br>
         <input type="text" name="namateam" id="namateam" class="form-control"><br>
