@@ -13,7 +13,19 @@ class Product extends Model
 
     protected $fillable = [
 
-        'nama', 'harga', 'subjek', 'category', 'alas', 'image',
+        'nama', 'harga', 'subjek', 'category_id', 'user_id', 'alas', 'image',
 
     ];
+
+    // protected $guarded = ['id'];
+
+    public function category()
+    {
+    	return $this->belongTo(Category::class);
+    }
+
+    public function user()
+    {
+        return $this->belongTo(User::class);
+    }
 }

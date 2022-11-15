@@ -23,12 +23,13 @@
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Harga</label>
                 <div class="col-sm-7">
-                  <input type="number" class="form-control" name="harga" placeholder="Harga" value="{{ old('nama', $product->harga) }}" autocomplete="off">
+                  <input type="number" class="form-control" name="harga" placeholder="Harga" value="{{ old('harga', $product->harga) }}" autocomplete="off">
                 </div>
               </div>
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Category</label>
                 <div class="col-sm-7">
+<<<<<<< HEAD
                   {{-- <input type="text" class="form-control" name="category" placeholder="Category" value="{{ old('nama', $product->category) }}" autocomplete="off"> --}}
                   <select type="select" class="form-control" name="category" placeholder="Category">
                     {{-- <option selected disabled value="{{ old('category') == 1 ? 'selected' : '' }}" >Open this select menu</option> --}}
@@ -36,6 +37,13 @@
                                 <option value="futsal" @if (old('category') == "futsal") {{ 'selected' }} @endif>futsal</option>
                                 <option value="basket" @if (old('category') == "basket") {{ 'selected' }} @endif>basket</option>
                   </select>
+=======
+                  <input type="text" class="form-control" name="category" placeholder="Category" value="{{ old('category', $product->category->name) }}" autocomplete="off">
+                  {{-- select class="form-control" name="category">
+                      <option value="futsal" @if(old('category') == 'futsal')selected@endif>futsal</option>
+                      <option value="basket" @if(old('category') == 'basket')selected@endif>basket</option>
+                  </select> --}}
+>>>>>>> dbbd756 (category id)
                 </div>
               </div>
               <div class="row">

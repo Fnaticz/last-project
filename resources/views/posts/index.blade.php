@@ -79,7 +79,7 @@
             </div>
           </div> 
           <div class="card-footer mr-auto">
-              {{ $products->links() }}
+              {{-- {{ $products->links() }} --}}
           </div>
         </div>
       </div>
