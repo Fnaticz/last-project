@@ -84,7 +84,7 @@
                             Alas: {{ $product->alas }}
                         </p>
                         <p>
-                            {{ $product->category }}
+                            
                         </p>
                         <a href="/details" class="primary-btn text-uppercase">View Details</a>
                     </div>
