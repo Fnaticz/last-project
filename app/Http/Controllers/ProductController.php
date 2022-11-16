@@ -46,7 +46,6 @@ class ProductController extends Controller
 
             'id',
 
-
             'nama' => 'required',
 
             'harga' => 'required',
@@ -95,8 +94,16 @@ class ProductController extends Controller
     public function edit(Product $product)
 
     {
+        // return view('posts.edit', [
+        //     // 'product' => $product,
+        //     'categories' => Category::all()
+        // ]);
 
-        return view('posts.edit', compact('product'));
+        $categories = Category::all();
+
+        return view('posts.edit', compact('product', 'categories'));
+
+        // return view('posts.edit', compact('product'));
     }
 
     public function update(Request $request, Product $product)
@@ -111,15 +118,18 @@ class ProductController extends Controller
 
             'harga' => 'required',
 
-            'category' => 'required',
+            'category_id' => 'required',
 
             'subjek' => 'required',
 
             'alas' => 'required',
 
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
+            // 'user_id' => auth()->user()->id,
         ]);
+
+        // $request['user_id'] = auth()->user()->id;
 
         $input = $request->all();
 
@@ -138,8 +148,8 @@ class ProductController extends Controller
             
             }
 
-        $product->update($input);
-            // dd($input);
+        // $product->update($input);
+            dd($input);
 
         return redirect('/post')->with('message','Data Updated Successfully');
 

@@ -90,7 +90,15 @@ Route::group(['middleware' => 'auth'], function() {
     Route::delete('/post/{product}', [ProductController::class, 'destroy'])->name('product.destroy');
     // Route::resource('post', DashController::class)->middleware('auth');
 
+Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 });
+
+// Route::group(['middleware' => ['auth:tamu']], function(){
+
+    Route::resource("/booking", BookingController::class); 
+    
+// });
+
 
 // Route::get('/mitlog', [MitlogController::class, 'index'])->name('mitlog')->middleware('guest');
 // Route::post('mitlog', [MitlogController::class, 'authenticate']);
@@ -112,7 +120,6 @@ Route::group(['middleware' => 'auth'], function() {
 
     // Route::resource('posts', PostController::class);
 
-Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 
 // Route::group(['middleware' => 'auth'], function() {
 //     Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
@@ -128,5 +135,4 @@ Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 //     Route::resource('roles', RoleController::class);
 // });
 
-Route::resource("/booking", BookingController::class); 
 

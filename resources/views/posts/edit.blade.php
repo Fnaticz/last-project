@@ -29,21 +29,11 @@
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Category</label>
                 <div class="col-sm-7">
-<<<<<<< HEAD
-                  {{-- <input type="text" class="form-control" name="category" placeholder="Category" value="{{ old('nama', $product->category) }}" autocomplete="off"> --}}
-                  <select type="select" class="form-control" name="category" placeholder="Category">
-                    {{-- <option selected disabled value="{{ old('category') == 1 ? 'selected' : '' }}" >Open this select menu</option> --}}
-                    {{-- <option value="">Select option</option> --}}
-                                <option value="futsal" @if (old('category') == "futsal") {{ 'selected' }} @endif>futsal</option>
-                                <option value="basket" @if (old('category') == "basket") {{ 'selected' }} @endif>basket</option>
+                  <select class="form-control" name="category_id">
+                  @foreach ($categories as $category)
+                      <option value='{{ $category->id }}'>{{ $category->name }}</option>
+                  @endforeach
                   </select>
-=======
-                  <input type="text" class="form-control" name="category" placeholder="Category" value="{{ old('category', $product->category->name) }}" autocomplete="off">
-                  {{-- select class="form-control" name="category">
-                      <option value="futsal" @if(old('category') == 'futsal')selected@endif>futsal</option>
-                      <option value="basket" @if(old('category') == 'basket')selected@endif>basket</option>
-                  </select> --}}
->>>>>>> dbbd756 (category id)
                 </div>
               </div>
               <div class="row">
