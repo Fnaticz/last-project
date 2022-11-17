@@ -28,4 +28,9 @@ class Product extends Model
     {
         return $this->belongTo(User::class);
     }
+
+    public function playtime()
+    {
+        return $this->belongTo(playtime::class);
+    }
 }
