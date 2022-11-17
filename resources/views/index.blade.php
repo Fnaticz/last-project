@@ -70,7 +70,7 @@
               </div>
             </div>
             <div class="row">
-            @foreach ($products as $product)
+            {{-- @foreach ($products as $product)
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product">
                         <div class="thumb">
@@ -89,7 +89,7 @@
                         <a href="/details" class="primary-btn text-uppercase">View Details</a>
                     </div>
                 </div>
-            @endforeach
+            @endforeach --}}
             </div>
         </div>
     </section>

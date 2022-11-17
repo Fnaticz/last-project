@@ -20,7 +20,9 @@ class ProductController extends Controller
 
         return view('posts.index', compact('products'))
 
+
             ->with('i', (request()->input('page', 1) - 1) * 10);
+            
     }
 
     /**
@@ -45,7 +47,6 @@ class ProductController extends Controller
         $request->validate([
 
             'id',
-
 
             'nama' => 'required',
 

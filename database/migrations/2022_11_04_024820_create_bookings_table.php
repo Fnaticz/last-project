@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string("waktumain");
             $table->date("tglmain");
             $table->date("endtgl");
+            // $table->string("image");
             $table->timestamps();
         });
     }

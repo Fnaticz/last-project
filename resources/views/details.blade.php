@@ -166,7 +166,47 @@ function build_calendar($month, $year) {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
 <style type="text/css">
-    
+
+/* .row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+} */
+
+    .card-booking {
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+}
+
+.card-booking .rate-title {
+    font-weight: bold;
+    font-size: 13px !important;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    background-clip: border-box;
+    /* border: 1px solid rgba(0, 0, 0, 0.125); */
+    border-radius: 0.25rem;
+}
     .btn-pr{
       padding: 8px 8px;
       font-size: 10px;
@@ -174,6 +214,18 @@ function build_calendar($month, $year) {
       /* gap: 2px; */
       
     }
+
+    .card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+
+    .dropdown-divider {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
 
     .btn-sml {
     padding: 5px 5px;
@@ -514,6 +566,62 @@ img {
 						</div>
 					</div>
 				</div>
+
+        {{-- <section>
+          <div class="col-lg-4 col-sm-4">
+            <div class="sticky-top" style="top: 96px;margin-bottom: 70px;">
+          <div class="card card-booking">
+            <div class="card-body">
+                <h3 class="text-red m-0">Pesan Sekarang !</h3>
+                <div class="dropdown-divider"></div>
+                  <div class="row">
+                    <div class="row">
+                      <div class="col-lg-6 col-sm-12">
+                        <h5 class="rate-title m-0">Daftar Tarif Weekday :</h5>
+                          <p class="badge bg-success my-2" style="font-size: 11px;">Rp. 175.000</p>
+                            <ul class="list-unstyled">
+                              <li class="list-item">- Session 10:00 - 12:00</li>
+                                <li class="list-item">- Session 12:00 - 14:00</li>
+                                  <li class="list-item">- Session 14:00 - 16:00</li>
+                                    </ul>
+                                  <p class="badge bg-success my-2" style="font-size: 11px;">Rp. 200.000</p>
+                                <ul class="list-unstyled">
+                              <li class="list-item">- Session 06:00 - 08:00</li>
+                             <li class="list-item">- Session 08:00 - 10:00</li>
+                            </ul>
+                         <p class="badge bg-success my-2" style="font-size: 11px;">Rp. 400.000</p>
+                       <ul class="list-unstyled">
+                      <li class="list-item">- Session 16:00 - 18:00</li>
+                    <li class="list-item">- Session 18:00 - 20:00</li>
+                  <li class="list-item">- Session 20:00 - 22:00</li>
+                 </ul>
+               </div>
+               <div class="col-lg-6 col-sm-12">
+                <h5 class="rate-title m-0">Daftar Tarif Weekend :</h5>
+                <p class="badge bg-success my-2" style="font-size: 11px;">Rp. 400.000</p>
+                <ul class="list-unstyled">
+                <li class="list-item">- Session 06:00 - 08:00</li>
+                <li class="list-item">- Session 08:00 - 10:00</li>
+                <li class="list-item">- Session 10:00 - 12:00</li>
+              <li class="list-item">- Session 12:00 - 14:00</li>
+              <li class="list-item">- Session 14:00 - 16:00</li>
+              <li class="list-item">- Session 16:00 - 18:00</li>
+              <li class="list-item">- Session 18:00 - 20:00</li>
+               <li class="list-item">- Session 20:00 - 22:00</li>
+                 </ul>
+                 </div>
+                  </div>
+                  </div>
+                <br><br>
+                 <button class="btn btn-danger w-100 text-uppercase" onclick="SubmitNonPackage()">Book</button>
+                  </div>
+        </div>
+                </div>
+            </div>
+        </section> --}}
+
+
+
         <br><br>
         <?php
         $dateComponents = getDate();

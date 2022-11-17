@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class BookingController extends Controller
 {
@@ -15,7 +15,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::latest()->get();
+        $bookings = Booking::latest()->paginate(10);
         return view('posts.bookings', compact('bookings'));
     }
 
