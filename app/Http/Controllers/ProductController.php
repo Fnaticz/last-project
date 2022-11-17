@@ -118,38 +118,32 @@ class ProductController extends Controller
 
             'harga' => 'required',
 
-            'category_id' => 'required',
+            'category_id',
 
             'subjek' => 'required',
 
             'alas' => 'required',
 
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
 
-            // 'user_id' => auth()->user()->id,
         ]);
 
-        // $request['user_id'] = auth()->user()->id;
+        $request['user_id'] = auth()->user()->id;
 
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-
             $destinationPath = 'image/';
-
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-
             $image->move($destinationPath, $profileImage);
-
             $input['image'] = "$profileImage";
         } else {
-
             unset($input['image']);
-            
+
             }
 
-        // $product->update($input);
-            dd($input);
+        $product->update($input);
+            // dd($input);
 
         return redirect('/post')->with('message','Data Updated Successfully');
 

@@ -31,7 +31,11 @@
                 <div class="col-sm-7">
                   <select class="form-control" name="category_id">
                   @foreach ($categories as $category)
+                    @if(old('category_id', $product->category_id) == $category->id)
+                      <option value='{{ $category->id }}' selected>{{ $category->name }}</option>
+                    @else
                       <option value='{{ $category->id }}'>{{ $category->name }}</option>
+                    @endif
                   @endforeach
                   </select>
                 </div>

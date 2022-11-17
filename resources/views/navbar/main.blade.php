@@ -62,7 +62,7 @@
 							<li><a href="{{ route('login') }}">Login</a></li>
 							<li><a href="{{ route('login') }}">My Account</a></li>
 						@endauth
-							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="{{ url('about') }}">About Us</a></li>
 					</ul>
 				</div>
 			</div>
