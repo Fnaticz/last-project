@@ -44,7 +44,7 @@
 		<div class="top_menu row m0">
 			<div class="container-fluid">
 				<div class="float-left">
-					<p>Call Us: +62 8</p>
+					<p>Call Us: <a href="https://chat.whatsapp.com/Kr2pwlY8aGX0bPR7VYCEtf"> Here </a></p>
 				</div>
 				<div class="float-right">
 					<ul class="right_side">
@@ -127,8 +127,8 @@
 			<div class="row footer-bottom d-flex justify-content-between align-items-center">
 				<p class="col-lg-12 footer-text text-center">
                     Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
-                    All rights reserved | This template is made with 
-                    <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://google.com" target="_blank">Nyee.</a>
+                    All rights reserved | This website is made with 
+                    <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://chat.whatsapp.com/Kr2pwlY8aGX0bPR7VYCEtf" target="_blank">Nyee.</a>
 				</p>
 			</div>
 		</div>

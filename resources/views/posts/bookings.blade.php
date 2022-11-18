@@ -35,7 +35,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $booking->namateam }}</td>
                             <td>{{ $booking->alamat }}</td>
-                            <td> {{$booking->notelepon }}</td>
+                            <td>{{ $booking->notelepon }}</td>
                             <td>{{ $booking->kegiatan }}</td>
                             <td>{{ $booking->waktumain }}</td>
                             <td>{{ $booking->tglmain }}</td>
