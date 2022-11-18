@@ -59,8 +59,7 @@ class ProductController extends Controller
             'alas' => 'required',
 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-
-            // 'user_id' => auth()->user()->id,
+            
         ]);
 
         $request['user_id'] = auth()->user()->id;
@@ -90,7 +89,7 @@ class ProductController extends Controller
     {   
         // dd($product);
 
-        return view('posts.show', compact('product'));
+        return view('posts.show', compact('product', 'playtimes'));
     }
 
     public function edit(Product $product)

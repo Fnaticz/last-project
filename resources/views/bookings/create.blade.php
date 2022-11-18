@@ -36,21 +36,23 @@
 
         <label for="">No. Telepon</label>
         <input type="tel" name="notelepon" id="notelepon" class="form-control" ><br>
-        <label for="">Kegiatan</label>
-        <input type="text" name="kegiatan" id="kegiatan" class="form-control"><br>
 
-        <label for="">Waktu Main</label>
-        <input type="text" name="waktumain" id="waktumain" class="form-control"><br>
-
-        <label for="">Tanggal mulai</label>
+        <label for="">Waktu Main</label><br>
+        {{-- @foreach ($playtimes as $playtime)
+          <tr style="display: block;">
+            <td><input type="radio" value="{{ $playtime->id }}" /> {{ $playtime->name }}</td>
+          <tr><br>
+        @endforeach --}}
+        <select class="form-control" name="playtime_id">
+        @foreach ($playtimes as $playtime)
+          <option value='{{ $playtime->id }}'>{{ $playtime->name }}</option>
+        @endforeach
+        </select>
+        <br>
+        <label for="">Tanggal</label>
         <input type="date" name="tglmain" id="tglmain" class="form-control"><br>
 
-        <label for="">Tanggal end</label>
-        <input type="date" name="endtgl" id="endtgl" class="form-control"><br>
-
-        <button type="submit" value="Save" class="btn btn-success"></button>
-        {{-- <a href="{{ route('posts.bookings') }}" class=""> --}}
-            {{-- </a><br> --}}
+        <button type="submit" value="Save" class="btn btn-success">Booking</button>
     </form>
 
     </div>

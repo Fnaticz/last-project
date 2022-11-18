@@ -10,11 +10,16 @@ class Booking extends Model
     use HasFactory;
     protected $table = 'bookings';
 
-    protected $primaryKey = 'id';
+    // protected $primaryKey = 'id';
 
     protected $fillable = [
         
-        'namateam', 'namapenanggungjawab', 'alamat', 'notelepon', 'kegiatan', 'waktumain', 'tglmain', 'endtgl'
+        'namateam', 'namapenanggungjawab', 'alamat', 'notelepon', 'tglmain', 'playtime_id'
     
     ];
+
+    public function playtime()
+    {
+        return $this->belongTo(playtime::class);
+    }
 }

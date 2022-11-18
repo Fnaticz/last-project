@@ -559,13 +559,19 @@ img {
 							<button class="add-to-cart btn btn-default" href="" type="button">add to cart</button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 							</form> -->
+<<<<<<< HEAD
 							<a href="/create">	
 							<button class="add-to-cart btn btn-default" href="/create" type="button">Pesan Sekarang</button>
+=======
+							<a href="/booking/create">	
+							<button class="add-to-cart btn btn-default" type="button">Pesan Sekarang</button>
+>>>>>>> b35ebd1a06f5efa0cc96764a88c6c5483bb9c55c
 							</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>
 				</div>
+<<<<<<< HEAD
 
         {{-- <section>
           <div class="col-lg-4 col-sm-4">
@@ -635,6 +641,9 @@ img {
     
         echo build_calendar($month, $year);
         ?>
+=======
+        
+>>>>>>> b35ebd1a06f5efa0cc96764a88c6c5483bb9c55c
 			</div>
 		</div>
     

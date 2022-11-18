@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Playtime;
 use App\Models\Booking;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -26,7 +26,9 @@ class BookingController extends Controller
      */
     public function create()
     {
-        return view('bookings.create');
+        return view('bookings.create', [
+            'playtimes' => Playtime::all()
+        ]);
     }
 
     /**
@@ -38,6 +40,8 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
+
+        // dd($input);
         Booking::create($input);
         return redirect('booking/create')->with('messagebok','Booking Terikirim !');
     }
@@ -48,10 +52,13 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Booking $booking)
     {
         // $booking = Booking::find($id);
-        // return view('bookings.show')->with('students', $student);
+
+        $playtimes = Playtime::all();
+
+        return view('bookings.show', compact('booking', 'playtimes'));
     }
 
     /**
