@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.btn {
+			margin-bottom: 150px;
+			margin-left: 600px;
+		}
+		.input-u {
+			margin-bottom: 100px;
+			margin-top: 200px;
+			margin-left: 450px;
+		}
+
+		.bn {
+			margin-top: 150px;
+			margin-left: 300px;
+		}
+
+
+		.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+	</style>
+
+	<title>Dashboard</title>
+</head>
+<body>
+
+	<input class="input-u" name="lapangan" placeholder="Nama Lapangan">
+	<input name="detail" placeholder="Delail">
+	<button class="button" style="vertical-align:middle" type="submit"><span>Post</span></button>
+
+
+	<br>
+	 <style>
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+
+<div class="dropdown">
+  <button class="dropbtn">Follow Github</button>
+  <div class="dropdown-content">
+    <a href="https://github.com/Zxyda">Zxyda</a>
+  </div>
+</div> 
+<a href="https://www.github.com/Zxyda"><button class="btn" onClick="handleSubmit()">Follow Github</button></a>
+       <div class="flex flex-col md:flex-col-reverse md:gap-2 justify-center pb-5 ">
+	<div class="p-8 p-0 md:px-80 md:p-0">
+          <div class="h-full  ">
+            <div class="wrap w-full px-2  max-h-screen overflow-y-scroll mb-9">
+              <a class="twitter-timeline" href="https://twitter.com/nemudesuu">Tweets by kominfosandibwi</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <!-- <a class="twitter-timeline" data-width="1000" data-height="700" data-theme="light" href="https://twitter.com/kominfosandibwi?ref_src=twsrc%5Etfw">Tweets by kominfosandibwi</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
+          </div>
+        </div>
+       </div>
+
+</body>
+</html>
+
+
+<!-- <button onClick="handleSubmit() disabled={nama function value/databasenya}"></button> -->
+
+
+<script type="text/javascript">
+const handleSubmit = () => {
+	console.log('https://www.google.com')
+	// <!-- yang atas ini/console lognya bisa di hapus -->
+
+
+	// <!-- setDbFunction(state => !state) <-- buat function baru buat manggil databasenya, terus panggil kesini
+}
+</script>

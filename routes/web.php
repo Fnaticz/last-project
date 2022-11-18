@@ -39,9 +39,9 @@ Route::get('DB_DATABASE', function () {
 */
 
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::get('/about', function () {
+    return view('welcome');
+});
 
 Route::resource('/', PageController::class);
 Route::get('/', [PageController::class, 'index']);
