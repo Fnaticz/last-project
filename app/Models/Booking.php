@@ -14,7 +14,12 @@ class Booking extends Model
 
     protected $fillable = [
         
-        'namateam', 'namapenanggungjawab', 'alamat', 'notelepon', 'kegiatan', 'waktumain', 'tglmain', 'endtgl'
+        'namateam', 'namapenanggungjawab', 'alamat', 'notelepon', 'tglmain'
     
     ];
+
+    public function playtime()
+    {
+        return $this->belongTo(playtime::class);
+    }
 }

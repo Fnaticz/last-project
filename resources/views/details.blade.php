@@ -460,7 +460,7 @@ img {
 
   </head>
 
-  <br><br>
+  <br><br><br><br><br><br>
 
   <body>
 	
@@ -507,26 +507,14 @@ img {
 							<button class="add-to-cart btn btn-default" href="" type="button">add to cart</button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 							</form> -->
-							<a href="/cart">	
-							<button class="add-to-cart btn btn-default" href="/" type="button">Pesan Sekarang</button>
+							<a href="/booking/create">	
+							<button class="add-to-cart btn btn-default" type="button">Pesan Sekarang</button>
 							</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>
 				</div>
-        <br><br>
-        <?php
-        $dateComponents = getDate();
-        if (isset($_GET['month']) && isset($_GET['year'])) {
-          $month = $_GET['month'];
-          $year = $_GET['year'];
-        }else{
-          $month = $dateComponents['mon'];
-          $year = $dateComponents['year'];
-        }
-    
-        echo build_calendar($month, $year);
-        ?>
+        
 			</div>
 		</div>
     

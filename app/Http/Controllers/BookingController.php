@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Playtime;
 use App\Models\Booking;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -26,7 +26,9 @@ class BookingController extends Controller
      */
     public function create()
     {
-        return view('bookings.create');
+        return view('bookings.create', [
+            'playtimes' => Playtime::all()
+        ]);
     }
 
     /**

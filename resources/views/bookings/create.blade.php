@@ -27,16 +27,17 @@
         <label for="">Kegiatan</label>
         <input type="text" name="kegiatan" id="kegiatan" class="form-control"><br>
 
-        <label for="">Waktu Main</label>
-        <input type="text" name="waktumain" id="waktumain" class="form-control"><br>
+        <label for="">Waktu Main</label><br>
+        @foreach ($playtimes as $playtime)
+          <tr style="display: block;">
+            <td><input type="radio" value="{{ $playtime->id }}" /> {{ $playtime->name }}</td>
+          <tr><br>
+        @endforeach
 
-        <label for="">Tanggal mulai</label>
+        <label for="">Tanggal</label>
         <input type="date" name="tglmain" id="tglmain" class="form-control"><br>
 
-        <label for="">Tanggal end</label>
-        <input type="date" name="endtgl" id="endtgl" class="form-control"><br>
-
-        <button type="submit" value="Save" class="btn btn-success"></button>
+        <button type="submit" value="Save" class="btn btn-success">Booking</button>
         {{-- <a href="{{ route('posts.bookings') }}" class=""> --}}
             {{-- </a><br> --}}
     </form>

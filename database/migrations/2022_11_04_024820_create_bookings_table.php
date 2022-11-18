@@ -15,14 +15,12 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('playtime_id');
             $table->string("namateam");
             $table->string("namapenanggungjawab");
             $table->string("alamat");
             $table->char("notelepon");
-            $table->string("kegiatan");
-            $table->string("waktumain");
             $table->date("tglmain");
-            $table->date("endtgl");
             $table->timestamps();
         });
     }
