@@ -10,11 +10,11 @@ class Booking extends Model
     use HasFactory;
     protected $table = 'bookings';
 
-    protected $primaryKey = 'id';
+    // protected $primaryKey = 'id';
 
     protected $fillable = [
         
-        'namateam', 'namapenanggungjawab', 'alamat', 'notelepon', 'tglmain'
+        'namateam', 'namapenanggungjawab', 'alamat', 'notelepon', 'tglmain', 'playtime_id'
     
     ];
 

@@ -40,6 +40,8 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
+
+        // dd($input);
         Booking::create($input);
         return redirect('booking/create')->with('flash_message','Booking Lapangan !');
     }
