@@ -52,10 +52,13 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Booking $booking)
     {
         // $booking = Booking::find($id);
-        // return view('bookings.show')->with('students', $student);
+
+        $playtimes = Playtime::all();
+
+        return view('bookings.show', compact('booking', 'playtimes'));
     }
 
     /**

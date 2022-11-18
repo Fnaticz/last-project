@@ -35,7 +35,7 @@
                             
                             {{-- <td class="text-primary">{{ $product->created_at->toFormattedDateString() }}</td> --}}
                             <td class="td-actions text-right">
-                                <a href=" " class="btn btn-visibility"> <i
+                                <a href="{{ route('booking.show', $booking->id) }}" class="btn btn-visibility"> <i
                                     class="material-icons">visibility</i> </a>
                     @endforeach
                     </tbody>
