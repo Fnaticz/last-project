@@ -23,7 +23,7 @@
                       <th> Kegiatan </th>
                       <th> Waktu Main </th>
                       <th> Tanggal Main</th>
-                      <th> Tanggal Selesai</th>
+                      {{-- <th> Tanggal Selesai</th> --}}
                       <th> Date</th>
                       <th class="text-right"> Actions </th>
                     </thead>
@@ -39,7 +39,7 @@
                             <td>{{ $booking->kegiatan }}</td>
                             <td>{{ $booking->waktumain }}</td>
                             <td>{{ $booking->tglmain }}</td>
-                            <td>{{ $booking->endtgl }}</td>
+                            {{-- <td>{{ $booking->endtgl }}</td> --}}
                             <td>{{ $booking->created_at->toFormattedDateString() }}</td>
                             
                             {{-- <td class="text-primary">{{ $product->created_at->toFormattedDateString() }}</td> --}}

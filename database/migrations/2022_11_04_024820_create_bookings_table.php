@@ -21,11 +21,9 @@ return new class extends Migration
             $table->string("alamat");
             $table->char("notelepon");
             $table->date("tglmain");
-<<<<<<< HEAD
-            $table->date("endtgl");
+            // $table->date("endtgl");
             // $table->string("image");
-=======
->>>>>>> b35ebd1a06f5efa0cc96764a88c6c5483bb9c55c
+
             $table->timestamps();
         });
     }

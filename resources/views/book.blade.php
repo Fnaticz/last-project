@@ -19,6 +19,35 @@ if(isset($_POST['submit'])){
     $mysqli->close();
 }
 
+$duration = 10;
+$cleanup = 0;
+$start = "09:00";
+$end = "15:00";
+
+
+function timeslots($duration, $cleanup, $start, $end){
+  $start = new DateTime($start);
+  $end = new DateTime($end);
+  $interval = new DateInterval("PT".$duration."M");
+  $cleanupInterval = new DateInterval("PT".$cleanup."M");
+  $slots = array();
+
+  for ($intStart= $start; $intStart<$end; $intStart->add($interval)->add($cleanupInterval)) { 
+    $endPeriod = clone $intStart;
+    $endPeriod->add($interval);
+    if($endPeriod>$end){
+      break;
+    }
+
+    $slots = $intStart->format("H:iA")."-". $endPeriod->format("H:iA");
+
+  }
+
+  return $slots;
+
+}
+
+
 ?>
 @section('content')
 <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
@@ -35,7 +64,7 @@ if(isset($_POST['submit'])){
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
-
+<br><br><br><br><br><br>
 <body>
     <div class="container">
         <h1 class="text-center">Book for Date:
@@ -52,20 +81,16 @@ if(isset($_POST['submit'])){
 
 
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-               <?php echo isset($msg)?$msg:''; ?>
-                <form action="" method="post" autocomplete="off">
-                    <div class="form-group">
-                        <label for="">Name</label>
-                        <input type="text" class="form-control" name="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="email" class="form-control" name="email">
-                    </div>
-                    <button class="btn btn-primary" type="submit" name="submit">Submit</button>
-                </form>
-            </div>
+           <?php $timeslots = timeslots($duration, $cleanup, $start, $end);
+                foreach($timeslots as $ts){
+            ?>
+           
+           <div class="col-md-2">
+               <button class="btn btn-success"><?php echo $ts;?></button>
+           </div>
+           
+           <?php } ?>
+           
         </div>
     </div>
 
