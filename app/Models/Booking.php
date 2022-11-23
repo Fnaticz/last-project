@@ -20,6 +20,6 @@ class Booking extends Model
 
     public function playtime()
     {
-        return $this->belongTo(playtime::class, "playtime_id");
+        return $this->belongsTo(playtime::class, "playtime_id");
     }
 }

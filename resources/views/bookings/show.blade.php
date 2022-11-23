@@ -19,22 +19,23 @@
               </div>
 
               <div class="row">
-                <label for="title" class="col-sm-2 col-form-label">Jam main</label>
-                <div class="col-sm-7">
-                  <label class="col-sm-7 col-form-label"><strong>{{ $booking->playtime_id ?? 'None' }}</strong></label>
-                </div>
-              </div>
-
-              <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Penanggung Jawab</label>
                 <div class="col-sm-7">
                   <label class="col-sm-7 col-form-label"><strong>{{ $booking->namapenanggungjawab }}</strong></label>
                 </div>
               </div>
+              
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">No.Telepon</label>
                 <div class="col-sm-7">
                   <label class="col-sm-7 col-form-label"><strong>{{ $booking->notelepon }}</strong></label>
+                </div>
+              </div>
+
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Jam main</label>
+                <div class="col-sm-7">
+                  <label class="col-sm-7 col-form-label"><strong>{{ $booking->playtime->name ?? 'None' }}</strong></label>
                 </div>
               </div>
 

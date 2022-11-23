@@ -41,9 +41,15 @@ class BookingController extends Controller
     {
         $input = $request->all();
 
+<<<<<<< HEAD
         // dd($input);
         Booking::create($input);
         return redirect('booking/create')->with('messagebok','Booking Terikirim !');
+=======
+        dd($input);
+        // Booking::create($input);
+        return redirect('booking/create')->with('flash_message','Booking Lapangan !');
+>>>>>>> 037d76d (booking show fix)
     }
 
     /**
