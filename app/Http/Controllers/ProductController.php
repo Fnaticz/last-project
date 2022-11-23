@@ -89,7 +89,7 @@ class ProductController extends Controller
     {   
         // dd($product);
 
-        return view('posts.show', compact('product', 'playtimes'));
+        return view('posts.show', compact('product'));
     }
 
     public function edit(Product $product)

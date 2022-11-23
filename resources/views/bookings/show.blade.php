@@ -21,7 +21,7 @@
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Jam main</label>
                 <div class="col-sm-7">
-                  <label class="col-sm-7 col-form-label"><strong>{{ $booking->playtimes->name ?? 'None' }}</strong></label>
+                  <label class="col-sm-7 col-form-label"><strong>{{ $booking->playtime_id ?? 'None' }}</strong></label>
                 </div>
               </div>
 
@@ -47,7 +47,7 @@
               
             </div>
             <div class="card-footer ml-auto mr-auto">
-              <button class="btn btn-success">ACCEPT</button>
+              <button type="submit" class="btn btn-success">ACCEPT</button>
               <button type="submit" class="btn btn-danger">DECLINE</button>
             </div>
           </div>
