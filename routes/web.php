@@ -43,8 +43,9 @@ Route::get('/about', function () {
     return view('welcome');
 });
 
-Route::resource('/', PageController::class);
+// Route::resource('/', PageController::class);
 Route::get('/', [PageController::class, 'index']);
+Route::get('/details/{product}', [PageController::class, 'show'])->name('page.show');
 
 
 
@@ -52,9 +53,9 @@ Route::get('/coupon', function () {
     return view('coupon');
 });
 
-Route::get('/details', function () {
-    return view('details');
-});
+// Route::get('/details', function () {
+//     return view('details');
+// });
 
 Route::get('/cart', function () {
     return view('cart');

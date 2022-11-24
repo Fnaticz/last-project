@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->string('nama');
             $table->integer('harga');
-            $table->string('subjek');
+            $table->text('subjek');
             $table->string('alas');
             $table->string('image');
             $table->timestamps();

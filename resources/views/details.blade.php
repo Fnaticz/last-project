@@ -2,7 +2,7 @@
 
 
 
-<?php
+{{-- <?php
 function build_calendar($month, $year) {
     $mysqli = new mysqli('localhost', 'root', '', 'last_project');
     $stmt = $mysqli->prepare("select * from bookings where MONTH(tglmain) = ? AND YEAR(tglmain) = ?");
@@ -144,7 +144,7 @@ function build_calendar($month, $year) {
 
 
     
-?>
+?> --}}
 
 
 
@@ -525,23 +525,23 @@ img {
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane active" id="pic-1"><img src="/image/{{$product->image}}" /></div>
+						  <div class="tab-pane" id="pic-2"><img src="/image/{{$product->image}}" /></div>
+						  <div class="tab-pane" id="pic-3"><img src="/image/{{$product->image}}" /></div>
+						  <div class="tab-pane" id="pic-4"><img src="/image/{{$product->image}}" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="/image/{{$product->image}}" /></div>
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
-						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="/image/{{$product->image}}" /></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img src="/image/{{$product->image}}" /></a></li>
+						  <li><a data-target="#pic-3" data-toggle="tab"><img src="/image/{{$product->image}}" /></a></li>
+						  <li><a data-target="#pic-4" data-toggle="tab"><img src="/image/{{$product->image}}" /></a></li>
+						  <li><a data-target="#pic-5" data-toggle="tab"><img src="/image/{{$product->image}}" /></a></li>
 						</ul>
 						
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">Lapangan HAHAHA</h3>
+						<h3 class="product-title">{{ $product->nama }}</h3>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -552,8 +552,8 @@ img {
 							</div>
 							<span class="review-no">41 reviews</span>
 						</div>
-						<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<h4 class="price">Harga: <span>Rp. 150.000 /Jam</span></h4>
+						<p class="product-description">{{ $product->subjek }}</p>
+						<h4 class="price">Harga: <span>Rp. {{ $product->harga }} /Jam</span></h4>
 						<p class="vote"><strong>91%</strong> Menyukainya! <strong>(87 votes)</strong></p>
 						<div class="action">
 							<!-- <form action="/add-to-cart" method="post">
@@ -628,9 +628,7 @@ img {
         </section> --}}
 
 
-
-        <br><br>
-        <?php
+        {{-- <?php
         $dateComponents = getDate();
         if (isset($_GET['month']) && isset($_GET['year'])) {
           $month = $_GET['month'];
@@ -641,7 +639,7 @@ img {
         }
     
         echo build_calendar($month, $year);
-        ?>
+        ?> --}}
 
 			</div>
 		</div>

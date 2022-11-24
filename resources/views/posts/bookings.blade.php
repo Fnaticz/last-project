@@ -17,11 +17,6 @@
                     <thead class="text-primary">
                       <th> No</th>
                       <th> Nama Tim </th>
-                      {{-- <th> Nama Penanggung</th> --}}
-                      <th>  Alamat </th>
-                      <th> No. Telepon </th>
-                      <th> Kegiatan </th>
-                      <th> Waktu Main </th>
                       <th> Tanggal Main</th>
                       {{-- <th> Tanggal Selesai</th> --}}
                       <th> Date</th>
@@ -34,9 +29,6 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $booking->namateam }}</td>
-                            <td>{{ $booking->alamat }}</td>
-                            <td>{{ $booking->notelepon }}</td>
-                            <td>{{ $booking->kegiatan }}</td>
                             <td>{{ $booking->waktumain }}</td>
                             <td>{{ $booking->tglmain }}</td>
                             {{-- <td>{{ $booking->endtgl }}</td> --}}

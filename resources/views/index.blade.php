@@ -84,9 +84,9 @@
                             Alas: {{ $product->alas }}
                         </p>
                         <p>
-                            
+                            Lapangan: {{ $product->category->name ?? 'none' }}
                         </p>
-                        <a href="/details" class="primary-btn text-uppercase">View Details</a>
+                        <a href="{{ route('page.show', $product->id) }}" class="primary-btn text-uppercase">View Details</a>
                     </div>
                 </div>
             @endforeach
