@@ -19,6 +19,7 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\PageController;
 
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\TournamentController;
 
 use App\Http\Controllers\DashController;
 
@@ -100,7 +101,8 @@ Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 
 // Route::group(['middleware' => ['auth:tamu']], function(){
 
-    Route::resource("/booking", BookingController::class); 
+    Route::resource("/booking", BookingController::class);
+    Route::resource("/tournament", TournamentController::class); 
     
 // });
 

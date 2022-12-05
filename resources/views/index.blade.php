@@ -44,7 +44,7 @@
                         <div class="content">
                             <h2 style="color:#fff;">Lapangan Futsal Terpopuler</h2>
                         </div>
-                        <a class="hot_deal_link" href="#"></a>
+                        <a class="hot_deal_link" href="/coupon"></a>
                     </div>
                 </div>
 
@@ -54,7 +54,7 @@
                         <div class="content">
                             <h2 style="color:#fff;">Lapangan Basket Terpopuler</h1>
                         </div>
-                        <a class="hot_deal_link" href="#"></a>
+                        <a class="hot_deal_link" href="/coupon"></a>
                     </div>
                 </div>
             </div>

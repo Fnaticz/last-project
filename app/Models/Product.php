@@ -30,8 +30,8 @@ class Product extends Model
         return $this->belongTo(User::class);
     }
 
-    public function playtime()
+    public function booking()
     {
-        return $this->belongTo(playtime::class);
+        return $this->hasMany(Booking::class);
     }
 }

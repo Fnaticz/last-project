@@ -39,15 +39,15 @@
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ url('post-create') }}">
-                <span class="sidebar-mini"> HLs</span>
-                <span class="sidebar-normal">{{ __('Hapus Lapangan') }} </span>
+              <a class="nav-link" href="{{ url('tournament') }}">
+                <span class="sidebar-mini"> TL</span>
+                <span class="sidebar-normal">{{ __('Tournament Live') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
-              <a class="nav-link" href="#">
-                <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('User Management') }} </span>
+              <a class="nav-link" href="{{ url('tournament/create') }}">
+                <span class="sidebar-mini"> BT </span>
+                <span class="sidebar-normal"> {{ __('Buat Tournament') }} </span>
               </a>
             </li>
           </ul>
