@@ -75,17 +75,17 @@
                      <h3>Pages</h3>
                      <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/map.html">Lapangan</a></li>
-                        <li><a href="pages/login.html">Login</a></li>
-                        <li><a href="pages/book.html">Book Lapangan</a></li>
+                        <li><a href="">Lapangan</a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Book Lapangan</a></li>
                      </ul>
                   </div>
                   <div class="bscol-md-2 item">
                      <h3>Know More</h3>
                      <ul>
-                        <li><a href="pages/membership.html">Membership</a></li>
-                        <li><a href="pages/team.html">Our Team</a></li>
-                        <li><a href="pages/news.html">News</a></li>
+                        <li><a href="">Membership</a></li>
+                        <li><a href="">Our Team</a></li>
+                        <li><a href="">News</a></li>
                      </ul>
                   </div>
                   <div class="bscol-md-2 item">
@@ -97,7 +97,7 @@
                   </div>
                   <div class="bscol-md-6 item text">
                      <h3>The Corner</h3>
-                     <p>Over the last 25 years, the Glory Hotels organisation has been known for dependably providing the best Indian hospitality experience with more than 50 hotels and resorts worldwide.</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ut.</p>
                   </div>
                   <div class="social_links">
                      <a href="https://www.instagram.com/">
