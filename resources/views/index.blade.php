@@ -19,144 +19,234 @@
 @endsection
 
 @section('content')
-    <section class="home_banner_area">
-        <div class="overlay"></div>
-        <div class="banner_inner d-flex align-items-center">
-            <div class="container">
-                <div class="banner_content row">
-                    <div class="offset-lg-2 col-lg-8">
-                        <strong><h3>COR<span>NER </span></strong>
-                         <br>Sewa Lapangan Online</h3>
-                        <p> Selamat datang di Website Booking Lapangan Online, Booking lapangan lebih mudah dari rumah saja</p>
-                        <a class="white_bg_btn" href="#">View Collection</a>
-                    </div>
-                </div>
+          <section class="banner">
+         <div class="content">
+            <div class="title">Corner</div>
+            <div class="top-subtitle subtitle">Best Memories Start Here</div>
+         </div>
+         <!-- <div class="search-box">
+            <div class="input-box">
+               <p>Location</p>
+               <input type="text" name="" id="" placeholder="input">
             </div>
-        </div>
-    </section>
-
-    <section class="hot_deals_area section_gap">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="hot_deal_box">
-                        <img class="img-fluid" src="{{ asset('img/football.png') }}" alt="">
-                        <div class="content">
-                            <h2 style="color:#fff;">Lapangan Futsal Terpopuler</h2>
-                        </div>
-                        <a class="hot_deal_link" href="/coupon"></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="hot_deal_box">
-                        <img class="img-fluid" src="{{ asset('img/basket.png') }}" alt="">
-                        <div class="content">
-                            <h2 style="color:#fff;">Lapangan Basket Terpopuler</h1>
-                        </div>
-                        <a class="hot_deal_link" href="/coupon"></a>
-                    </div>
-                </div>
+            <div class="input-box">
+               <p>Check-In Date</p>
+               <input type="date" name="" id="" placeholder="01/01/2021">
             </div>
-        </div>
-    </section>
-
-    <section class="product-area section-gap">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-              <div class="main_title">
-                <h2><span style="font-color:f1610e ">Lapangan</span> Terbaru</h2>
-                <p>Lapangan yang kami rekomendasikan untuk anda</p>
-              </div>
+            <div class="input-box">
+               <p>Guests</p>
+               <input type="number" name="" id="" placeholder="100">
             </div>
-            <div class="row">
-            @foreach ($products as $product)
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <div class="thumb">
-                            <img src="/image/{{ $product->image }}" width="180px" height="120px" alt="">
-                        </div>
-                        <h4>{{ $product->nama }}</h4>
-                        <p>
-                            Harga: Rp. {{ $product->harga }}/Jam
-                        </p>
-                        <p>
-                            Alas: {{ $product->alas }}
-                        </p>
-                        <p>
-                            Lapangan: {{ $product->category->name ?? 'none' }}
-                        </p>
-                        <a href="{{ route('page.show', $product->id) }}" class="primary-btn text-uppercase">View Details</a>
-                    </div>
-                </div>
-            @endforeach
+            <div class="input-box">
+               <br>
+               <span class="inline-flex rounded-md shadow-sm">
+               <a href="pages/book.html" style="padding: 12px 15px 12px 15px; font-size: 17px; font-family: Inter;" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+               Book now
+               </a>
+               </span>
             </div>
-        </div>
-    </section>
+         </div> -->
+      </section>
 
-
-    <section>
-        <div class="container">
-                <div class="main_title">
-                  <h2>Latest <span style="font-color:f1610e "> Match</span></h2>
-                  <p>Skor Tournament Futsal Hari ini</p>
-                </div>
-            <div class="match">
-                <div class="match-header">
-                    <div class="match-status">Live</div>
-                    <div class="match-tournament"><img src="img/futsal/logo3.png" />School Premier League</div>
-                    <div class="match-actions">
-                        <button class="btn-icon"><i class="fa fa-star-o"></i></button>
-                        <button class="btn-icon"><i class="fa fa-bell-o"></i></button>
-                    </div>
-                </div>
-                <div class="match-content">
-                    <div class="column">
-                        <div class="team team--home">
-                            <div class="team-logo">
-                                
-                                <img src="img/futsal/logo1.png" />
-                            </div>
-                            <h2 class="team-name">Esemkasa</h2>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="match-details">
-                            <div class="match-date">
-                                3 May at <strong>17:30</strong>
-                            </div>
-                            <div class="match-score">
-                                <span class="match-score-number match-score-number--leading">3</span>
-                                <span class="match-score-divider">:</span>
-                                <span class="match-score-number">1</span>
-                            </div>
-                            <div class="match-time-lapsed">
-                                72'
-                            </div>
-                            <div class="match-referee">
-                                Tournament: <strong>Futsal</strong>
-                            </div>
-                            <div class="match-bet-options">
-                                <button class="match-bet-option">1.48</button>
-                                <button class="match-bet-option">7.84</button>
-                                <button class="match-bet-option">3.24</button>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="team team--away">
-                            <div class="team-logo">
-                        
-                                <img src="img/futsal/logo2.png" />
-                            </div>
-                            <h2 class="team-name"> Sadama</h2>
-                        </div>
-                    </div>
-                </div>
+      <section class="text-gray-600 body-font" id="about" style="font-family: 'Inter'; margin-top: 12%;">
+         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center" style="margin: auto; width: 70%;">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+               <img class="object-cover object-center rounded" alt="hero" src="http://placekitten.com/400/252">
             </div>
-        </div>
-    </section>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+               <h1 class="sec-head">About Us
+               </h1>
+               <p class="mb-8 leading-relaxed" style="width: auto;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <div class="flex justify-center">
+                  <span class="inline-flex rounded-md shadow-sm">
+                  <a href="/about" class="button button__header focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Know More</a>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Hotels Section -->
+      <section class="hotels" id="hotels">
+         <h1 class="sec-head" id="hotels-head">Our Hotels</h1>
+      </section>
+      <div class="wrapper">
+         <div class="carousel owl-carousel">
+            <div class="card card-1">
+            </div>
+            <div class="card card-2">
+            </div>
+            <div class="card card-3">
+            </div>
+            <div class="card card-4">
+            </div>
+            <div class="card card-5">
+            </div>
+            <div class="card card-6">
+            </div>
+            <div class="card card-7">
+            </div>
+            <div class="card card-8">
+            </div>
+         </div>
+      </div>
+
+      <!-- Vision Section -->
+      <div class='vision'>
+         <div class='row'>
+            <div class='column'>
+               <div class='vision-column'>
+                  <h1 class="sec-head">Our Vision</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <h1 class="sec-head" style="text-align: center; margin: 40px; margin-top: 100px;">Comment</h1>
+      <div class="wrapper-rev">
+         <div class="box">
+            <i class='bx bxs-quote-left quote' ></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco ut.</p>
+            <div class="content">
+               <div class="info">
+                  <div class="name">Rafiy Ahmad</div>
+                  <div class="stars">
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                  </div>
+               </div>
+               <div class="image">
+                  <img src="https://png.pngtree.com/png-vector/20190930/ourlarge/pngtree-hooded-computer-hacker-with-laptop-icon-png-image_1762179.jpg" alt="">
+               </div>
+            </div>
+         </div>
+         <div class="box">
+            <i class='bx bxs-quote-left quote' ></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ut.</p>
+            <div class="content">
+               <div class="info">
+                  <div class="name">Ahmad Dani</div>
+                  <div class="stars">
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bx-star'></i>
+                  </div>
+               </div>
+               <div class="image">
+                  <img src="https://png.pngtree.com/png-vector/20190930/ourlarge/pngtree-hooded-computer-hacker-with-laptop-icon-png-image_1762179.jpg" alt="">
+               </div>
+            </div>
+         </div>
+         <div class="box">
+            <i class='bx bxs-quote-left quote' ></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ut.</p>
+            <div class="content">
+               <div class="info">
+                  <div class="name">Zidan Putra</div>
+                  <div class="stars">
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star-half'></i>
+                  </div>
+               </div>
+               <div class="image">
+                  <img src="https://png.pngtree.com/png-vector/20190930/ourlarge/pngtree-hooded-computer-hacker-with-laptop-icon-png-image_1762179.jpg" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <section class=" text-gray-100 px-8 py-12" style="font-family: Inter;">
+         <div class="text-center w-full">
+         </div>
+         <div
+            class="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg">
+            <div class="flex flex-col justify-between">
+               <div>
+                  <h2 class="sec-head">Contact Us</h2>
+                  <img src="assets/img/contact.svg" style="margin-top: 50px; padding-right: 50px;" alt="">
+               </div>
+               
+            </div>
+            <div class="">
+               <div>
+                  <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
+                  <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                     type="text" placeholder="">
+               </div>
+               <div class="mt-8">
+                  <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+                  <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                     type="text">
+               </div>
+               <div class="mt-8">
+                  <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
+                  <textarea
+                     class="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+               </div>
+               <div class="mt-8">
+                  <button
+                     class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                  Send Message
+                  </button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Scroll Up Button -->
+      <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+      </a>
+
+      <!-- Owl Carousel JS -->
+      <script>
+         $(".carousel").owlCarousel({
+           margin: 20,
+           loop: true,
+           autoplay: true,
+           autoplayTimeout: 2000,
+           autoplayHoverPause: true,
+           responsive: {
+             0:{
+               items:1,
+               nav: false
+             },
+             600:{
+               items:2,
+               nav: false
+             },
+             1000:{
+               items:3,
+               nav: false
+             }
+           }
+         });
+      </script>
+
+      <!-- JS -->
+      <script src="assets/js/main.js"></script>
 
 <!--     <div class="autoplay">
       <div>your content</div>

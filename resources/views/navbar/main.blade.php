@@ -1,138 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
-    
-    @yield('title')
-    
-	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-	<link rel="stylesheet" href="{{ asset('vendors/linericon/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('vendors/owl-carousel/owl.carousel.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('vendors/lightbox/simpleLightbox.css') }}">
-	<link rel="stylesheet" href="{{ asset('vendors/nice-select/css/nice-select.css') }}">
-	<link rel="stylesheet" href="{{ asset('vendors/animate-css/animate.css') }}">
-	<link rel="stylesheet" href="{{ asset('vendors/jquery-ui/jquery-ui.css') }}">
-	{{-- <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"> --}}
-	
-	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+      <!-- Icons -->
+      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      
+      
+      <!-- CSS -->
+      <link rel="stylesheet" href="assets/css/styles.css">
 
-    <link rel="stylesheet" href="{{ URL::asset('css/main.css')}}">
+      <!-- jQuery Owl Carousel -->
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
-	<style>
-		.menu-sidebar-area {
-			list-style-type:none; padding-left: 0; font-size: 15pt;
-		}
-		.menu-sidebar-area > li {
-			margin:0 0 10px 0;
-			list-style-position:inside;
-			border-bottom: 1px solid black;
-		}
-		.menu-sidebar-area > li > a {
-			color: black
-		}
-	</style>
-	@yield('css')
-</head>
+      <!-- Tailwind CDN -->
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-<body>
-	<header class="header_area">
-		<div class="top_menu row m0">
-			<div class="container-fluid">
-				<div class="float-left">
-					<p>Call Us: <a href="https://chat.whatsapp.com/Kr2pwlY8aGX0bPR7VYCEtf"> Here </a></p>
-				</div>
-				<div class="float-right">
-					<ul class="right_side">
-						@auth
-							<li class="nav-item submenu dropdown">
-						        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
-						        <ul class="dropdown-menu">
-						            <form action="/logout" method="post">
-				                      @csrf
-				                      <button type="submit" class="dropdown-item text-center">ログアウト</button>
-				                    </form>
-						        </ul>
-						    </li>
-						@else
-							<li><a href="{{ route('login') }}">Login</a></li>
-							<li><a href="{{ route('login') }}">My Account</a></li>
-						@endauth
-							<li><a href="{{ url('about') }}">About Us</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container-fluid">
-                    <div id="logo">
-              		<a href="/" style="color:black; font-size:20px;"><img src="img/ball.png" width="50px" height="50px" alt="" title="Corner">Corner</a>
-            		</div>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-					 aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<div class="row w-100">
-							<div class="col-lg-7 pr-0">
-								@include('navbar.menu')
-							</div>
-													<div class="col-lg-5">
-								<ul class="nav navbar-nav navbar-right right_nav pull-right">
-									<hr>
-									<li class="nav-item">
-										<a href="#" class="icons">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</a>
-									</li>
-									<hr>
-									<li class="nav-item">
-										<a href="/dashboard" class="icons">
-											<i class="fa fa-user" aria-hidden="true"></i>
-										</a>
-									</li>
-									<hr>
-									<li class="nav-item">
-										<a href="#" class="icons">
-											<i class="fa fa-heart-o" aria-hidden="true"></i>
-										</a>
-									</li>
-									<hr>
-									<li class="nav-item">
-										<a href="{{ url('cart') }}" class="icons">
-											<i class="lnr lnr lnr-cart"></i>
-										</a>
-									</li>
-									<hr>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.ico">
+      
+      <!-- Title -->
+      <title>Corner - Pusat Sewa Lapangan</title>
+   </head>
+   <body>
+
+      <!-- Navigation Bar -->
+      <header class="header" id="header" style="font-family: 'Inter'; background: rgb(255, 255, 255);">
+         <nav class="nav container">
+            <b><a href="/" class="nav__logo" style="font-family: 'Product Sans Bold'; letter-spacing: -.5px; font-size: 1.5rem;"> Corner </a></b>
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="/" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Home</a> 
+                  </li>
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">About</a> 
+                  </li>
+                  <li class="nav__item">
+                     <a href="pages/map.html" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Lapangan</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#comment" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">COVID</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="pages/news.html" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">News</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+               <i class='bx bx-grid-alt'></i>
+            </div>
+            <a href="/login" class="button button__header focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Sign in</a>
+         </nav>
+      </header>
 
     @yield('content')
 
-	<footer class="footer-area section_gap">
-		<div class="container">
-			<div class="row footer-bottom d-flex justify-content-between align-items-center">
-				<p class="col-lg-12 footer-text text-center">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
-                    All rights reserved | This website is made with 
-                    <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://chat.whatsapp.com/Kr2pwlY8aGX0bPR7VYCEtf" target="_blank">Nyee.</a>
-				</p>
-			</div>
-		</div>
-	</footer>
+	<div class="footer-dark" style="font-family: Inter;">
+         <footer>
+            <div class="bscontainer">
+               <div class="bsrow">
+                  <div class="bscol-md-2 item">
+                     <h3>Pages</h3>
+                     <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/map.html">Lapangan</a></li>
+                        <li><a href="pages/login.html">Login</a></li>
+                        <li><a href="pages/book.html">Book Lapangan</a></li>
+                     </ul>
+                  </div>
+                  <div class="bscol-md-2 item">
+                     <h3>Know More</h3>
+                     <ul>
+                        <li><a href="pages/membership.html">Membership</a></li>
+                        <li><a href="pages/team.html">Our Team</a></li>
+                        <li><a href="pages/news.html">News</a></li>
+                     </ul>
+                  </div>
+                  <div class="bscol-md-2 item">
+                     <h3>Other Details</h3>
+                     <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                     </ul>
+                  </div>
+                  <div class="bscol-md-6 item text">
+                     <h3>The Corner</h3>
+                     <p>Over the last 25 years, the Glory Hotels organisation has been known for dependably providing the best Indian hospitality experience with more than 50 hotels and resorts worldwide.</p>
+                  </div>
+                  <div class="social_links">
+                     <a href="https://www.instagram.com/">
+                     <span class="fa-stack fa-lg ig combo">
+                        <i class="fa fa-circle fa-stack-2x circle"></i>
+                        <i class="fa fa-instagram fa-stack-1x fa-inverse icon"></i>
+                     </span>
+                     </a>
+                     <a href="https://www.facebook.com/">
+                     <span class="fa-stack fa-lg fb combo">
+                        <i class="fa fa-circle fa-stack-2x circle"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse icon"></i>
+                     </span>
+                     </a>
+                     <a href="https://www.youtube.com/">
+                     <span class="fa-stack fa-lg yt combo">
+                        <i class="fa fa-circle fa-stack-2x circle"></i>
+                        <i class="fa fa-youtube-play fa-stack-1x fa-inverse icon"></i>
+                     </span>
+                     </a>
+                     <a href="https://www.twitter.com/">
+                     <span class="fa-stack fa-lg tw combo">
+                        <i class="fa fa-circle fa-stack-2x circle"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse icon"></i>
+                     </span>
+                     </a>
+                     <a href="https://codepen.io">
+                     <span class="fa-stack fa-lg gt combo">
+                        <i class="fa fa-circle fa-stack-2x circle"></i>
+                        <i class="fa fa-codepen fa-stack-1x fa-inverse icon"></i>
+                     </span>
+                     </a>
+                     <a href="https://www.linkedin.com/">
+                     <span class="fa-stack fa-lg tw combo">
+                        <i class="fa fa-circle fa-stack-2x circle"></i>
+                        <i class="fa fa-linkedin fa-stack-1x fa-inverse icon"></i>
+                     </span>
+                     </a>
+                  </div>
+               </div>
+               <p class="copyright">The Corner © 2023</p>
+            </div>
+         </footer>
+      </div>
 
 	<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
 	<script src="{{ asset('js/popper.js') }}"></script>
