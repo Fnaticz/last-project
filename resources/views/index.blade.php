@@ -73,7 +73,7 @@
 
       <!-- Hotels Section -->
       <section class="hotels" id="hotels">
-         <h1 class="sec-head" id="hotels-head">Our Hotels</h1>
+         <h1 class="sec-head" id="hotels-head">Our Field</h1>
       </section>
       <div class="wrapper">
          <div class="carousel owl-carousel">
