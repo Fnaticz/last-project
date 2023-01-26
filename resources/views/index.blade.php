@@ -21,10 +21,10 @@
 @section('content')
           <section class="banner">
          <div class="content">
-            <div class="title">Corner</div>
+            <div class="title">Sora Homestay</div>
             <div class="top-subtitle subtitle">Best Memories Start Here</div>
          </div>
-         <!-- <div class="search-box">
+         <div class="search-box">
             <div class="input-box">
                <p>Location</p>
                <input type="text" name="" id="" placeholder="input">
@@ -45,7 +45,7 @@
                </a>
                </span>
             </div>
-         </div> -->
+         </div>
       </section>
 
       <section class="text-gray-600 body-font" id="about" style="font-family: 'Inter'; margin-top: 12%;">

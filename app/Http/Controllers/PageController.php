@@ -19,7 +19,7 @@ class PageController extends Controller
         $products = Product::paginate(5);
         $categories = Category::all();
 
-        return view('index', compact('products', 'categories'));
+        return view('homestay', compact('products', 'categories'));
     }
 
     /**

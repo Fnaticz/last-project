@@ -45,7 +45,7 @@ Route::get('/about', function () {
 });
 
 // Route::resource('/', PageController::class);
-Route::get('/', [PageController::class, 'index']);
+Route::get('/homestay', [PageController::class, 'index']);
 Route::get('/details/{product}', [PageController::class, 'show'])->name('page.show');
 
 
@@ -58,8 +58,8 @@ Route::get('/coupon', function () {
 //     return view('details');
 // });
 
-Route::get('/cart', function () {
-    return view('cart');
+Route::get('/', function () {
+    return view('index');
 });
 
 Route::get('/dash', function () {

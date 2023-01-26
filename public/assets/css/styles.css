@@ -838,19 +838,19 @@ body.dark-theme {
 }
 
 .carousel .card-1 {
-	background-image: url(../img/h1.jpeg);
+	background-image: url(../img/h1.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
 .carousel .card-2 {
-	background-image: url(../img/h2.jpeg);
+	background-image: url(../img/h2.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
 .carousel .card-3 {
-	background-image: url(../img/h3.jpeg);
+	background-image: url(../img/h3.jpg);
 	background-size: cover;
 	background-position: center;
 }

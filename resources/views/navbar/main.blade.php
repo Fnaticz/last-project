@@ -11,7 +11,9 @@
       
       
       <!-- CSS -->
-      <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="../assets/css/book.css">
+      <<link rel="stylesheet" href="../assets/css/news.css">
+      <link rel="stylesheet" href="../assets/css/styles.css">
 
       <!-- jQuery Owl Carousel -->
       <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -48,13 +50,16 @@
                      <a href="#about" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">About</a> 
                   </li>
                   <li class="nav__item">
-                     <a href="pages/map.html" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Lapangan</a>
+                     <a href="{{ url('homestay') }}" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Homestay</a>
                   </li>
                   <li class="nav__item">
-                     <a href="#comment" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">COVID</a>
+                     <a href="{{ url('member') }}" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Membership</a>
                   </li>
                   <li class="nav__item">
-                     <a href="pages/news.html" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">News</a>
+                     <a href="{{ url('map') }}" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Map</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="{{ url('dining') }}" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Dining</a>
                   </li>
                </ul>
             </div>
