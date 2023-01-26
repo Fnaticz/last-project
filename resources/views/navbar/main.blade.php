@@ -13,7 +13,9 @@
       <!-- CSS -->
       <link rel="stylesheet" href="../assets/css/book.css">
       <<link rel="stylesheet" href="../assets/css/news.css">
+      <link rel="stylesheet" href="../assets/css/dining.css">
       <link rel="stylesheet" href="../assets/css/styles.css">
+      <link rel="stylesheet" href="../assets/css/membership.css">
 
       <!-- jQuery Owl Carousel -->
       <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -33,14 +35,14 @@
       <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.ico">
       
       <!-- Title -->
-      <title>Corner - Pusat Sewa Lapangan</title>
+      <title>The Sora Homestay</title>
    </head>
    <body>
 
       <!-- Navigation Bar -->
       <header class="header" id="header" style="font-family: 'Inter'; background: rgb(255, 255, 255);">
          <nav class="nav container">
-            <b><a href="/" class="nav__logo" style="font-family: 'Product Sans Bold'; letter-spacing: -.5px; font-size: 1.5rem;"> Corner </a></b>
+            <b><a href="/" class="nav__logo" style="font-family: 'Product Sans Bold'; letter-spacing: -.5px; font-size: 1.5rem;"> The Sora </a></b>
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
                   <li class="nav__item">
@@ -53,7 +55,7 @@
                      <a href="{{ url('homestay') }}" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Homestay</a>
                   </li>
                   <li class="nav__item">
-                     <a href="{{ url('member') }}" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Membership</a>
+                     <a href="{{ url('membership') }}" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Membership</a>
                   </li>
                   <li class="nav__item">
                      <a href="{{ url('map') }}" class="nav__link font-medium leading-6 text-black-600 transition duration-150 ease-out hover:text-gray-600">Map</a>
@@ -80,9 +82,9 @@
                      <h3>Pages</h3>
                      <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="">Lapangan</a></li>
+                        <li><a href="">Homestay</a></li>
                         <li><a href="">Login</a></li>
-                        <li><a href="">Book Lapangan</a></li>
+                        <li><a href="">Book hotel</a></li>
                      </ul>
                   </div>
                   <div class="bscol-md-2 item">
@@ -101,7 +103,7 @@
                      </ul>
                   </div>
                   <div class="bscol-md-6 item text">
-                     <h3>The Corner</h3>
+                     <h3>The Sora</h3>
                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ut.</p>
                   </div>
                   <div class="social_links">

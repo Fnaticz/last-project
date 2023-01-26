@@ -50,13 +50,13 @@ Route::get('/details/{product}', [PageController::class, 'show'])->name('page.sh
 
 
 
-Route::get('/coupon', function () {
-    return view('coupon');
+Route::get('/dining', function () {
+    return view('dining');
 });
 
-// Route::get('/details', function () {
-//     return view('details');
-// });
+Route::get('/membership', function () {
+    return view('membership');
+});
 
 Route::get('/', function () {
     return view('index');
