@@ -49,7 +49,7 @@
       </section>
 
       <section class="text-gray-600 body-font" id="about" style="font-family: 'Inter'; margin-top: 12%;">
-         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center" style="margin: auto; width: 70%;">
+         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center" style="">
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                <img class="object-cover object-center rounded" alt="hero" src="http://placekitten.com/400/252">
             </div>

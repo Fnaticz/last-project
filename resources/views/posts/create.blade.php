@@ -38,18 +38,7 @@
                 </div>
               </div>
 
-              <div class="row">
-                <label for="title" class="col-sm-2 col-form-label">Category</label>
-                <div class="col-sm-7">
-                  {{-- <input type="text" class="form-control" name="category" placeholder="Category"> --}}
-                  {{-- {!! Form::Label('category_id', 'Category:') !!} --}}
-                  <select class="form-control" name="category_id">
-                  @foreach ($categories as $category)
-                      <option value='{{ $category->id }}'>{{ $category->name }}</option>
-                  @endforeach
-                  </select>
-                </div>
-              </div>
+              
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Subjek</label>
                 <div class="col-sm-7">

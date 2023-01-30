@@ -145,7 +145,7 @@
                      </a>
                   </div>
                </div>
-               <p class="copyright">The Corner © 2023</p>
+               <p class="copyright">The Sora © 2023</p>
             </div>
          </footer>
       </div>

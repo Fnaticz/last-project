@@ -40,89 +40,94 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::create([
-            'name' => 'Bola',
-            'slug' => 'bola'
+            'name' => 'Pending',
+            'slug' => 'Pending'
         ]);
 
         Category::create([
-            'name' => 'Basket',
-            'slug' => 'basket'
+            'name' => 'Approved',
+            'slug' => 'Approved'
         ]);
 
-        Playtime::create([
-            'name' => '08.00-09.00',
-            'slug' => '08.00-09.00'
+        Category::create([
+            'name' => 'Decline',
+            'slug' => 'Decline'
         ]);
 
-        Playtime::create([
-            'name' => '09.00-10.00',
-            'slug' => '09.00-10.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '08.00-09.00',
+        //     'slug' => '08.00-09.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '10.00-11.00',
-            'slug' => '10.00-11.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '09.00-10.00',
+        //     'slug' => '09.00-10.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '11.00-12.00',
-            'slug' => '11.00-12.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '10.00-11.00',
+        //     'slug' => '10.00-11.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '12.00-13.00',
-            'slug' => '12.00-13.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '11.00-12.00',
+        //     'slug' => '11.00-12.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '13.00-14.00',
-            'slug' => '13.00-14.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '12.00-13.00',
+        //     'slug' => '12.00-13.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '14.00-15.00',
-            'slug' => '14.00-15.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '13.00-14.00',
+        //     'slug' => '13.00-14.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '15.00-16.00',
-            'slug' => '15.00-16.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '14.00-15.00',
+        //     'slug' => '14.00-15.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '16.00-17.00',
-            'slug' => '16.00-17.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '15.00-16.00',
+        //     'slug' => '15.00-16.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '17.00-18.00',
-            'slug' => '17.00-18.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '16.00-17.00',
+        //     'slug' => '16.00-17.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '18.00-19.00',
-            'slug' => '18.00-19.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '17.00-18.00',
+        //     'slug' => '17.00-18.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '19.00-20.00',
-            'slug' => '19.00-20.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '18.00-19.00',
+        //     'slug' => '18.00-19.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '20.00-21.00',
-            'slug' => '20.00-21.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '19.00-20.00',
+        //     'slug' => '19.00-20.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '21.00-22.00',
-            'slug' => '21.00-22.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '20.00-21.00',
+        //     'slug' => '20.00-21.00'
+        // ]);
 
-        Playtime::create([
-            'name' => '22.00-23.00',
-            'slug' => '22.00-23.00'
-        ]);
+        // Playtime::create([
+        //     'name' => '21.00-22.00',
+        //     'slug' => '21.00-22.00'
+        // ]);
+
+        // Playtime::create([
+        //     'name' => '22.00-23.00',
+        //     'slug' => '22.00-23.00'
+        // ]);
 
     }
 }
