@@ -202,7 +202,7 @@ function build_calendar($month, $year) {
               </svg>
             </button>
             <img
-              src="../images/h1.jpg"
+              src="../image/{{ $product->image}}"
               alt="sneaker"
               class="block sm:rounded-xl xl:w-[70%] xl:rounded-xl m-auto pointer-events-none transition duration-300 lg:w-3/4 lg:pointer-events-auto lg:cursor-pointer lg:hover:shadow-xl"
               id="hero"
@@ -237,7 +237,7 @@ function build_calendar($month, $year) {
               class="w-1/5 cursor-pointer rounded-xl sm:w-28 md:w-32 lg:w-[72px] xl:w-[78px] ring-active"
             >
               <img
-                src="../images/h1.jpg"
+                src="../image/{{ $product->image}}"
                 alt="thumbnail"
                 class="rounded-xl hover:opacity-50 transition active"
                 id="thumb-1"
