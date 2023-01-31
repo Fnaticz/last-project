@@ -26,13 +26,26 @@
                   <input type="number" class="form-control" name="harga" placeholder="Harga" value="{{ old('harga', $product->harga) }}" autocomplete="off">
                 </div>
               </div>
-            
+              <div class="row">
+                <label for="title" class="col-sm-2 col-form-label">Category</label>
+                <div class="col-sm-7">
+                  <select class="form-control" name="category_id">
+                  @foreach ($categories as $category)
+                    @if(old('category_id', $product->category_id) == $category->id)
+                      <option value='{{ $category->id }}' selected>{{ $category->name }}</option>
+                    @else
+                      <option value='{{ $category->id }}'>{{ $category->name }}</option>
+                    @endif
+                  @endforeach
+                  </select>
+                </div>
+              </div>
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Subjek</label>
                 <div class="col-sm-7">
                   <input type="text" class="form-control" name="subjek" placeholder="Subjek" value="{{ old('subjek', $product->subjek) }}" autocomplete="off">
                 </div>
-              </div> 
+              </div>
               <div class="row">
                 <label for="title" class="col-sm-2 col-form-label">Alas</label>
                 <div class="col-sm-7">
