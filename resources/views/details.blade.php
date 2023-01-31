@@ -178,8 +178,7 @@ function build_calendar($month, $year) {
         <section
           class="h-fit flex-col gap-8 mt-16 sm:flex sm:flex-row sm:gap-4 sm:h-full sm:mt-24 sm:mx-2 md:gap-8 md:mx-4 lg:flex-col lg:mx-0 lg:mt-36"
         >
-
-        <picture
+          <picture
             class="relative flex items-center bg-orange sm:bg-transparent"
           >
             <button
@@ -203,7 +202,7 @@ function build_calendar($month, $year) {
               </svg>
             </button>
             <img
-              src="./images/image-product-1.jpg"
+              src="../images/h1.jpg"
               alt="sneaker"
               class="block sm:rounded-xl xl:w-[70%] xl:rounded-xl m-auto pointer-events-none transition duration-300 lg:w-3/4 lg:pointer-events-auto lg:cursor-pointer lg:hover:shadow-xl"
               id="hero"
@@ -229,7 +228,7 @@ function build_calendar($month, $year) {
               </svg>
             </button>
           </picture>
-        
+
           <div
             class="thumbnails hidden justify-between gap-4 m-auto sm:flex sm:flex-col sm:justify-start sm:items-center sm:h-fit md:gap-5 lg:flex-row"
           >
@@ -287,20 +286,13 @@ function build_calendar($month, $year) {
         <section
           class="w-full p-6 lg:mt-36 lg:pr-20 lg:py-10 2xl:pr-40 2xl:mt-40"
         >
-          <h4
-            class="font-bold text-orange mb-2 uppercase text-xs tracking-widest"
-          >
-            Sneaker Company
-          </h4>
           <h1
             class="text-very-dark mb-4 font-bold text-3xl lg:text-4xl"
           >
-            Fall Limited Edition Sneakers
+            {{ $product->nama }}
           </h1>
           <p class="text-dark-grayish mb-6 text-base sm:text-lg">
-            These low-profile sneakers are your perfect casual wear
-            companion. Featuring a durable rubber outer sole,
-            they’ll withstand everything the weather can offer.
+            {{ $product->subjek }}
           </p>
 
           <div
@@ -310,18 +302,9 @@ function build_calendar($month, $year) {
               <h3
                 class="text-very-dark font-bold text-3xl inline-block"
               >
-                $125.00
+                Rp. {{ $product->harga }}
               </h3>
-              <span
-                class="inline-block h-fit py-0.5 px-2 font-bold bg-pale-orange text-orange rounded-lg text-sm"
-                >50%</span
-              >
             </div>
-            <p
-              class="text-dark-grayish w-fit line-through decoration-dark-grayish decoration-1 my-auto"
-            >
-              $250.00
-            </p>
           </div>
 
           <div class="flex flex-col gap-5 mb-16 sm:flex-row lg:mb-0">
