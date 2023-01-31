@@ -1,8 +1,7 @@
 @extends('navbar.main')
 
 
-
-{{-- <?php
+<?php
 function build_calendar($month, $year) {
     $mysqli = new mysqli('localhost', 'root', '', 'last_project');
     $stmt = $mysqli->prepare("select * from bookings where MONTH(tglmain) = ? AND YEAR(tglmain) = ?");
@@ -144,7 +143,7 @@ function build_calendar($month, $year) {
 
 
     
-?> --}}
+?> 
 
 
 
@@ -206,14 +205,14 @@ h5 {
     word-wrap: break-word;
     background-color: #ffffff;
     background-clip: border-box;
-    /* border: 1px solid rgba(0, 0, 0, 0.125); */
+    border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
 }
     .btn-pr{
       padding: 8px 8px;
       font-size: 10px;
       border-radius: 7px;
-      /* gap: 2px; */
+      gap: 2px;
       
     }
 
@@ -628,7 +627,7 @@ img {
         </section> --}}
 
 
-        {{-- <?php
+        <?php
         $dateComponents = getDate();
         if (isset($_GET['month']) && isset($_GET['year'])) {
           $month = $_GET['month'];
@@ -639,7 +638,7 @@ img {
         }
     
         echo build_calendar($month, $year);
-        ?> --}}
+        ?>
 
 			</div>
 		</div>
