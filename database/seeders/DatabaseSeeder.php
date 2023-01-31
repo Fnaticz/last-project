@@ -40,34 +40,34 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::create([
+            'name' => '1',
+            'slug' => '1'
+        ]);
+
+        Category::create([
+            'name' => '2',
+            'slug' => '2'
+        ]);
+
+        Category::create([
+            'name' => '3',
+            'slug' => '3'
+        ]);
+
+        Playtime::create([
             'name' => 'Pending',
             'slug' => 'Pending'
         ]);
 
-        Category::create([
+        Playtime::create([
             'name' => 'Approved',
             'slug' => 'Approved'
         ]);
 
-        Category::create([
+        Playtime::create([
             'name' => 'Decline',
             'slug' => 'Decline'
         ]);
-
-        // Playtime::create([
-        //     'name' => '08.00-09.00',
-        //     'slug' => '08.00-09.00'
-        // ]);
-
-        // Playtime::create([
-        //     'name' => '09.00-10.00',
-        //     'slug' => '09.00-10.00'
-        // ]);
-
-        // Playtime::create([
-        //     'name' => '10.00-11.00',
-        //     'slug' => '10.00-11.00'
-        // ]);
 
         // Playtime::create([
         //     'name' => '11.00-12.00',

@@ -11,33 +11,22 @@
 
       <!-- Booking Form -->
       <div class="booking-form-w3layouts" style="font-family: Inter;">
-         <form action="#" method="post">
+         <form action="{{ route('booking.store') }}" method="post">
+         @csrf
             <h2 class="sub-heading-agileits">Booking Details</h2>
             <div class="main-flex-w3ls-sectns">
                <div class="field-agileinfo-spc form-w3-agile-text1">
                   <br>
-                  <select class="form-control">
-                     <option>From</option>
-                     <option value="Lorem Ipsum">India</option>
-                     <option value="Adipiscing">Dubai</option>
-                     <option value="Lorem Ipsum">Mexico</option>
-                     <option value="Adipiscing">Brazil</option>
-                     <option value="Lorem Ipsum">Mongolia</option>
-                     <option value="Adipiscing">Australia</option>
-                  </select>
+                  <div class="field-agileinfo-spc form-w3-agile-text2">
+                     <input type="text" name="namateam" id="namateam" class="timepicker form-control hasWickedpicker" placeholder="Atas Nama" value="" onkeypress="return false;">
+                  </div>
                </div>
                <br>
                <div class="field-agileinfo-spc form-w3-agile-text2">
                   <br>
-                  <select class="form-control">
-                     <option>To</option>
-                     <option value="Lorem Ipsum">India</option>
-                     <option value="Adipiscing">Dubai</option>
-                     <option value="Lorem Ipsum">Mexico</option>
-                     <option value="Adipiscing">Brazil</option>
-                     <option value="Lorem Ipsum">Mongolia</option>
-                     <option value="Adipiscing">Australia</option>
-                  </select>
+                  <div class="field-agileinfo-spc form-w3-agile-text2">
+                     <input type="text" name="namapenanggungjawab" id="namapenanggungjawab" class="timepicker form-control hasWickedpicker" placeholder="Departure Time" value="" onkeypress="return false;">
+                  </div>
                </div>
             </div>
             <div class="main-flex-w3ls-sectns">

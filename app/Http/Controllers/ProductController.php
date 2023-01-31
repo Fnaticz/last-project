@@ -52,7 +52,7 @@ class ProductController extends Controller
 
             'harga' => 'required',
 
-            'category_id' => 1,
+            'category_id' => 'required',
 
             'subjek' => 'required',
 
@@ -79,9 +79,9 @@ class ProductController extends Controller
             $input['image'] = "$profileImage";
         }
 
-        // Product::create($input);
+        Product::create($input);
         // Product::create($request->all());
-        dd($input);
+        // dd($input);
         return redirect('/post/create')->with('message','Data Uploaded Successfully');
     }
 
