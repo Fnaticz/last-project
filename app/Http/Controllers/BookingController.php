@@ -39,6 +39,7 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+        $request['user_id'] = auth()->user()->id;
         $input = $request->all();
         
         // dd($input);
@@ -94,5 +95,21 @@ class BookingController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function updateOrder(array $params)
+    {
+        $order = $this->findOrderById($params['id']);
+
+        $collection = collect($params)->except('_token');
+
+
+
+
+        $order->update();
+
+
+
+        return $order;
     }
 }

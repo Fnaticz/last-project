@@ -154,6 +154,7 @@ function build_calendar($month, $year) {
 
 
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -511,6 +512,9 @@ img {
     </style>
 
 =======
+=======
+
+>>>>>>> 6641ec8 (-1)
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -529,8 +533,11 @@ img {
     />
     <link rel="stylesheet" href="../output.css" />
     <title>Detail Homestay</title>
+<<<<<<< HEAD
 >>>>>>> 0e10cc39ec9ce3d48d054fd9d1640b81cbec44d6
   </head>
+=======
+>>>>>>> 6641ec8 (-1)
   <body class="overflow-x-hidden lg:overflow-hidden">
     <!-- Contents -->
     <div class="container mx-auto font-kumbh text-base">
@@ -713,4 +720,3 @@ img {
 
     <script src="{{ asset('js/script.js') }}"></script>
   </body>
-</html>

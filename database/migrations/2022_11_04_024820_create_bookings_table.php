@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string("namapenanggungjawab");
             $table->string("alamat");
             $table->char("notelepon");
-            $table->date("tglmain");
+            // $table->date("tglmain");
             // $table->date("endtgl");
             // $table->string("image");
 
