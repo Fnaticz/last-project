@@ -1,0 +1,555 @@
+[33mcommit 284a1008dcfc1cfee5f06d2372032f4b782a6bfb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Sun Feb 5 13:12:00 2023 +0900
+
+    er
+
+[33mcommit 14216b0a6bd0f7950fe488f80b303ffaef073c17[m
+Merge: 4364be2 0e10cc3
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Feb 1 06:47:56 2023 +0700
+
+    kalender
+
+[33mcommit 4364be28642849a4c21c748dbd1f0c40ff281dde[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Feb 1 06:47:27 2023 +0700
+
+    kalender
+
+[33mcommit 0e10cc39ec9ce3d48d054fd9d1640b81cbec44d6[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Jan 31 10:06:59 2023 +0900
+
+    change
+
+[33mcommit 8af7f4d37aa29d64a6153480c4f06aee55b3701d[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Jan 31 10:03:29 2023 +0900
+
+    image
+
+[33mcommit e016cc71079e598bc19f16e80b95a130d06c4570[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Jan 31 09:57:20 2023 +0900
+
+    update
+
+[33mcommit 5192decd0e18d33f35512d0214d7d72ae0e73aa9[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Jan 31 09:55:11 2023 +0900
+
+    data
+
+[33mcommit 892365e778acd37b753edd7055d259d8c3bb3234[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Jan 31 09:43:42 2023 +0900
+
+    details
+
+[33mcommit f84ec4ea02dcbc4959d42ad5cc773e6001ffd3e8[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Mon Jan 30 11:46:44 2023 +0900
+
+    delete
+
+[33mcommit 4d3e8187c94ae38751d2eb4a4a74f7ee8c90859d[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Mon Jan 30 11:45:04 2023 +0900
+
+    fixing
+
+[33mcommit f0418dc3c84645b9eb2ee16f8e7fdb1019a264e6[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Jan 26 16:13:47 2023 +0900
+
+    image
+
+[33mcommit ef24cd3ca66fc6c3c1ca4bc0912ab04fbd3b22fa[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Jan 26 15:52:42 2023 +0900
+
+    layouts
+
+[33mcommit 78d4f4ec7ebcff4a99c0bff4a9171834b0744626[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Jan 26 15:34:56 2023 +0900
+
+    update
+
+[33mcommit 16ea8e31d4337070581b5c8fa737232deb722d2a[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Fri Jan 13 16:33:53 2023 +0900
+
+    update
+
+[33mcommit e201f5e20ecc8f139977a6eacffcc08b4e68334e[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Jan 10 12:05:00 2023 +0900
+
+    delete
+
+[33mcommit 5d98e517eebc90ddbcb5a03723ddf66c621d8fb8[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Jan 10 11:59:24 2023 +0900
+
+    update
+
+[33mcommit caca6b1cb858e17e7df2d896a1e2ae754e0bb7a3[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Jan 10 11:56:33 2023 +0900
+
+    update index
+
+[33mcommit ec3a5ac6b2f3033a47ffa70ce33b177d481ff3f5[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Jan 10 11:55:52 2023 +0900
+
+    update index
+
+[33mcommit 498b7a4b16b583b39ef702e35f15d89f80a8b1fa[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Mon Dec 5 09:58:08 2022 +0900
+
+    tour
+
+[33mcommit 93587c434ed6fa825c8afa3c13b8fe0fcdaf0837[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Nov 24 10:52:50 2022 +0900
+
+    Homepage category
+
+[33mcommit 40b514a84752bd452da56b03059ee6e59e377ffe[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Wed Nov 23 11:00:26 2022 +0900
+
+    booking show fix
+
+[33mcommit 2831d2e7eef5348b77d3abd5d30b02a21e1a7b54[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Wed Nov 23 09:44:29 2022 +0900
+
+    booking show
+
+[33mcommit e1f1e1a79d007d17dba6d36ec5711d52df8e1add[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Nov 22 17:35:03 2022 +0700
+
+    jam
+
+[33mcommit 521e65993ee543a6d0c9a358390e7cf5d240586d[m
+Merge: 0ebb897 e756ce5
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Mon Nov 21 10:43:07 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zxyda/last-project
+
+[33mcommit e756ce560a4e09b3f19df659505e588f2f3452b3[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Fri Nov 18 16:43:57 2022 +0900
+
+    playtime show update
+
+[33mcommit 0ebb8971ac35f5205de13e648cd63429937621f6[m
+Merge: 8ae4af6 b35ebd1
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Nov 18 14:04:53 2022 +0700
+
+    sd
+
+[33mcommit b35ebd1a06f5efa0cc96764a88c6c5483bb9c55c[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Fri Nov 18 15:58:20 2022 +0900
+
+    playtime show
+
+[33mcommit d42161f52d3b7d093f3f4720c830f6f3da559327[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Fri Nov 18 12:23:57 2022 +0900
+
+    playtime create
+
+[33mcommit 0a7bf608de7eac59c6182d57ab1fe8cefcadb611[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Fri Nov 18 10:03:53 2022 +0900
+
+    example time
+
+[33mcommit 8ae4af64f904e10341044ac351e80e346a55ce33[m
+Merge: 4973574 7874a7b
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Nov 18 07:50:46 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zxyda/last-project
+
+[33mcommit 49735741524e54ecdc4da361f862ca93db9ac193[m
+Merge: f1ff2db f2762b2
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Nov 18 07:50:36 2022 +0700
+
+    a
+
+[33mcommit 7874a7b8b565b9b1c62ca08f3dabe667304213f7[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Nov 17 17:29:52 2022 +0900
+
+    playtime
+
+[33mcommit 1482732b352397cd421a0a6997fbc1987bda9f23[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Nov 17 17:01:34 2022 +0900
+
+    update edit
+
+[33mcommit f1ff2db19370b852220982536ed812cf3f0b9908[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Thu Nov 17 10:24:47 2022 +0700
+
+    cm
+
+[33mcommit f2762b25a128ff1304bee6cab89fc438887f83dd[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Wed Nov 16 18:00:37 2022 +0900
+
+    home
+
+[33mcommit e227669ce1d56b0f471c0729d90d34088a9f3b25[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Wed Nov 16 17:49:31 2022 +0900
+
+    fix
+
+[33mcommit e804828e19b7f70b441fce958fc6ae0f5fb883a9[m
+Merge: 43546dd 5de3687
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Nov 15 20:53:35 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zxyda/last-project
+
+[33mcommit 5de3687bbbbfb57a98b202b14e156747d6587c9b[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Nov 15 16:44:56 2022 +0900
+
+    seed
+
+[33mcommit 43546ddab2476f9cc2a43947ec03d8d983a3428f[m
+Merge: 87374ab eebf6b1
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Nov 15 14:21:54 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zxyda/last-project
+
+[33mcommit 87374ab1786a147421ba0f04937030a6a5ee17a6[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Nov 15 14:21:51 2022 +0700
+
+    ra
+
+[33mcommit eebf6b1f8d22b0918cc8a2f451abf4ebf5baa437[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Nov 15 16:18:42 2022 +0900
+
+    user id
+
+[33mcommit a839552e0e335996083930297395c838bd975e62[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Nov 15 12:44:32 2022 +0900
+
+    category id
+
+[33mcommit 1f99810a92d26403c573728317caabf874461023[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Nov 15 10:07:07 2022 +0700
+
+    update
+
+[33mcommit 897e2bfc84b53c5a22adff0185868aab42fad8f7[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Nov 11 08:22:56 2022 +0700
+
+    a
+
+[33mcommit bbc8ea56738c33f2c0dd316c209d224ea453132a[m
+Author: Echa <109565624+mchann@users.noreply.github.com>
+Date:   Fri Nov 11 08:22:34 2022 +0700
+
+    Update README.md
+
+[33mcommit 11d53ad5593b10dd4253bb7cf6c5c2ab1fe46e9c[m
+Author: Echa <109565624+mchann@users.noreply.github.com>
+Date:   Fri Nov 11 07:57:32 2022 +0700
+
+    Update README.md
+
+[33mcommit 75acd1bacd4b18f019d597b2c25578174a3af331[m
+Author: Echa <109565624+mchann@users.noreply.github.com>
+Date:   Fri Nov 11 07:56:55 2022 +0700
+
+    Update README.md
+
+[33mcommit 2338c9f4ed3b207799fb6de2ca09c2a46bf1eac9[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Nov 11 07:54:29 2022 +0700
+
+    ps
+
+[33mcommit 5ef11754a77aa498b31b8bc8ca7db7c60e7c6b35[m
+Author: Echa <109565624+mchann@users.noreply.github.com>
+Date:   Fri Nov 11 07:53:10 2022 +0700
+
+    Update README.md
+
+[33mcommit 781b2dc804f0607fe52327c595d6458390e69dc0[m
+Author: Echa <109565624+mchann@users.noreply.github.com>
+Date:   Fri Nov 11 07:52:22 2022 +0700
+
+    Update README.md
+
+[33mcommit ba9775595f5298ad9f852784f5172491f5fcc5ed[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Nov 9 14:04:51 2022 +0700
+
+    selectboxfutsalbasket
+
+[33mcommit 96a6d429606e2c739b20354df8e3803942486717[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Nov 9 09:10:02 2022 +0700
+
+    ahaha_ada_typo
+
+[33mcommit 9cf5a572fe896e2070855f5607a7342510f23f22[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Nov 9 08:58:44 2022 +0700
+
+    flshdlte
+
+[33mcommit 26534c70c1f61bdee1bd5ac020121d43016641fe[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Nov 9 08:50:22 2022 +0700
+
+    flash_message
+
+[33mcommit 70dfa9d60e9e93a4318c9d50b6dba10d13afa251[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Nov 8 09:14:52 2022 +0700
+
+    u
+
+[33mcommit 37baed467e5f1d685df51a5d0fadd7a05427d972[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Nov 4 10:58:55 2022 +0700
+
+    amu_tema_ungu?
+
+[33mcommit e736ea44b79469eeb62262a033b8d955f0156579[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Nov 4 10:52:29 2022 +0700
+
+    bk
+
+[33mcommit 8b66eeec61d778ef71e85b3bd85b171f5eb47903[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Nov 4 09:25:49 2022 +0700
+
+    calendar
+
+[33mcommit 99c58ff557c75645966bfedaad9d4fd5d5e29cce[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Fri Nov 4 09:56:21 2022 +0900
+
+    foreach
+
+[33mcommit d944ba2ac746874a07fd6b7f86315cb807f9109d[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Nov 2 15:16:29 2022 +0700
+
+    in
+
+[33mcommit 482f511ed1e6dc742d997302d7fcc9d9d7b2051b[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Nov 2 15:12:41 2022 +0700
+
+    corousel_slidenya_hilang
+
+[33mcommit e3b2b6adea073caee350789491210adeafc31e64[m
+Merge: ec2846e 7dabe46
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Nov 2 15:10:09 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zxyda/last-project
+
+[33mcommit ec2846ed6aaa3e3a5ef9282477f5f60a09126b13[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Nov 2 15:10:02 2022 +0700
+
+    latestmatch
+
+[33mcommit 7dabe469ac3ba2f0a2f69dcd4c4c09f33ac6d336[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Nov 1 17:13:52 2022 +0900
+
+    image
+
+[33mcommit 75eca511981a7dde715278a2118b5804947c1547[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Tue Nov 1 15:46:34 2022 +0900
+
+    update post
+
+[33mcommit b88ee9470ba27cbf6b3eeda24cf5c24a5b2eeb23[m
+Merge: 4850e33 257bc40
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Nov 1 07:27:20 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zxyda/last-project
+
+[33mcommit 4850e3388e436d3bb1fbc7d831902b4ba6d69a85[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Nov 1 07:27:16 2022 +0700
+
+    21
+
+[33mcommit 257bc40bd67cd901f47fe873e9a7737df061ea92[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Mon Oct 31 15:59:08 2022 +0900
+
+    image
+
+[33mcommit dd8582d786ad6588ea955318a3fb6f9783acd10e[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Oct 27 11:20:01 2022 +0900
+
+    up
+
+[33mcommit 89e63a979501219b97e58e85f677fc3ad3a6c7e4[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Oct 27 10:12:17 2022 +0900
+
+    delete
+
+[33mcommit fbe4a489601ed0a7eaa8707bad93b39835717bbd[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Wed Oct 26 17:04:52 2022 +0900
+
+    update
+
+[33mcommit 6a422c748c4ec627357478d082837c8712470b5b[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Wed Oct 26 15:57:28 2022 +0900
+
+    backend show, edit
+
+[33mcommit ff7fc2d83f7dadefefdc0757907dc5b1f24b9259[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Wed Oct 26 13:15:38 2022 +0900
+
+    Backend
+
+[33mcommit 58b08a3b9f09986ff95be2c5dcb3096a390e2b3f[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Oct 20 13:13:07 2022 +0900
+
+    ini udah jadi blade
+
+[33mcommit 2996805f5036b86fb04932d863318528f9225bf3[m
+Merge: c0ef677 a7d55d4
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Oct 20 11:54:17 2022 +0900
+
+    Merge branch 'main' of https://github.com/Zxyda/last-project
+
+[33mcommit c0ef677832f515369a9e9aff15639e95c7b4126a[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Oct 20 11:46:51 2022 +0900
+
+    add
+
+[33mcommit a7d55d424f5609fe6fdd8c0d290a838b3f67e6fe[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Thu Oct 20 09:42:56 2022 +0700
+
+    jadiinbladegimana?
+
+[33mcommit cc6e8c968c92d98b7ac74ac4be4436de363a4c2a[m
+Author: Zxyda <112914073+Zxyda@users.noreply.github.com>
+Date:   Wed Oct 19 16:14:33 2022 +0900
+
+    aaaaaaaaa
+
+[33mcommit 5a8efcbc99f7f0ad545c94d0f2d542013f9c9fc2[m
+Author: Zxyda <112914073+Zxyda@users.noreply.github.com>
+Date:   Wed Oct 19 16:14:17 2022 +0900
+
+    a
+
+[33mcommit b61c6d5be759683430af7e826af1c85e91a09c61[m
+Author: Zxyda <112914073+Zxyda@users.noreply.github.com>
+Date:   Wed Oct 19 16:03:42 2022 +0900
+
+    aaaaaaaaaaa
+
+[33mcommit 5ddcf1783c2b33b5be83b59b44181225f0524c85[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Oct 19 11:29:21 2022 +0700
+
+    upmin
+
+[33mcommit ae3eddcea6abeb012d22021bcf46757d56dab94b[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Oct 19 08:03:10 2022 +0700
+
+    dashadmin
+
+[33mcommit 5c4075a1ae7231203f257df9f2b24ec06d719ddd[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Oct 7 11:30:03 2022 +0700
+
+    dashboardadmin
+
+[33mcommit dc3948fd1adfc6cffd3284eced50d7790b87fb40[m
+Author: Zxyda <112914073+Zxyda@users.noreply.github.com>
+Date:   Tue Oct 4 07:58:43 2022 +0700
+
+    Delete vite.config.js
+
+[33mcommit 752caef185c6e801ec0d8460125155e8936c306b[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Sep 29 17:22:58 2022 +0900
+
+    login
+
+[33mcommit 2ccdc1e8f2c5df799ffb2bb6b6546339ef1504ef[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Sep 29 16:15:59 2022 +0900
+
+    add
+
+[33mcommit c05d1768d95c2374e7aa2c015f92de0c2498ca5b[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Sep 29 13:58:14 2022 +0900
+
+    home
+
+[33mcommit 019b74650c106bc30c4957372c38f8f79b7700c3[m
+Author: Zxyda <oktaviantrisabana@gmail.com>
+Date:   Thu Sep 29 11:54:16 2022 +0900
+
+    nav
+
+[33mcommit 5df2163ff1843697449340718f7c54cf250b0098[m
+Author: your_github_username <your_github_email>
+Date:   Tue Sep 27 10:07:28 2022 +0900
+
+    fix
+
+[33mcommit 2665a065ee940f32dbee58dfe5e1dcb2c148dd77[m
+Author: your_github_username <your_github_email>
+Date:   Mon Sep 26 17:43:27 2022 +0900
+
+    login-dash
+
+[33mcommit a48d0f2c9e2d0ca3894bfc84cb406a3a61171e43[m
+Author: your_github_username <your_github_email>
+Date:   Mon Sep 26 14:59:14 2022 +0900
+
+    first commit

@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 @extends('navbar.main')
 
 
 <?php
-=======
-{{-- <?php
->>>>>>> 0e10cc39ec9ce3d48d054fd9d1640b81cbec44d6
+
+
+
 function build_calendar($month, $year) {
     $mysqli = new mysqli('localhost', 'root', '', 'last_project');
     $stmt = $mysqli->prepare("select * from bookings where MONTH(tglmain) = ? AND YEAR(tglmain) = ?");
@@ -152,13 +151,11 @@ function build_calendar($month, $year) {
 
 
 
+@section('content')
 
-
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<<<<<<< HEAD
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -511,10 +508,6 @@ img {
 
     </style>
 
-=======
-=======
-
->>>>>>> 6641ec8 (-1)
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -533,11 +526,7 @@ img {
     />
     <link rel="stylesheet" href="../output.css" />
     <title>Detail Homestay</title>
-<<<<<<< HEAD
->>>>>>> 0e10cc39ec9ce3d48d054fd9d1640b81cbec44d6
   </head>
-=======
->>>>>>> 6641ec8 (-1)
   <body class="overflow-x-hidden lg:overflow-hidden">
     <!-- Contents -->
     <div class="container mx-auto font-kumbh text-base">
@@ -625,7 +614,6 @@ img {
               />
             </div>
 
-<<<<<<< HEAD
         <?php
         $dateComponents = getDate();
         if (isset($_GET['month']) && isset($_GET['year'])) {
@@ -638,7 +626,6 @@ img {
     
         echo build_calendar($month, $year);
         ?>
-=======
             <div
               id="3"
               class="w-1/5 cursor-pointer rounded-xl sm:w-28 md:w-32 lg:w-[72px] xl:w-[78px]"
@@ -650,7 +637,6 @@ img {
                 id="thumb-3"
               />
             </div>
->>>>>>> 0e10cc39ec9ce3d48d054fd9d1640b81cbec44d6
 
             <div
               id="4"
@@ -720,3 +706,5 @@ img {
 
     <script src="{{ asset('js/script.js') }}"></script>
   </body>
+
+@endsection

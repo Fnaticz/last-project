@@ -42,8 +42,8 @@ class BookingController extends Controller
         $request['user_id'] = auth()->user()->id;
         $input = $request->all();
         
-        // dd($input);
-        Booking::create($input);
+        dd($input);
+        // Booking::create($input);
         return redirect('booking/create')->with('messagebok','Booking Terikirim !');
 
     }
