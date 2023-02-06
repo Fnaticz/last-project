@@ -15,7 +15,7 @@
 </script> -->
 
 @section('title')
-    <title>Corner - Pusat Sewa Lapangan</title>
+    <title>The Sora Homestay</title>
 @endsection
 
 @section('content')

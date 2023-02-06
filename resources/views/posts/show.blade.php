@@ -7,7 +7,7 @@
         <div class="card">
           <div class="card-header card-header-primary">
             <h4 class="card-title">Post</h4>
-            <p class="card-category">Detail lapangan {{ $product->nama }}</p>
+            <p class="card-category">Detail kamar {{ $product->nama }}</p>
           </div>
           <div class="card-body">
             <div class="row">

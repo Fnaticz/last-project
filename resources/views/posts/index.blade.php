@@ -7,8 +7,8 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header card-header-primary">
-            <h4 class="card-title">Lapangan</h4>
-            <p class="card-category">Lapangan yang anda post</p>
+            <h4 class="card-title">Kamar / Room</h4>
+            <p class="card-category">Kamar yang anda post</p>
           </div>
           <div class="card-body">
             <!-- <div class="row">

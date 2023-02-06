@@ -10,7 +10,7 @@
           <div class="card">
             <div class="card-header card-header-primary">
               <h4 class="card-title">Edit</h4>
-              <p class="card-category">Edit lapangan</p>
+              <p class="card-category">Edit Kamar</p>
             </div>
             <div class="card-body">
               <div class="row">

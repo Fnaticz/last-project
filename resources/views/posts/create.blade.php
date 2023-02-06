@@ -10,7 +10,7 @@
           <div class="card">
             <div class="card-header card-header-primary">
               <h4 class="card-title">Tambah</h4>
-              <p class="card-category">Tamabahkan lapangan lebih banyak untuk mitra anda</p>
+              <p class="card-category">Tamabahkan Kamar</p>
             </div>
             <div class="card-body">
               <div>

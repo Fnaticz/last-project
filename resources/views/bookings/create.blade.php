@@ -7,7 +7,7 @@
 <br>
 <br>
 <div class="card" style="margin:20px;">
-    <div class="card-header">Form Booking Lapangan</div>
+    <div class="card-header">Form Booking Kamar</div>
     <div class="card-body">
         <form action="{{ route('booking.store') }}" method="post">
         @csrf
@@ -20,17 +20,17 @@
             @endif
           </div>
         
-        <label for="">Nama Tim</label><br>
+        <label for="">Nama </label><br>
         <input type="text" name="namateam" id="namateam" class="form-control"><br>
         <label for="">Nama Penanggung Jawab</label>
         <input type="text" name="namapenanggungjawab" id="namapenanggungjawab" class="form-control"><br>
         <label for="">alamat</label>
         <input type="text" name="alamat" id="alamat" class="form-control"><br>
 
-<<<<<<< HEAD
+
         <label for="">No. Telepon</label>
         <input type="tel" name="notelepon" id="notelepon" class="form-control" ><br>
-=======
+
       <!-- Booking Form -->
       <div class="booking-form-w3layouts" style="font-family: Inter;">
          <form action="{{ route('booking.store') }}" method="post">
@@ -157,7 +157,7 @@
             <div class="clear"></div>
          </form>
       </div>
->>>>>>> 0e10cc39ec9ce3d48d054fd9d1640b81cbec44d6
+
 
         <label for="">Waktu Main</label><br>
         {{-- @foreach ($playtimes as $playtime)
