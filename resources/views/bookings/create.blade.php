@@ -1,5 +1,14 @@
 @extends('navbar.main')
 @section('content')
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style type="text/css">
+   .hide {
+  display:none;
+}
+</style>
+
+
 <br>
 <br>
 <br>
@@ -11,22 +20,34 @@
     <div class="card-body">
         <form action="{{ route('booking.store') }}" method="post">
         @csrf
+
         <div>
             @if(session()->has('messagebok',))
+
             <div class="alert alert-success" id="alert">
               <button type="button" class="close" data-dismiss="alert">x</button>
+
             {{ session()->get('messagebok') }}
             </div>
+
             @endif
           </div>
+<<<<<<< HEAD
         
         <label for="">Nama </label><br>
+=======
+
+        <label for="">Nama Tim</label><br>
+>>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
         <input type="text" name="namateam" id="namateam" class="form-control"><br>
+
         <label for="">Nama Penanggung Jawab</label>
         <input type="text" name="namapenanggungjawab" id="namapenanggungjawab" class="form-control"><br>
+
         <label for="">alamat</label>
         <input type="text" name="alamat" id="alamat" class="form-control"><br>
 
+<<<<<<< HEAD
 
         <label for="">No. Telepon</label>
         <input type="tel" name="notelepon" id="notelepon" class="form-control" ><br>
@@ -158,23 +179,21 @@
          </form>
       </div>
 
+=======
+        <label for="">No. Telepon</label>
+        <input type="tel" name="notelepon" id="notelepon" class="form-control" ><br>
+>>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
 
-        <label for="">Waktu Main</label><br>
-        {{-- @foreach ($playtimes as $playtime)
-          <tr style="display: block;">
-            <td><input type="radio" value="{{ $playtime->id }}" /> {{ $playtime->name }}</td>
-          <tr><br>
-        @endforeach --}}
-        <select class="form-control" name="playtime_id">
-        @foreach ($playtimes as $playtime)
-          <option value='{{ $playtime->id }}'>{{ $playtime->name }}</option>
-        @endforeach
-        </select>
-        <br>
-        <label for="">Tanggal</label>
-        <input type="date" name="tglmain" id="tglmain" class="form-control"><br>
+        <div class="hide"> 
+            <select class="form-control" name="playtime_id">
+            @foreach ($playtimes as $playtime)
+               <option value='{{ $playtime->id }}'>{{ $playtime->name }}</option>
+            @endforeach
+            </select>
+        </div>
 
         <button type="submit" value="Save" class="btn btn-success">Booking</button>
     </form>
 
     </div>
+</div>

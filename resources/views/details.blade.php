@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 
 @extends('navbar.main')
 
 
  <?php
+=======
+@extends('navbar.main')
+
+
+<?php
+
+
+
+>>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
 function build_calendar($month, $year) {
     $mysqli = new mysqli('localhost', 'root', '', 'last_project');
     $stmt = $mysqli->prepare("select * from bookings where MONTH(tglmain) = ? AND YEAR(tglmain) = ?");
@@ -145,10 +155,20 @@ function build_calendar($month, $year) {
 ?> 
 
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
 
+=======
+
+
+@section('content')
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+>>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -501,7 +521,10 @@ img {
 
     </style>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -520,7 +543,10 @@ img {
     />
     <link rel="stylesheet" href="../output.css" />
     <title>Detail Homestay</title>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
   </head>
   <body class="overflow-x-hidden lg:overflow-hidden">
     <!-- Contents -->
@@ -609,7 +635,10 @@ img {
               />
             </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
         <?php
         $dateComponents = getDate();
         if (isset($_GET['month']) && isset($_GET['year'])) {
@@ -622,7 +651,10 @@ img {
     
         echo build_calendar($month, $year);
         ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
             <div
               id="3"
               class="w-1/5 cursor-pointer rounded-xl sm:w-28 md:w-32 lg:w-[72px] xl:w-[78px]"
@@ -634,7 +666,10 @@ img {
                 id="thumb-3"
               />
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
 
             <div
               id="4"
@@ -704,4 +739,5 @@ img {
 
     <script src="{{ asset('js/script.js') }}"></script>
   </body>
-</html>
+
+@endsection

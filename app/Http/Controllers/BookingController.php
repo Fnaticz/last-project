@@ -39,10 +39,11 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+        $request['user_id'] = auth()->user()->id;
         $input = $request->all();
         
-        // dd($input);
-        Booking::create($input);
+        dd($input);
+        // Booking::create($input);
         return redirect('booking/create')->with('messagebok','Booking Terikirim !');
 
     }
@@ -94,5 +95,21 @@ class BookingController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function updateOrder(array $params)
+    {
+        $order = $this->findOrderById($params['id']);
+
+        $collection = collect($params)->except('_token');
+
+
+
+
+        $order->update();
+
+
+
+        return $order;
     }
 }

@@ -102,7 +102,7 @@ Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 // Route::group(['middleware' => ['auth:tamu']], function(){
 
     Route::resource("/booking", BookingController::class);
-    Route::resource("/tournament", TournamentController::class); 
+    // Route::resource("/tournament", TournamentController::class); 
     
 // });
 
