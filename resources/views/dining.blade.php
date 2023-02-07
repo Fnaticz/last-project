@@ -52,7 +52,7 @@
                      <div class="p-6 md:py-8">
                         <h4 class="title-price font-medium leading-tight text-2xl mb-2">Indonesian Cuisine
                         </h4>
-                        <p class="text-gray-600">Indian cuisine is not a single cuisine but a collection of differing regional cuisines; each is its own distinct Indian food.
+                        <p class="text-gray-600">Indonesian Food
                         </p>
                      </div>
                   </div>

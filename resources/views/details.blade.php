@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 @extends('navbar.main')
 
@@ -13,6 +14,9 @@
 
 
 >>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
+=======
+{{-- <?php
+>>>>>>> 8eb54b7 (fix)
 function build_calendar($month, $year) {
     $mysqli = new mysqli('localhost', 'root', '', 'last_project');
     $stmt = $mysqli->prepare("select * from bookings where MONTH(tglmain) = ? AND YEAR(tglmain) = ?");
@@ -32,22 +36,16 @@ function build_calendar($month, $year) {
     
     
      $daysOfWeek = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
-
      
      $firstDayOfMonth = mktime(0,0,0,$month,1,$year);
-
      
      $numberDays = date('t',$firstDayOfMonth);
-
    
      $dateComponents = getdate($firstDayOfMonth);
-
     
      $monthName = $dateComponents['month'];
-
     
      $dayOfWeek = $dateComponents['wday'];
-
      
     $datetoday = date('Y-m-d');
     
@@ -64,29 +62,20 @@ function build_calendar($month, $year) {
     
         
       $calendar .= "<tr>";
-
      // Create the calendar headers
-
      foreach($daysOfWeek as $day) {
           $calendar .= "<th  class='header'>$day</th>";
      } 
-
      // Create the rest of the calendar
-
      // Initiate the day counter, starting with the 1st.
-
      $currentDay = 1;
-
      $calendar .= "</tr><tr>";
-
      // The variable $dayOfWeek is used to
      // ensure that the calendar
      // display consists of exactly 7 columns.
-
      if ($dayOfWeek > 0) { 
          for($k=0;$k<$dayOfWeek;$k++){
                 $calendar .= "<td  class='empty'></td>"; 
-
          }
      }
     
@@ -94,14 +83,10 @@ function build_calendar($month, $year) {
      $month = str_pad($month, 2, "0", STR_PAD_LEFT);
   
      while ($currentDay <= $numberDays) {
-
           // Seventh column (Saturday) reached. Start a new row.
-
           if ($dayOfWeek == 7) {
-
                $dayOfWeek = 0;
                $calendar .= "</tr><tr>";
-
           }
           
           $currentDayRel = str_pad($currentDay, 2, "0", STR_PAD_LEFT);
@@ -127,30 +112,23 @@ function build_calendar($month, $year) {
  
           $currentDay++;
           $dayOfWeek++;
-
      }
      
      
-
      // Complete the row of the last week in month, if necessary
-
      if ($dayOfWeek != 7) { 
      
           $remainingDays = 7 - $dayOfWeek;
             for($l=0;$l<$remainingDays;$l++){
                 $calendar .= "<td class='empty'></td>"; 
-
          }
-
      }
      
      $calendar .= "</tr>";
-
      $calendar .= "</table>";
-
      echo $calendar;
-
 }
+<<<<<<< HEAD
 
 ?> 
 
@@ -525,6 +503,13 @@ img {
 
 =======
 >>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
+=======
+    
+?> --}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+>>>>>>> 8eb54b7 (fix)
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -542,11 +527,15 @@ img {
       href="../images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="../output.css" />
+<<<<<<< HEAD
     <title>Detail Homestay</title>
 <<<<<<< HEAD
 
 =======
 >>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
+=======
+    <title>Detail {{ $product->nama }}</title>
+>>>>>>> 8eb54b7 (fix)
   </head>
   <body class="overflow-x-hidden lg:overflow-hidden">
     <!-- Contents -->
@@ -582,7 +571,7 @@ img {
             </button>
             <img
               src="../image/{{ $product->image}}"
-              alt="sneaker"
+              alt="Homestay"
               class="block sm:rounded-xl xl:w-[70%] xl:rounded-xl m-auto pointer-events-none transition duration-300 lg:w-3/4 lg:pointer-events-auto lg:cursor-pointer lg:hover:shadow-xl"
               id="hero"
             />
@@ -607,6 +596,7 @@ img {
               </svg>
             </button>
           </picture>
+<<<<<<< HEAD
 
           <div
             class="thumbnails hidden justify-between gap-4 m-auto sm:flex sm:flex-col sm:justify-start sm:items-center sm:h-fit md:gap-5 lg:flex-row"
@@ -683,8 +673,9 @@ img {
               />
             </div>
           </div>
+=======
+>>>>>>> 8eb54b7 (fix)
         </section>
-
         <!-- Text -->
         <section
           class="w-full p-6 lg:mt-36 lg:pr-20 lg:py-10 2xl:pr-40 2xl:mt-40"
@@ -697,7 +688,6 @@ img {
           <p class="text-dark-grayish mb-6 text-base sm:text-lg">
             {{ $product->subjek }}
           </p>
-
           <div
             class="flex items-center justify-between mb-6 sm:flex-col sm:items-start"
           >
@@ -709,11 +699,6 @@ img {
               </h3>
             </div>
           </div>
-
-          <div class="flex flex-col gap-5 mb-16 sm:flex-row lg:mb-0">
-            <div
-              class="w-full h-10 text-sm bg-light py-2 flex items-center justify-between rounded-lg font-bold relatives sm:w-80"
-            >
             <button
               class="w-full h-10 bg-orange py-2 flex items-center justify-center gap-4 text-xs rounded-lg font-bold text-light shadow-md shadow-orange hover:brightness-125 transition select-none"
               id="add-cart"
@@ -730,14 +715,12 @@ img {
                   fill-rule="nonzero"
                 />
               </svg>
-              Booking
+              Add to cart
             </button>
           </div>
         </section>
       </main>
     </div>
-
     <script src="{{ asset('js/script.js') }}"></script>
   </body>
-
-@endsection
+</html>

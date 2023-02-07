@@ -23,9 +23,9 @@ class Booking extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function FunctionName()
+    public function playtime()
     {
-        return $this->belongsTo(playtime::class, "playtime_id");
+        return $this->belongsTo(Playtime::class);
     }
 
     public function product()
