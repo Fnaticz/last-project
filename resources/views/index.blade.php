@@ -51,7 +51,7 @@
       <section class="text-gray-600 body-font" id="about" style="font-family: 'Inter'; margin-top: 12%;">
          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center" style="">
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-               <img class="object-cover object-center rounded" alt="hero" src="https://goo.gl/maps/9h2BcNCp5SK3hGMd8">
+               <img class="object-cover object-center rounded" alt="hero" src="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/tix-hotel/images-web/2022/03/30/c568608b-ec3b-4569-a99b-3540c36ed6aa-1648645528672-09185abd261f5ae56b430edd84296653.jpg">
             </div>
             <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
                <h1 class="sec-head">About Us

@@ -17,7 +17,7 @@
                <div class=" lg:w-1/3 my-4 md:my-6 ">
                   <div style="border: 1px solid rgba(200, 200, 200, 0.712); border-radius: 9px;" class=" border-t-4 border-solid border-white text-center max-w-sm mx-auto hover:border-indigo-600 transition-colors duration-300">
                      <div class="p-6 md:py-8">
-                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Chinese Cuisine</h4>
+                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Banyuwangi Cuisine</h4>
                         <p class="text-gray-600">The outside world defines as Chinese cuisine as not a true cuisine but rather a composite of distinct regional cuisines.
                         </p>
                      </div>
@@ -26,8 +26,8 @@
                <div class=" lg:w-1/3 my-4 md:my-6" >
                   <div style="border: 1px solid rgba(200, 200, 200, 0.712); border-radius: 9px;" class=" border-t-4 border-solid border-white bg-white text-center max-w-sm mx-auto hover:border-indigo-600 transition-colors duration-300">
                      <div class="p-6 md:py-8">
-                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">French Cuisine</h4>
-                        <p class="text-gray-600">Overall, the cooking of France is the best in the Western World. And its classical and regional cuisines are superb.
+                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Fast Food Cuisine</h4>
+                        <p class="text-gray-600">Overall, the cooking of Fast Food is the best and  you will be treated to great dining.
                         </p>
                      </div>
                   </div>
@@ -35,7 +35,7 @@
                <div  class=" lg:w-1/3 my-4 md:my-6">
                   <div style="border: 1px solid rgba(200, 200, 200, 0.712); border-radius: 9px;" class=" border-t-4 border-solid border-white bg-white text-center max-w-sm mx-auto hover:border-indigo-600 transition-colors duration-300">
                      <div class="p-6 md:py-8">
-                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Italian Cuisine</h4>
+                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Indonesian Cuisine</h4>
                         <p class="text-gray-600">Italian cuisine is characterized by its extreme simplicity, with many dishes having only four to eight ingredients.
                         </p>
                      </div>
@@ -44,38 +44,8 @@
             </div>
          </div>
       </div>
-      <div class=" py-1" style="font-family: Inter;">
-         <div class="container mx-auto" style="padding-right: 100px; padding-left: 100px;">
-            <div class=" lg:flex lg:-mx-4 mt-6 md:mt-12" style="margin: auto;">
-               <div class=" lg:w-1/3 my-4 md:my-6 ">
-                  <div style="border: 1px solid rgba(200, 200, 200, 0.712); border-radius: 9px;" class=" border-t-4 border-solid border-white text-center max-w-sm mx-auto hover:border-indigo-600 transition-colors duration-300">
-                     <div class="p-6 md:py-8">
-                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Indonesian Cuisine
-                        </h4>
-                        <p class="text-gray-600">Indian cuisine is not a single cuisine but a collection of differing regional cuisines; each is its own distinct Indian food.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class=" lg:w-1/3 my-4 md:my-6" >
-                  <div style="border: 1px solid rgba(200, 200, 200, 0.712); border-radius: 9px;" class=" border-t-4 border-solid border-white bg-white text-center max-w-sm mx-auto hover:border-indigo-600 transition-colors duration-300">
-                     <div class="p-6 md:py-8">
-                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Japanese Cuisine
-                        </h4>
-                        <p class="text-gray-600">Though more complex cuisines exist, none comes close to matching Japan’s culinary aesthetics.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div  class=" lg:w-1/3 my-4 md:my-6">
-                  <div style="border: 1px solid rgba(200, 200, 200, 0.712); border-radius: 9px;" class=" border-t-4 border-solid border-white bg-white text-center max-w-sm mx-auto hover:border-indigo-600 transition-colors duration-300">
-                     <div class="p-6 md:py-8">
-                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Turkish Cuisine
-                        </h4>
-                        <p class="text-gray-600">This cuisine is a Middle Eastern culinary marriage and the nation has some of the most dedicated and talented cooks.
-                        </p>
-                     </div>
-                  </div>
+      
+               
                </div>
             </div>
          </div>
