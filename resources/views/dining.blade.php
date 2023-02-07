@@ -44,8 +44,43 @@
             </div>
          </div>
       </div>
+<<<<<<< HEAD
       
                
+=======
+      <div class=" py-1" style="font-family: Inter;">
+         <div class="container mx-auto" style="padding-right: 100px; padding-left: 100px;">
+            <div class=" lg:flex lg:-mx-4 mt-6 md:mt-12" style="margin: auto;">
+               <div class=" lg:w-1/3 my-4 md:my-6 ">
+                  <div style="border: 1px solid rgba(200, 200, 200, 0.712); border-radius: 9px;" class=" border-t-4 border-solid border-white text-center max-w-sm mx-auto hover:border-indigo-600 transition-colors duration-300">
+                     <div class="p-6 md:py-8">
+                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Indonesian Cuisine
+                        </h4>
+                        <p class="text-gray-600">Indonesian Food
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class=" lg:w-1/3 my-4 md:my-6" >
+                  <div style="border: 1px solid rgba(200, 200, 200, 0.712); border-radius: 9px;" class=" border-t-4 border-solid border-white bg-white text-center max-w-sm mx-auto hover:border-indigo-600 transition-colors duration-300">
+                     <div class="p-6 md:py-8">
+                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Japanese Cuisine
+                        </h4>
+                        <p class="text-gray-600">Though more complex cuisines exist, none comes close to matching Japan’s culinary aesthetics.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div  class=" lg:w-1/3 my-4 md:my-6">
+                  <div style="border: 1px solid rgba(200, 200, 200, 0.712); border-radius: 9px;" class=" border-t-4 border-solid border-white bg-white text-center max-w-sm mx-auto hover:border-indigo-600 transition-colors duration-300">
+                     <div class="p-6 md:py-8">
+                        <h4 class="title-price font-medium leading-tight text-2xl mb-2">Turkish Cuisine
+                        </h4>
+                        <p class="text-gray-600">This cuisine is a Middle Eastern culinary marriage and the nation has some of the most dedicated and talented cooks.
+                        </p>
+                     </div>
+                  </div>
+>>>>>>> ac3b3fe92b37161ab9ee4e5648e12231e0df2d82
                </div>
             </div>
          </div>

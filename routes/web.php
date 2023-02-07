@@ -81,6 +81,10 @@ Route::get('/map', function () {
 // 	return view('mitra.dash');
 // });
 
+Route::get('/booking/{id}/create', function ($id) {
+    return 'Product '.$id;
+});
+
 // Route::get('post', [ProductController::class, 'index'])->name('product.index')->middleware('auth');
 // Route::post('post', [ProductController::class, 'store'])->name('product.store')->middleware('auth');
 

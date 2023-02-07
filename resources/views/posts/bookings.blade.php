@@ -17,7 +17,7 @@
                     <thead class="text-primary">
                       <th> No</th>
                       <th> Nama Tim </th>
-                      <th> Tanggal Main</th>
+                      <th>  Status </th>
                       {{-- <th> Tanggal Selesai</th> --}}
                       <th> Date</th>
                       <th class="text-right"> Actions </th>
@@ -29,15 +29,20 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $booking->namateam }}</td>
+                            <td>{{ $booking->playtime_id->name ?? 'none' }}</td>
                             <td>{{ $booking->waktumain }}</td>
-                            <td>{{ $booking->tglmain }}</td>
-                            {{-- <td>{{ $booking->endtgl }}</td> --}}
-                            <td>{{ $booking->created_at->toFormattedDateString() }}</td>
+                            {{-- <td>{{ $booking->endtgl }}</td> 
+                            <td>{{ $booking->created_at->toFormattedDateString() }}</td> --}}
                             
                             {{-- <td class="text-primary">{{ $product->created_at->toFormattedDateString() }}</td> --}}
                             <td class="td-actions text-right">
                                 <a href="{{ route('booking.show', $booking->id) }}" class="btn btn-visibility"> <i
                                     class="material-icons">visibility</i> </a>
+                                                         <td>
+
+                        <input data-id="{{$booking->playtime_id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $booking->playtime ? 'checked' : '' }}>
+
+                     </td>
                     @endforeach
                     </tbody>
                     </table>

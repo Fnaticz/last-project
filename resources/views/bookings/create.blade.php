@@ -52,6 +52,7 @@
         <label for="">No. Telepon</label>
         <input type="tel" name="notelepon" id="notelepon" class="form-control" ><br>
 
+<<<<<<< HEAD
       <!-- Booking Form -->
       <div class="booking-form-w3layouts" style="font-family: Inter;">
          <form action="{{ route('booking.store') }}" method="post">
@@ -185,6 +186,9 @@
 >>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
 
         <div class="hide"> 
+=======
+        <div class="hide">
+>>>>>>> 8eb54b7 (fix)
             <select class="form-control" name="playtime_id">
             @foreach ($playtimes as $playtime)
                <option value='{{ $playtime->id }}'>{{ $playtime->name }}</option>

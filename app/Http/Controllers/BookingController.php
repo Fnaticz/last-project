@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Playtime;
 use App\Models\Booking;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -37,14 +38,16 @@ class BookingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Product $product)
     {
-        $request['user_id'] = auth()->user()->id;
+        // $product_id=Input::get('product_id');
+        $product_id = $request['product_id'];
+        // $request['user_id'] = auth()->user()->id;
         $input = $request->all();
         
         dd($input);
         // Booking::create($input);
-        return redirect('booking/create')->with('messagebok','Booking Terikirim !');
+        return redirect('booking/create', compact('products'))->with('messagebok','Booking Terikirim !');
 
     }
 
@@ -111,5 +114,21 @@ class BookingController extends Controller
 
 
         return $order;
+    }
+    
+    public function changeStatus(Request $request)
+
+    {
+
+        $user = User::find($request->user_id);
+
+        $user->status = $request->status;
+
+        $user->save();
+
+  
+
+        return response()->json(['success'=>'Status change successfully.']);
+
     }
 }
