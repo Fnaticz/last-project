@@ -74,6 +74,9 @@ Route::get('/create', function () {
 	return view('bookings.create');
 });
 
+Route::get('/map', function () {
+	return view('map');
+});
 // Route::get('/dashtrial', function () {
 // 	return view('mitra.dash');
 // });

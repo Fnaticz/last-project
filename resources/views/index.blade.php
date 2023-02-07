@@ -51,17 +51,14 @@
       <section class="text-gray-600 body-font" id="about" style="font-family: 'Inter'; margin-top: 12%;">
          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center" style="">
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-               <img class="object-cover object-center rounded" alt="hero" src="http://placekitten.com/400/252">
+               <img class="object-cover object-center rounded" alt="hero" src="https://goo.gl/maps/9h2BcNCp5SK3hGMd8">
             </div>
             <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
                <h1 class="sec-head">About Us
                </h1>
-               <p class="mb-8 leading-relaxed" style="width: auto;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <p class="mb-8 leading-relaxed" style="width: auto;">Terletak di Banyuwangi, dibangun di pusat Pantai Timur Jawa, dikenal sebagai 'Kota Festival' karena banyak festival diadakan sepanjang tahun, RnJ Homestay sangat cocok untuk pelancong rekreasi. Homestay ini memiliki resepsionis 24 jam, layanan kamar, dan keamanan, area merokok yang ditunjuk, dan tempat parkir gratis. Selain itu, pengiriman makanan luar diperbolehkan untuk kenyamanan para tamu. Staf properti baik dan efisien membuat tinggal di homestay ini lebih menyenangkan dan menarik.
+
+                  Tidak ada kekurangan hal-hal yang harus dilakukan atau makanan untuk dicoba di sekitar RnJ Homestay. Dalam jarak pendek dari properti adalah atraksi dan restoran yang dapat dinikmati wisatawan.</p>
                <div class="flex justify-center">
                   <span class="inline-flex rounded-md shadow-sm">
                   <a href="/about" class="button button__header focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Know More</a>
