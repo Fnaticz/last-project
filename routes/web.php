@@ -81,9 +81,9 @@ Route::get('/map', function () {
 // 	return view('mitra.dash');
 // });
 
-Route::get('/booking/{id}/create', function ($id) {
-    return 'Product '.$id;
-});
+// Route::get('/map', function ($id) {
+//     return view('map');
+// });
 
 // Route::get('post', [ProductController::class, 'index'])->name('product.index')->middleware('auth');
 // Route::post('post', [ProductController::class, 'store'])->name('product.store')->middleware('auth');
@@ -105,6 +105,9 @@ Route::group(['middleware' => 'auth'], function() {
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 });
+
+Route::put('/update-status/{booking}', [BookingController::class, 'updateStatus'])->name('update.status');
+
 
 // Route::group(['middleware' => ['auth:tamu']], function(){
 

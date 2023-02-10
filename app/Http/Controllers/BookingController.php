@@ -16,8 +16,9 @@ class BookingController extends Controller
      */
     public function index()
     {
+        $playtimes = Playtime::all();
         $bookings = Booking::latest()->paginate(10);
-        return view('posts.bookings', compact('bookings'));
+        return view('bookings.bookings', compact('bookings', 'playtimes'));
     }
 
     /**
@@ -41,7 +42,8 @@ class BookingController extends Controller
     public function store(Request $request, Product $product)
     {
         // $product_id=Input::get('product_id');
-        $product_id = $request['product_id'];
+        // $product_id = $request['product_id'];
+        $request->input('product_id');
         // $request['user_id'] = auth()->user()->id;
         $input = $request->all();
         
@@ -99,36 +101,15 @@ class BookingController extends Controller
     {
         //
     }
-
-    public function updateOrder(array $params)
-    {
-        $order = $this->findOrderById($params['id']);
-
-        $collection = collect($params)->except('_token');
-
-
-
-
-        $order->update();
-
-
-
-        return $order;
-    }
     
-    public function changeStatus(Request $request)
-
+    public function updateStatus(Request $request, Booking $booking)
     {
 
-        $user = User::find($request->user_id);
+        $input = $request->all();
+        
+        $booking->update($input);
 
-        $user->status = $request->status;
-
-        $user->save();
-
-  
-
-        return response()->json(['success'=>'Status change successfully.']);
-
+        // dd($input);
+        return redirect()->back();
     }
 }

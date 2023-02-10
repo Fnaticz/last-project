@@ -29,7 +29,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $booking->namateam }}</td>
-                            <td>{{ $booking->playtime_id->name ?? 'none' }}</td>
+                            <td>{{ $booking->playtime->name ?? 'None' }}</td>
                             <td>{{ $booking->waktumain }}</td>
                             {{-- <td>{{ $booking->endtgl }}</td> 
                             <td>{{ $booking->created_at->toFormattedDateString() }}</td> --}}

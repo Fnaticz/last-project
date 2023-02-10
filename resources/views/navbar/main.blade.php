@@ -12,7 +12,8 @@
       
       <!-- CSS -->
       <link rel="stylesheet" href="../assets/css/book.css">
-      <<link rel="stylesheet" href="../assets/css/news.css">
+      <link rel="stylesheet" href="../assets/css/map.css">
+      <link rel="stylesheet" href="../assets/css/news.css">
       <link rel="stylesheet" href="../assets/css/dining.css">
       <link rel="stylesheet" href="../assets/css/styles.css">
       <link rel="stylesheet" href="../assets/css/membership.css">

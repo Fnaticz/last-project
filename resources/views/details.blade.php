@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-@extends('navbar.main')
-
-
- <?php
-=======
-@extends('navbar.main')
-
-
-<?php
-
-
-
->>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
-=======
 {{-- <?php
->>>>>>> 8eb54b7 (fix)
+
 function build_calendar($month, $year) {
     $mysqli = new mysqli('localhost', 'root', '', 'last_project');
     $stmt = $mysqli->prepare("select * from bookings where MONTH(tglmain) = ? AND YEAR(tglmain) = ?");
@@ -128,29 +111,16 @@ function build_calendar($month, $year) {
      $calendar .= "</table>";
      echo $calendar;
 }
-<<<<<<< HEAD
-
-?> 
 
 
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+?>  --}}
 
-=======
-
-
-@section('content')
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
->>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Detail Kamar</title>
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
@@ -499,17 +469,6 @@ img {
 
     </style>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
-=======
-    
-?> --}}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
->>>>>>> 8eb54b7 (fix)
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -520,6 +479,8 @@ img {
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link
       rel="icon"
       type="image/png"
@@ -527,15 +488,7 @@ img {
       href="../images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="../output.css" />
-<<<<<<< HEAD
-    <title>Detail Homestay</title>
-<<<<<<< HEAD
-
-=======
->>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
-=======
     <title>Detail {{ $product->nama }}</title>
->>>>>>> 8eb54b7 (fix)
   </head>
   <body class="overflow-x-hidden lg:overflow-hidden">
     <!-- Contents -->
@@ -596,8 +549,6 @@ img {
               </svg>
             </button>
           </picture>
-<<<<<<< HEAD
-
           <div
             class="thumbnails hidden justify-between gap-4 m-auto sm:flex sm:flex-col sm:justify-start sm:items-center sm:h-fit md:gap-5 lg:flex-row"
           >
@@ -624,12 +575,7 @@ img {
                 id="thumb-2"
               />
             </div>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
-        <?php
+        {{-- <?php
         $dateComponents = getDate();
         if (isset($_GET['month']) && isset($_GET['year'])) {
           $month = $_GET['month'];
@@ -640,11 +586,7 @@ img {
         }
     
         echo build_calendar($month, $year);
-        ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
+        ?> --}}
             <div
               id="3"
               class="w-1/5 cursor-pointer rounded-xl sm:w-28 md:w-32 lg:w-[72px] xl:w-[78px]"
@@ -656,11 +598,6 @@ img {
                 id="thumb-3"
               />
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
-
             <div
               id="4"
               class="w-1/5 cursor-pointer rounded-xl sm:w-28 md:w-32 lg:w-[72px] xl:w-[78px]"
@@ -673,8 +610,6 @@ img {
               />
             </div>
           </div>
-=======
->>>>>>> 8eb54b7 (fix)
         </section>
         <!-- Text -->
         <section
@@ -717,6 +652,53 @@ img {
               </svg>
               Add to cart
             </button>
+            <br>
+
+<div class="card">
+    <div class="card-header">Form Booking Kamar</div>
+    <div class="card-body">
+        <form action="{{ route('booking.store') }}" method="post">
+        @csrf
+
+        <div>
+            @if(session()->has('messagebok',))
+
+            <div class="alert alert-success" id="alert">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+
+            {{ session()->get('messagebok') }}
+            </div>
+
+            @endif
+          </div>
+        
+        <label for="">Nama </label><br>
+        <input type="text" name="namateam" id="namateam" class="form-control"><br>
+
+        <label for="">Nama Penanggung Jawab</label>
+        <input type="text" name="namapenanggungjawab" id="namapenanggungjawab" class="form-control"><br>
+
+        <label for="">alamat</label>
+        <input type="text" name="alamat" id="alamat" class="form-control"><br>
+
+        <label for="">No. Telepon</label>
+        <input type="tel" name="notelepon" id="notelepon" class="form-control" ><br>
+
+
+        <div class="hide">
+            <select class="form-control" name="playtime_id">
+            @foreach ($playtimes as $playtime)
+               <option value='{{ $playtime->id }}'>{{ $playtime->name }}</option>
+            @endforeach
+            </select>
+            <input type="hidden" name="product_id" value="{{ $product->id }}">
+        </div>
+
+        <button type="submit" value="Save" class="btn">Booking</button>
+    </form>
+
+    </div>
+</div>
           </div>
         </section>
       </main>

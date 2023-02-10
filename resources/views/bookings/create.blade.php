@@ -15,7 +15,7 @@
 <br>
 <br>
 <br>
-<div class="card" style="margin:20px;">
+<div class="card">
     <div class="card-header">Form Booking Kamar</div>
     <div class="card-body">
         <form action="{{ route('booking.store') }}" method="post">
@@ -32,13 +32,8 @@
 
             @endif
           </div>
-<<<<<<< HEAD
         
         <label for="">Nama </label><br>
-=======
-
-        <label for="">Nama Tim</label><br>
->>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
         <input type="text" name="namateam" id="namateam" class="form-control"><br>
 
         <label for="">Nama Penanggung Jawab</label>
@@ -47,14 +42,26 @@
         <label for="">alamat</label>
         <input type="text" name="alamat" id="alamat" class="form-control"><br>
 
-<<<<<<< HEAD
-
         <label for="">No. Telepon</label>
         <input type="tel" name="notelepon" id="notelepon" class="form-control" ><br>
 
-<<<<<<< HEAD
+
+        <div class="hide">
+            <select class="form-control" name="playtime_id">
+            @foreach ($playtimes as $playtime)
+               <option value='{{ $playtime->id }}'>{{ $playtime->name }}</option>
+            @endforeach
+            </select>
+        </div>
+
+        <button type="submit" value="Save" class="btn btn-success">Booking</button>
+    </form>
+
+    </div>
+</div>
+
       <!-- Booking Form -->
-      <div class="booking-form-w3layouts" style="font-family: Inter;">
+      {{-- <div class="booking-form-w3layouts" style="font-family: Inter;">
          <form action="{{ route('booking.store') }}" method="post">
          @csrf
             <h2 class="sub-heading-agileits">Booking Details</h2>
@@ -180,24 +187,8 @@
          </form>
       </div>
 
-=======
         <label for="">No. Telepon</label>
         <input type="tel" name="notelepon" id="notelepon" class="form-control" ><br>
->>>>>>> 22f7eb0968fdf2c4e888279b71e8c0255b0baaf7
 
         <div class="hide"> 
-=======
-        <div class="hide">
->>>>>>> 8eb54b7 (fix)
-            <select class="form-control" name="playtime_id">
-            @foreach ($playtimes as $playtime)
-               <option value='{{ $playtime->id }}'>{{ $playtime->name }}</option>
-            @endforeach
-            </select>
-        </div>
-
-        <button type="submit" value="Save" class="btn btn-success">Booking</button>
-    </form>
-
-    </div>
-</div>
+ --}}
